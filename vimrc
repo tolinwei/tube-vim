@@ -7,3 +7,4 @@ set tabstop=4
 set shiftwidth=4    " ??
 set softtabstop=4   " delete 4 spaces
 set hlsearch
+set title
