@@ -7,9 +7,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 
-export CLICOLOR=1
-# export LSCOLORS=GxFxCxDxBxegedabagaced
-export LSCOLORS=Exfxcxdxbxegedabagacad
+# export CLICOLOR=1
+# export LSCOLORS=Exfxcxdxbxegedabagacad
 
 # for virtualenv
 export WORKON_HOME=~/Projects/Envs
@@ -21,5 +20,3 @@ export ES_PLUGIN=/usr/local/var/lib/elasticsearch/plugins
 
 # for MySQL
 alias mysql="/usr/local/mysql-5.6.20-osx10.8-x86_64/bin/mysql"
-# for login to staging of Crowdskout
-alias gostaging="ssh -A -i ~/Projects/Staging.pem root@54.86.244.184"
