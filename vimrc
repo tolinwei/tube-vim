@@ -1,6 +1,10 @@
 " General syntax
 syntax on
 set number
+colorscheme gruvbox
+set background=dark
+
+set number
 
 set backspace=indent,eol,start
 
