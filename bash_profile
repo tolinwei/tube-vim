@@ -9,10 +9,12 @@ alias mv="mv -i"
 
 # export CLICOLOR=1
 # export LSCOLORS=Exfxcxdxbxegedabagacad
+# to make vim colorscheme works under tmux
+export TERM=xterm-256color
 
 # for virtualenv
 export WORKON_HOME=~/Projects/Envs
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 # for Elasticsearch
 export ES_HOME=/usr/local/Cellar/elasticsearch/1.3.4
