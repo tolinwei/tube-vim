@@ -44,3 +44,7 @@ mkdir -p ~/.vim/colors
 cp gruvbox.vim ~/.vim/colors
 cp tjkirch-yroot.zsh-theme ~/.oh-my-zsh/themes
 cp zshrc ~/.zshrc
+
+# For git
+git config --global user.name "Wei Lin"
+git config --global user.email "linwei@yahoo-inc.com"

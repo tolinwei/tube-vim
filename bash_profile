@@ -22,3 +22,7 @@ export ES_PLUGIN=/usr/local/var/lib/elasticsearch/plugins
 
 # for MySQL
 alias mysql="/usr/local/mysql-5.6.20-osx10.8-x86_64/bin/mysql"
+
+# for Benzene
+export JAVA_HOME=/home/y
+
