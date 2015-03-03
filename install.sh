@@ -1,14 +1,19 @@
 #!/bin/bash
 
-##############################
+################################################## (50 #s)
 # Setup dev env from within this repo
-##############################
+# Install brew, git, wget if run on Mac
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"t
+# brew install git
+# brew install wget
+##################################################
 # Clone ivanlw/dev-env-config repo
 mkdir -p ~/Projects
 cd ~/Projects
 git clone git@github.com:ivanlw/dev-env-config.git
 
 # Install oh-my-zsh, need to mannually change later
+# the content of install.sh is not compatible with ZSH, it must be excuted under /bin/bash
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 
 # Install Vundle
@@ -39,12 +44,11 @@ sudo make install  # sudo required
 # Copy remaining configuration files
 cd ~/Projects/dev-env-config
 cp tmux.conf ~/.tmux.conf
-cp bash_profile ~/.bash_profile
+cp bashrc ~/.bashrc
 mkdir -p ~/.vim/colors
-cp gruvbox.vim ~/.vim/colors
-cp tjkirch-yroot.zsh-theme ~/.oh-my-zsh/themes
+cp gruvbox.vim ~/.vim/colors/
+cp Tomorrow-Night.vim ~/.vim/colors/
+cp Tomorrow-Night-Eighties.vim ~/.vim/colors/
+cp tjkirch-yroot.zsh-theme ~/.oh-my-zsh/themes/
 cp zshrc ~/.zshrc
 
-# For git
-git config --global user.name "Wei Lin"
-git config --global user.email "linwei@yahoo-inc.com"

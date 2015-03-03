@@ -1,4 +1,4 @@
-source ~/.bash_profile
+source ~/.bashrc
 
 # Path to your oh-my-zsh installation.
 export ZSH=/home/linwei/.oh-my-zsh

@@ -23,6 +23,13 @@ export ES_PLUGIN=/usr/local/var/lib/elasticsearch/plugins
 # for MySQL
 alias mysql="/usr/local/mysql-5.6.20-osx10.8-x86_64/bin/mysql"
 
+# for Git
+git config --global user.name "Wei Lin"
+git config --global user.email "linwei@yahoo-inc.com"
+
 # for Benzene
 export JAVA_HOME=/home/y
+alias ut="ssh uranium-gw.tan.ygrid.yahoo.com"
+alias zt="ssh zanium-gw.tan.ygrid.yahoo.com"
+alias cb="ssh cobalt-gw.blue.ygrid.yahoo.com"
 
