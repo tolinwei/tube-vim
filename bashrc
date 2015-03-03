@@ -32,4 +32,5 @@ export JAVA_HOME=/home/y
 alias ut="ssh uranium-gw.tan.ygrid.yahoo.com"
 alias zt="ssh zanium-gw.tan.ygrid.yahoo.com"
 alias cb="ssh cobalt-gw.blue.ygrid.yahoo.com"
-
+alias ut-launcher="ssh dp-fetlbenzene-launch-dev1.data.ne1.yahoo.com"
+alias cb-launcher="ssh dp-fetlbenzene-launch-dev1.data.gq1.yahoo.com"
