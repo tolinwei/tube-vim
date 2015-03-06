@@ -26,6 +26,7 @@ alias mysql="/usr/local/mysql-5.6.20-osx10.8-x86_64/bin/mysql"
 # for Git
 git config --global user.name "Wei Lin"
 git config --global user.email "linwei@yahoo-inc.com"
+git config colo.ui true
 
 # for Benzene
 export JAVA_HOME=/home/y
