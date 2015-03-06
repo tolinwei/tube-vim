@@ -17,6 +17,7 @@ set smartindent                     " Copy indentation from previous line
                                     " , and add extra level in some cases
 
 set nowrap                          " Don't wrap lines
+autocmd BufWritePre * :%s/\s\+$//e  " Delete all trailing whitespaces on save
 
 autocmd BufWritePre * :%s/\s\+$//e  " Delete all trailing whitespaces on save
 
