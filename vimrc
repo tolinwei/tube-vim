@@ -19,8 +19,10 @@ set smartindent                     " Copy indentation from previous line
 set nowrap                          " Don't wrap lines
 autocmd BufWritePre * :%s/\s\+$//e  " Delete all trailing whitespaces on save
 
-autocmd BufWritePre * :%s/\s\+$//e  " Delete all trailing whitespaces on save
-
+" 80 words onwards as "warning" and 120 words as "dager"
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+let &colorcolumn="80,".join(range(120,999),",")
 
 " The begining of Vunble
 
