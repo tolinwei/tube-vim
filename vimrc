@@ -3,7 +3,6 @@ syntax on
 set number
 colorscheme gruvbox
 set background=dark
-
 set number
 
 set backspace=indent,eol,start
@@ -15,14 +14,20 @@ set softtabstop=4		    " Set it the same sa shiftwidth when using SPACE indentio
 				    " , default value is the same as 'tabstop'
 set smartindent                     " Copy indentation from previous line
                                     " , and add extra level in some cases
-
 set nowrap                          " Don't wrap lines
 autocmd BufWritePre * :%s/\s\+$//e  " Delete all trailing whitespaces on save
 
-" 80 words onwards as "warning" and 120 words as "dager"
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-let &colorcolumn="80,".join(range(120,999),",")
+
+" 80 words onwards as "warning" and 120 words as "danger"
+" for both industry standard (80 columns) and Yahoo standards (120 columns)
+if exists('+colorcolumn')
+    let &colorcolumn="81,".join(range(121,999),",")
+    " set colorcolumn=81
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+endif
+" execute "set colorcolumn=" . join(range(121,999), ',')  " Correct
+
 
 " The begining of Vunble
 
