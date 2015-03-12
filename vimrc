@@ -21,13 +21,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " 80 words onwards as "warning" and 120 words as "danger"
 " for both industry standard (80 columns) and Yahoo standards (120 columns)
-if exists('+colorcolumn')
-    let &colorcolumn="81,".join(range(121,999),",")
-    " execute "set colorcolumn=" . join(range(121,999), ',')  " Also works
-    " set colorcolumn=81
-else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
-endif
+" only support Vim with +colorcolumn plugin: if exists('+colorcolumn')
+" set colorcolumn=81
+"
+let &colorcolumn="81,".join(range(121,999),",")
+" execute "set colorcolumn=" . join(range(121,999), ',')    " Also works
 
 
 " The begining of Vunble
