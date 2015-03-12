@@ -7,7 +7,9 @@ Configuration files for setting up UNIX-like dev environment.
 
 
 ### Usage
-Just clone the repo and execute `./install.sh` to get everything done for you. You will be prompted to type in your password during the shell installation.
+Just clone the repo and execute `bash install.sh` to get everything done for you. You will be prompted to type in your password during the shell installation.
+
+(If you're using `chroot` or any modified version like `yroot`, don't use `sudo bash install.sh` instead because this would lead the `cp` command in `install.sh` entering the wrong directory)
 
 ### Lists
 
