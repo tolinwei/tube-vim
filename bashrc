@@ -30,6 +30,8 @@ git config --global user.email "linwei@yahoo-inc.com"
 
 # for Benzene
 export JAVA_HOME=/home/y
+alias dev="thenagain.corp.ne1.yahoo.com"
+alias dev-env-test="startedparted.corp.ne1.yahoo.com"
 alias ut="ssh uranium-gw.tan.ygrid.yahoo.com"
 alias zt="ssh zanium-gw.tan.ygrid.yahoo.com"
 alias cb="ssh cobalt-gw.blue.ygrid.yahoo.com"

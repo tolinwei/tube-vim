@@ -11,13 +11,9 @@
 mkdir -p ~/Projects
 mkdir -p ~/Downloads
 
-# Clone ivanlw/dev-env-config repo
-cd ~/Projects
-git clone git@github.com:ivanlw/dev-env-config.git
-
 # Install Vim of version 7.4 from source code
 cd ~/Downloads
-wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz3
+wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 tar jxvf vim-7.4.tar.bz2
 cd vim74
 ./configure --with-features=huge
