@@ -51,7 +51,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set right side NERDTree
-let g:NERDTreeWinPos="right"
+" let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
