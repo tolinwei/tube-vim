@@ -26,6 +26,7 @@ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - 
 # Install Vundle
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Install the plugins defined in vimrc
+cd ~/Projects/dev-env
 cp vimrc ~/.vimrc
 vim +PluginInstall +qall
 
@@ -38,7 +39,7 @@ cd libevent-2.0.22-stable/
 ./configure --prefix=/usr/local/
 make && sudo make install  # sudo required
 
-cd ..
+cd ~/Downloads
 wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
 tar zxvf tmux-1.9a.tar.gz
 cd tmux-1.9a
