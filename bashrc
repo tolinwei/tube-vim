@@ -12,6 +12,10 @@ alias mv="mv -i"
 # to make vim colorscheme works under tmux
 export TERM=xterm-256color
 
+# set the editor for Git and also other programs
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # for virtualenv
 export WORKON_HOME=~/Projects/Envs
 # source /usr/local/bin/virtualenvwrapper.sh
@@ -30,8 +34,7 @@ git config --global user.email "linwei@yahoo-inc.com"
 
 # for Benzene
 export JAVA_HOME=/home/y
-alias dev="thenagain.corp.ne1.yahoo.com"
-alias dev-env-test="startedparted.corp.ne1.yahoo.com"
+alias dev="ssh thenagain.corp.ne1.yahoo.com"
 alias ut="ssh uranium-gw.tan.ygrid.yahoo.com"
 alias zt="ssh zanium-gw.tan.ygrid.yahoo.com"
 alias cb="ssh cobalt-gw.blue.ygrid.yahoo.com"
