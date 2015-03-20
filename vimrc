@@ -14,6 +14,7 @@ set softtabstop=4		                " Set it the same sa shiftwidth when using SP
 set smartindent                                 " Copy indentation from previous line
                                                 " , and add extra level in some cases
 set nowrap                                      " Don't wrap lines
+set hlsearch
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -39,6 +40,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'bling/vim-airline'
+" set airline to appear all the time
+set laststatus=2
+
 " formats to install plugins on Github
 Plugin 'scrooloose/nerdtree'
 " NERDTree toggle
@@ -51,7 +56,7 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set right side NERDTree
-let g:NERDTreeWinPos="right"
+" let g:NERDTreeWinPos="right"
 let g:NERDTreeWinSize=30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
@@ -67,7 +72,6 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'bling/vim-airline'
 
 " Plugin 'ervandew/supertab'
 
