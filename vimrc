@@ -51,7 +51,7 @@ map <C-n> :NERDTreeToggle<CR>
 " change width of NERDTree (this is not working)
 " let g:NERDTreeWinSize=30
 " open NERDTree automatically when vim starts up
-" autocmd vimenter * NERDTree
+autocmd VimEnter * NERDTree | wincmd p
 " open NERDTree automatically when vim starts up with no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
