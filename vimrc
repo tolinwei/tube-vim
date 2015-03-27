@@ -2,7 +2,7 @@
 syntax on
 set number
 colorscheme gruvbox
-" set background=dark
+set background=dark
 set number
 set backspace=indent,eol,start
 
@@ -15,6 +15,8 @@ set smartindent                                 " Copy indentation from previous
                                                 " , and add extra level in some cases
 set nowrap                                      " Don't wrap lines
 set hlsearch
+set foldmethod=syntax
+set nofoldenable                                " Disable fold at startup
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -57,7 +59,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set right side NERDTree
 " let g:NERDTreeWinPos="right"
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize=28
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only
@@ -72,8 +74,20 @@ function! s:CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'nathanaelkane/vim-indent-guides'
+" startup with vim
+let g:indent_guides_enable_on_vim_startup=1
+" set width
+let g:indent_guides_guide_size=1
 
-" Plugin 'ervandew/supertab'
+" Need to install Exuberant Ctags before usage
+" http://ctags.sourceforge.net/
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+" Set width
+let g:tagbar_width=25
+" Open tagbar when open Vim with supported file/files
+autocmd VimEnter * nested :call tagbar#autoopen(1)
 
 Plugin 'kien/ctrlp.vim'
 "let g:ctrlp_map = '<c-p>'
