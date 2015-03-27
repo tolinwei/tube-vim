@@ -59,7 +59,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set right side NERDTree
 " let g:NERDTreeWinPos="right"
-let g:NERDTreeWinSize=28
+let g:NERDTreeWinSize=30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only
@@ -85,7 +85,7 @@ let g:indent_guides_guide_size=1
 Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 " Set width
-let g:tagbar_width=25
+let g:tagbar_width=50
 " Open tagbar when open Vim with supported file/files
 autocmd VimEnter * nested :call tagbar#autoopen(1)
 
