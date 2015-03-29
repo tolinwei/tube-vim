@@ -13,7 +13,7 @@ set backspace=indent,eol,start
 " http://vim.wikia.com/wiki/Indenting_source_code
 set shiftwidth=4		                " Affects when press >>, << or ==
 set softtabstop=4		                " Set it the same sa shiftwidth when using SPACE indention
-				                " , default value is the same as 'tabstop'
+                                                " , default value is the same as 'tabstop'
 set expandtab			                " When press <TAB> key, insert 'softtabstop' amount of space
 set smartindent                                 " Copy indentation from previous line
                                                 " , and add extra level in some cases
@@ -35,7 +35,7 @@ autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 80 words onwards as "warning" and 120 words as "danger"
-" for both industry standard (80 columns) and Yahoo standards (120 columns)
+" For both industry standard (80 columns) and Yahoo standards (120 columns)
 if exists('+colorcolumn')
     let &colorcolumn="81,".join(range(121,999),",")
 else
@@ -49,14 +49,14 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible		                " be iMproved, required
-filetype off			                " required
-" set the runtime path to include Vundle and initialize
+filetype off			                " Required, open later
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -67,19 +67,23 @@ Plugin 'altercation/vim-colors-solarized'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'bling/vim-airline'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set airline to appear all the time
+" Set airline to appear all the time
 set laststatus=2
+" Remove the pause when leaving insert mode
+set timeoutlen=50
+" Load theme at startup
+let g:airline_theme='badwolf'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree toggle
 map <C-n> :NERDTreeToggle<CR>
-" change width of NERDTree (this is not working)
-" let g:NERDTreeWinSize=30
-" open NERDTree automatically when vim starts up
+" Change width of NERDTree (this is not working)
+" Let g:NERDTreeWinSize=30
+" Open NERDTree automatically when vim starts up
 autocmd VimEnter * NERDTree | wincmd p
-" open NERDTree automatically when vim starts up with no files were specified
+" Open NERDTree automatically when vim starts up with no files were specified
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " set right side NERDTree
@@ -101,7 +105,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" startup with vim
+" Startup vim-indent-guides with vim
 let g:indent_guides_enable_on_vim_startup=1
 " set width
 let g:indent_guides_guide_size=1
@@ -122,11 +126,8 @@ Plugin 'vim-scripts/restore_view.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'kien/ctrlp.vim'
+" Plugin 'Valloric/YouCompleteMe'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                " required
