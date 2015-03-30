@@ -8,7 +8,7 @@ Configuration files for setting up UNIX-like dev environment.
 
 ### Usage
 Just clone the repo and execute `bash install.sh` to get everything done for you.
-If you just need Vim configuration, run `bash vim-install.sh` instead, which is a subset of `install.sh`.
+If you ONLY need Vim configuration, run `bash vim-install.sh` instead, which is a subset of `install.sh`.
 
 You'll be prompted to enter your password or type `yes` for certificate things during the script's running)
 
