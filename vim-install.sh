@@ -13,13 +13,8 @@ mkdir -p ~/Downloads
 ################################################################################
 # Copy configuration files
 cd ~/Projects/dev-env
-cp tmux.conf ~/.tmux.conf
-cp bashrc ~/.bashrc
 mkdir -p ~/.vim/colors
 cp gruvbox.vim ~/.vim/colors/
-cp Tomorrow-Night.vim ~/.vim/colors/
-cp Tomorrow-Night-Eighties.vim ~/.vim/colors/
-cp tjkirch-yroot.zsh-theme ~/.oh-my-zsh/themes/
 cp zshrc ~/.zshrc
 ################################################################################
 # Install Vundle
