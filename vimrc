@@ -31,8 +31,8 @@ autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespace
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 80 words onwards as "warning" and 120 words as "danger"
-" For both industry standard (80 columns) and Yahoo standards (120 columns)
+                                                " 80 words onwards as "warning" and 120 words as "danger"
+                                                " For both industry standard (80 columns) and Yahoo standards (120 columns)
 if exists('+colorcolumn')
     let &colorcolumn="81,".join(range(121,999),",")
 else
@@ -64,8 +64,9 @@ let g:airline_theme='badwolf'	                " Load theme at startup
 Plugin 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>	                " NERDTree toggle
-autocmd VimEnter * NERDTree | wincmd p	        " Open NERDTree automatically when vim starts up
+" autocmd VimEnter * NERDTree | wincmd p	" Open NERDTree automatically when vim starts up
                                                 " Open NERDTree automatically when vim starts up with no files specified
+autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " let g:NERDTreeWinPos="right"	                " set right side NERDTree
 let g:NERDTreeWinSize=40
@@ -116,7 +117,12 @@ Plugin 'jiangmiao/auto-pairs'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'ervandew/supertab'
+Plugin 'honza/vim-snippets'                     " Load Snippets engine used by ultisnips
+Plugin 'SirVer/ultisnips'                       " Track the engine
+" Trigger configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
