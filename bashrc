@@ -32,6 +32,11 @@ git config --global user.name "Wei Lin"
 git config --global user.email "linwei@yahoo-inc.com"
 git config --global color.ui true
 
+# for Vimpager
+export PAGER=/usr/local/bin/vimpager
+alias less=$PAGER
+alias zless=$PAGER
+
 # for Benzene
 export JAVA_HOME=/home/y
 alias dev="ssh thenagain.corp.ne1.yahoo.com"
