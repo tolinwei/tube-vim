@@ -1,7 +1,7 @@
 config-files
 ============
 
-Configuration files for setting up UNIX-like dev environment.
+Self configuration files for setting up Yahoo's Linux dev environment.
 
 ### Preview
 
