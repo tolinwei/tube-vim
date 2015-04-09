@@ -32,7 +32,7 @@ git config --global user.name "Wei Lin"
 git config --global user.email "linwei@yahoo-inc.com"
 git config --global color.ui true
 
-# for Vimpager
+# for Vimpager, needs to be installed mannually from Github repo
 export PAGER=/usr/local/bin/vimpager
 alias less=$PAGER
 alias zless=$PAGER

@@ -3,9 +3,9 @@ source ~/.bashrc
 # Path to your oh-my-zsh installation.
 
 # For linux
-export ZSH=/home/linwei/.oh-my-zsh
+# export ZSH=/home/linwei/.oh-my-zsh
 # For OS X
-# export ZSH=/Users/linwei/.oh-my-zsh
+export ZSH=/Users/linwei/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -51,7 +51,7 @@ ZSH_THEME="tjkirch"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo git tmux)
+plugins=(ls z d sudo git tmux)
 
 # User configuration
 
