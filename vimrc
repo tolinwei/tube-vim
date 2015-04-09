@@ -10,14 +10,16 @@ colorscheme gruvbox
 " General setting	                        " http://vim.wikia.com/wiki/Indenting_source_code
 set number
 set backspace=indent,eol,start
-set shiftwidth=4		                " Affects when press >>, << or ==
 set softtabstop=4		                " Set it the same sa shiftwidth when using SPACE indention
                                                 " , default value is the same as 'tabstop'
+set shiftwidth=4		                " Affects when press >>, << or ==
 set expandtab			                " When press <TAB> key, insert 'softtabstop' amount of space
 set smartindent                                 " Copy indentation from previous line
                                                 " , and add extra level in some cases
 set nowrap                                      " Don't wrap lines
 set hlsearch
+set cursorline
+set clipboard=unnamed                           " Make yank and pasge working between Vims
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -57,7 +59,8 @@ Plugin 'bling/vim-airline'
 """"""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2	                        " Set airline to appear all the time
 set timeoutlen=50	                        " Remove the pause when leaving insert mode
-let g:airline_theme='badwolf'	                " Load theme at startup
+" let g:airline_theme='badwolf'	                " Load theme at startup
+let g:airline_theme='tomorrow'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -117,17 +120,18 @@ Plugin 'jiangmiao/auto-pairs'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'honza/vim-snippets'                     " Load Snippets engine used by ultisnips
-Plugin 'SirVer/ultisnips'                       " Track the engine
+" Plugin 'honza/vim-snippets'                     " Load Snippets engine used by ultisnips
+" Plugin 'SirVer/ultisnips'                       " Track the engine
 " Trigger configuration
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                " required for Vundle
 filetype plugin indent on	                " required for Vundle
+set omnifunc=syntaxcomoplete#Complete           " enable built-in Omni completion
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
