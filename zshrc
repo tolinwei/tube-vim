@@ -5,7 +5,8 @@ source ~/.bashrc
 # For linux
 # export ZSH=/home/linwei/.oh-my-zsh
 # For OS X
-export ZSH=/Users/linwei/.oh-my-zsh
+# export ZSH=/Users/linwei/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
