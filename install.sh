@@ -1,22 +1,27 @@
 #!/bin/bash
-
 ################################################################################
 # Setup dev env from within this repo
-# Install brew, git, wget if run on Mac
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"t
-# brew install git
-# brew install wget
+# Install iTerm2 before executing this installation script
 ################################################################################
-# Backup existing Vim settings if any exists
-if [ -e .vimrc ]; then mv .vimrc .vimrc-bak; fi
+PROJECT_NAME="dev-config"
+PROJECT_FOLDER="~/Projects"
+DOWNLOAD_FOLDER="~/Downloads"
+################################################################################
+# Install brew, git, wget for OS X
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"t
+brew install git
+brew install wget
+################################################################################
+# Backup existing Vim settings if any
+if [ -e .vimrc ]; then mv .vimrc .vimrc_bak; fi
 if [ -e .vim ]; then mv .vim .vim_bak; fi
 ################################################################################
-# Set up directorys
-mkdir -p ~/Projects
-mkdir -p ~/Downloads
+# Set up directories
+mkdir -p $PROJECT_FOLDER
+mkdir -p $DOWNLOAD_FOLDER
 ################################################################################
 # Copy configuration files
-cd ~/Projects/dev-env
+cd ~/Projects/$PROJECT_NAME
 cp tmux.conf ~/.tmux.conf
 cp bashrc ~/.bashrc
 mkdir -p ~/.vim/colors
@@ -32,7 +37,7 @@ cd vim74
 ./configure --with-features=huge
 make && sudo make install
 ################################################################################
-# Install oh-my-zsh, may need to mannually change later
+# Install oh-my-zsh, may need to mannually shell change later
 # the content of install.sh is not compatible with ZSH, it must be excuted under /bin/bash
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 ################################################################################
@@ -59,4 +64,7 @@ cd tmux-1.9a
 LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && sudo make install  # sudo required
 ################################################################################
-
+# Import terminal color schema for iTerm2
+cd ~/Projects/$PROJECT_NAME
+open gruvbox-dark.itermcolors
+################################################################################

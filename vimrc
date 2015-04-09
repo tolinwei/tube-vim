@@ -18,6 +18,7 @@ set smartindent                                 " Copy indentation from previous
                                                 " , and add extra level in some cases
 set nowrap                                      " Don't wrap lines
 set hlsearch
+set cursorline
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -53,7 +54,7 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'bling/vim-airline'
+Plugin 'tolinwei/vim-airline'
 """"""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2	                        " Set airline to appear all the time
 set timeoutlen=50	                        " Remove the pause when leaving insert mode
