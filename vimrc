@@ -120,18 +120,30 @@ Plugin 'jiangmiao/auto-pairs'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Plugin 'honza/vim-snippets'                     " Load Snippets engine used by ultisnips
-" Plugin 'SirVer/ultisnips'                       " Track the engine
-" Trigger configuration
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsJumpForwardTrigger="<c-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+Plugin 'ervandew/supertab'
+""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:SuperTabDefaultCompletionType = "<C-n>"	" Naviagete the completion menu from top to bottom
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin 'scrooloose/syntastic'	                " not suitable for benzene
+""""""""""""""""""""""""""""""""""""""""""""""""
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                " required for Vundle
 filetype plugin indent on	                " required for Vundle
-set omnifunc=syntaxcomoplete#Complete           " enable built-in Omni completion
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

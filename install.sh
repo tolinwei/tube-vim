@@ -11,6 +11,8 @@ ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 ################################################################################
 # Install brew, git, wget for OS X
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"t
+brew update
+brew upgrade
 brew install git
 brew install wget
 ################################################################################
@@ -35,8 +37,17 @@ cp zshrc ~/.zshrc
 cd $DOWNLOAD_FOLDER
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 tar jxvf vim-7.4.tar.bz2
-cd vim74
+cd vim74/
+brew install lua
 ./configure --with-features=huge
+make && sudo make install
+################################################################################
+# Install Exuberant Ctags to support tagbar (or omni-complete if used)
+cd $DOWNLOAD_FOLDER
+wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+tar zxvf ctags-5.8.tar.gz
+cd ctags-5.8
+./configure
 make && sudo make install
 ################################################################################
 # Install oh-my-zsh, may need to mannually shell change later
@@ -70,3 +81,4 @@ make && sudo make install  # sudo required
 cd $PROJECT_FOLDER$PROJECT_NAME
 open gruvbox-dark.itermcolors
 ################################################################################
+
