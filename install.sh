@@ -10,7 +10,7 @@ VIM_COLOR_FOLDER=~/.vim/colors/
 ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 ################################################################################
 # Install brew, git, wget for OS X
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"t
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew upgrade
 brew install git
@@ -21,6 +21,7 @@ if [ -e .vimrc ]; then mv .vimrc .vimrc_bak; fi
 if [ -e .vim ]; then mv .vim .vim_bak; fi
 ################################################################################
 # Set up directories
+cd ~/
 mkdir -p $PROJECT_FOLDER
 mkdir -p $DOWNLOAD_FOLDER
 ################################################################################
