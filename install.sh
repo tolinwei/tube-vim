@@ -30,7 +30,7 @@ cp tmux.conf ~/.tmux.conf
 cp bashrc ~/.bashrc
 mkdir -p $VIM_COLOR_FOLDER
 cp gruvbox.vim $VIM_COLOR_FOLDER
-cp tjkirch-yroot.zsh-theme $ZSH_THEME_FOLDER
+# cp tjkirch-yroot.zsh-theme $ZSH_THEME_FOLDER
 cp zshrc ~/.zshrc
 ################################################################################
 # Install Vim of version 7.4 from source code
