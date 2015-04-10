@@ -9,6 +9,9 @@ DOWNLOAD_FOLDER=~/Downloads/
 VIM_COLOR_FOLDER=~/.vim/colors/
 ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 ################################################################################
+# Install gcc compiler for OS X
+xcode-select --install
+################################################################################
 # Install brew, git, wget for OS X
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
