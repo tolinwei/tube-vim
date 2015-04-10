@@ -2,10 +2,6 @@ source ~/.bashrc
 
 # Path to your oh-my-zsh installation.
 
-# For linux
-# export ZSH=/home/linwei/.oh-my-zsh
-# For OS X
-# export ZSH=/Users/linwei/.oh-my-zsh
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.

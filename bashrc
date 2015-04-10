@@ -16,36 +16,12 @@ export TERM=xterm-256color
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# for virtualenv
-export WORKON_HOME=~/Projects/Envs
-# source /usr/local/bin/virtualenvwrapper.sh
-
-# for Elasticsearch
-export ES_HOME=/usr/local/Cellar/elasticsearch/1.3.4
-export ES_PLUGIN=/usr/local/var/lib/elasticsearch/plugins
-
-# for MySQL
-alias mysql="/usr/local/mysql-5.6.20-osx10.8-x86_64/bin/mysql"
-
 # for Git
-git config --global user.name "Wei Lin"
-git config --global user.email "linwei@yahoo-inc.com"
+git config --global user.name "<put-your-name-here>"
+git config --global user.email "<put-your-email-here>"
 git config --global color.ui true
 
 # for Vimpager, needs to be installed mannually from Github repo
 export PAGER=/usr/local/bin/vimpager
 alias less=$PAGER
 alias zless=$PAGER
-
-# for Benzene
-export JAVA_HOME=/home/y
-alias dev="ssh thenagain.corp.ne1.yahoo.com"
-alias ut="ssh uranium-gw.tan.ygrid.yahoo.com"
-alias zt="ssh zanium-gw.tan.ygrid.yahoo.com"
-alias cb="ssh cobalt-gw.blue.ygrid.yahoo.com"
-alias ut-launcher="ssh dp-fetlbenzene-launch-dev1.data.ne1.yahoo.com"
-alias cb-launcher="ssh dp-fetlbenzene-launch-dev1.data.gq1.yahoo.com"
-alias bz="cd ~/Projects/benzene"
-
-# Enter Project directory after SSH
-cd ~/Projects
