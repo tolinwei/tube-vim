@@ -46,7 +46,7 @@ echo ## Copying configuration files for tmux, bash, zhs and coloe scheme for Vim
 echo ###########################################################################
 cd $PROJECT_FOLDER$PROJECT_NAME
 cp tmux.conf ~/.tmux.conf
-cp bashrc ~/.bashrc
+cat bashrc >> ~/.bashrc
 mkdir -p $VIM_COLOR_FOLDER
 cp gruvbox.vim $VIM_COLOR_FOLDER
 cp zshrc ~/.zshrc
