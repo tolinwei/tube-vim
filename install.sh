@@ -40,7 +40,7 @@ cp zshrc ~/.zshrc
 # Install Vim of version 7.4 from source code
 cd $DOWNLOAD_FOLDER
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-tar jxvf vim-7.4.tar.bz2
+tar jxf vim-7.4.tar.bz2
 cd vim74/
 brew install lua
 ./configure --with-features=huge
@@ -49,7 +49,7 @@ make && sudo make install
 # Install Exuberant Ctags to support tagbar (or omni-complete if used)
 cd $DOWNLOAD_FOLDER
 wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-tar zxvf ctags-5.8.tar.gz
+tar zxf ctags-5.8.tar.gz
 cd ctags-5.8
 ./configure
 make && sudo make install
@@ -69,14 +69,14 @@ vim +PluginInstall +qall
 cd $DOWNLOAD_FOLDER
 wget https://sourceforge.net/projects/levent/files/libevent/libevent-2.0/libevent-2.0.22-stable.tar.gz
 ./configure --prefix=/usr/local/
-tar zxvf libevent-2.0.22-stable.tar.gz
+tar zxf libevent-2.0.22-stable.tar.gz
 cd libevent-2.0.22-stable/
 ./configure --prefix=/usr/local/
 make && sudo make install  # sudo required
 
 cd $DOWNLOAD_FOLDER
 wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
-tar zxvf tmux-1.9a.tar.gz
+tar zxf tmux-1.9a.tar.gz
 cd tmux-1.9a
 LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && sudo make install  # sudo required
