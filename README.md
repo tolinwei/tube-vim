@@ -1,7 +1,7 @@
 dev-config
 ============
 
-Configuration for setting up dev environment.
+Configuration for setting up shell dev environment.
 
 ## Preview
 
