@@ -4,7 +4,7 @@ echo "
 ## Seting up advanced shell environment from within this repo
 ## Please install iTerm2 before executing this script
 ###########################################################################"
-echo
+
 echo "
 ###########################################################################
 ## Defining folder variables
@@ -20,7 +20,7 @@ echo "
 ## Please click 'Install' on the popup window
 ###########################################################################"
 xcode-select --install
-echo
+
 echo "
 ###########################################################################
 ## Installing brew, git, wget for OS X
@@ -30,14 +30,14 @@ brew update
 brew upgrade
 brew install git
 brew install wget
-echo
+
 echo "
 ###########################################################################
 ## Backing up existing Vim settings if any
 ###########################################################################"
 if [ -e .vimrc ]; then mv .vimrc .vimrc_bak; fi
 if [ -e .vim ]; then mv .vim .vim_bak; fi
-echo
+
 echo "
 ###########################################################################
 ## Setting up directories
@@ -45,7 +45,7 @@ echo "
 cd ~/
 mkdir -p $PROJECT_FOLDER
 mkdir -p $DOWNLOAD_FOLDER
-echo
+
 echo "
 ###########################################################################
 ## Copying configuration files for tmux, bash, zhs and coloe scheme for Vim
@@ -56,7 +56,7 @@ cat bashrc >> ~/.bashrc
 mkdir -p $VIM_COLOR_FOLDER
 cp gruvbox.vim $VIM_COLOR_FOLDER
 cp zshrc ~/.zshrc
-echo
+
 echo "
 ###########################################################################
 ## Installing Vim 7.4 compiled from source code
@@ -68,7 +68,7 @@ cd vim74/
 brew install lua
 ./configure --with-features=huge
 make && sudo make install
-echo
+
 echo "
 ###########################################################################
 ## Installing Exuberant Ctags to support tagbar from source code
@@ -79,19 +79,19 @@ tar zxf ctags-5.8.tar.gz
 cd ctags-5.8
 ./configure
 make && sudo make install
-echo
+
 echo "
 ###########################################################################
 ## Installing oh-my-zsh, may need to mannually shell change later
 ###########################################################################"
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
-echo
+
 echo "
 ###########################################################################
 ## Installing Vundle for manegement of Vim plugins
 ###########################################################################"
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-echo
+
 echo "
 ###########################################################################
 ## Installing Vim plugins defined in vimrc
@@ -99,7 +99,7 @@ echo "
 cd $PROJECT_FOLDER$PROJECT_NAME
 cp vimrc ~/.vimrc
 vim +PluginInstall +qall
-echo
+
 echo "
 ###########################################################################
 ## Installing libevent as dependency of tmux
@@ -111,7 +111,7 @@ tar zxf libevent-2.0.22-stable.tar.gz
 cd libevent-2.0.22-stable/
 ./configure --prefix=/usr/local/
 make && sudo make install  # sudo required
-echo
+
 echo "
 ###########################################################################
 ## Installing tmux compiled from source code (libevent as dependency first)
@@ -122,7 +122,7 @@ tar zxf tmux-1.9a.tar.gz
 cd tmux-1.9a
 LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && sudo make install  # sudo required
-echo
+
 echo "
 ###########################################################################
 ## Importing color scheme for iTerm2
