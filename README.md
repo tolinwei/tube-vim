@@ -1,11 +1,11 @@
 dev-config
 ============
 
-Configuration for setting up dev environment.
+Configuration for setting up shell dev environment.
 
 ## Preview
 
-![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
+![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/d35155fe2a89954bee80b53518aefc817d2e77f7/preview/bashrc-pre.png)
 ![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 ![bashrc preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/java-pre.png)
 
