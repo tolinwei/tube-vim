@@ -18,17 +18,11 @@ echo "
 ## Installing Command Line Tools for OS X
 ## Please click 'Install' on the popup window
 ###########################################################################"
-xcode-select --install
 
 echo "
 ###########################################################################
 ## Installing brew, git, wget for OS X
 ###########################################################################"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
-brew install git
-brew install wget
 
 echo "
 ###########################################################################
