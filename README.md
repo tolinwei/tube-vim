@@ -5,8 +5,11 @@ Configuration for setting up dev environment.
 
 ## Preview
 
+- Java preview
 ![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
+- Shell preview
 ![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
+- bashrc preview
 ![bashrc preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/java-pre.png)
 
 ## Installation
