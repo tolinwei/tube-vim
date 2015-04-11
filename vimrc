@@ -111,8 +111,8 @@ let g:rbpt_max=16
 let g:rbpt_loadcmd_toggle=0
 au VimEnter * RainbowParenthesesToggle	        " Always on
 au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -123,18 +123,6 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 """"""""""""""""""""""""""""""""""""""""""""""""
 " let g:SuperTabDefaultCompletionType = "<C-n>"	" Naviagete the completion menu from top to bottom
-""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin 'scrooloose/syntastic'	                " not suitable for benzene
-""""""""""""""""""""""""""""""""""""""""""""""""
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
