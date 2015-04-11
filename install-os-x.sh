@@ -117,7 +117,8 @@ cd $DOWNLOAD_FOLDER
 wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
 tar zxf tmux-1.9a.tar.gz
 cd tmux-1.9a
-LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
+./configure  # Tested that only ./configure would be working
+# LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && sudo make install  # sudo required
 
 echo "
