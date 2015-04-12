@@ -14,3 +14,6 @@ Configuration for setting up shell dev environment.
 - Run `echo $SHELL` in iTerm2 to make sure you're using `bash`
 - Clone this project to anywhere locally, cd into it and then run `bash install-os-x.sh` under `bash` inside iTerm2
 
+## Why tube-vim
+I started this project when I was working for Yahoo! Inc. on a , which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I renamed it as tube-vim for a memorial.
+
