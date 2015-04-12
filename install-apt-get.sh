@@ -2,7 +2,10 @@
 echo "
 ###########################################################################
 ## Seting up advanced shell environment from within this repo
-## Please install iTerm2 before executing this script
+## Please install git using the following command to clone this repo
+##
+## sudo apt-get install git
+##
 ###########################################################################"
 
 echo "
@@ -19,17 +22,13 @@ echo "
 ## Installing Command Line Tools for OS X
 ## Please click 'Install' on the popup window
 ###########################################################################"
-xcode-select --install
-
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install build-essential
 echo "
 ###########################################################################
 ## Installing brew, git, wget for OS X
 ###########################################################################"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
-brew install git
-brew install wget
 
 echo "
 ###########################################################################
@@ -117,8 +116,7 @@ cd $DOWNLOAD_FOLDER
 wget http://downloads.sourceforge.net/tmux/tmux-1.9a.tar.gz
 tar zxf tmux-1.9a.tar.gz
 cd tmux-1.9a
-./configure  # Tested that only ./configure would be working
-# LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
+LDFLAGS="-L/usr/local/lib -Wl,-rpath=/usr/local/lib" ./configure --prefix=/usr/local
 make && sudo make install  # sudo required
 
 echo "

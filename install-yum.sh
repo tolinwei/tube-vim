@@ -13,6 +13,7 @@ PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 DOWNLOAD_FOLDER=~/Downloads/
 VIM_COLOR_FOLDER=~/.vim/colors/
 ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
+
 echo "
 ###########################################################################
 ## Installing Command Line Tools for OS X
@@ -57,7 +58,6 @@ cd $DOWNLOAD_FOLDER
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 tar jxf vim-7.4.tar.bz2
 cd vim74/
-brew install lua
 ./configure --with-features=huge
 make && sudo make install
 
