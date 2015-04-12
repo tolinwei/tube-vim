@@ -131,6 +131,7 @@ Bundle 'scrooloose/nerdcommenter'
 """"""""""""""""""""""""""""""""""""""""""""""""
 let mapleader="."	                        " http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
 set timeout timeoutlen=1500
+let NERDSpaceDelims=1	                        " Add extra space after comment symbol
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
