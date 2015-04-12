@@ -2,7 +2,11 @@
 echo "
 ###########################################################################
 ## Seting up advanced shell environment from within this repo
-## Please install iTerm2 before executing this script
+## Please install git using the following command in order to clone this repo
+##
+## sudo yum update
+## sudo yum install git
+##
 ###########################################################################"
 
 echo "
@@ -16,13 +20,13 @@ ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 
 echo "
 ###########################################################################
-## Installing Command Line Tools for OS X
+## Installing Command Line Tools for CentOS, Fedora, RHEL and etc.
 ## Please click 'Install' on the popup window
 ###########################################################################"
 
 echo "
 ###########################################################################
-## Installing brew, git, wget for OS X
+## Installing brew, git, wget for those OSs
 ###########################################################################"
 
 echo "

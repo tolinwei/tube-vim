@@ -2,8 +2,10 @@
 echo "
 ###########################################################################
 ## Seting up advanced shell environment from within this repo
-## Please install git using the following command to clone this repo
+## Please install git using the following command in order to clone this repo
 ##
+## sudo apt-get update
+## sudo apt-get upgrade
 ## sudo apt-get install git
 ##
 ###########################################################################"
@@ -19,7 +21,7 @@ ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 
 echo "
 ###########################################################################
-## Installing Command Line Tools for OS X
+## Installing Command Line Tools for Debian, Ubuntu, Linux Mint and etc.
 ## Please click 'Install' on the popup window
 ###########################################################################"
 sudo apt-get update
@@ -27,7 +29,7 @@ sudo apt-get upgrade
 sudo apt-get install build-essential
 echo "
 ###########################################################################
-## Installing brew, git, wget for OS X
+## Installing brew, git, wget for those OSs
 ###########################################################################"
 
 echo "
