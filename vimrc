@@ -130,6 +130,13 @@ Bundle 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
+Bundle 'scrooloose/nerdcommenter'
+""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader="."
+set timeout timeoutlen=1500
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                " required for Vundle
 filetype plugin indent on	                " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""
