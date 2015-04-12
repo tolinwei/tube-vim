@@ -1,7 +1,7 @@
-dev-config
+tube-vim
 ============
 
-Configuration for setting up shell dev environment.
+Configuration for setting up Vim development environment.
 
 ## Preview
 
