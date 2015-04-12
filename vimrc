@@ -68,9 +68,6 @@ Plugin 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>	                " NERDTree toggle
 " autocmd VimEnter * NERDTree | wincmd p	" Open NERDTree automatically when vim starts up
-                                                " Open NERDTree automatically when vim starts up with no files specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " let g:NERDTreeWinPos="right"	                " set right side NERDTree
 let g:NERDTreeWinSize=40
 """"""""""""""""""""""""""""""""""""""""""""""""
