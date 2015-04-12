@@ -22,15 +22,10 @@ ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 echo "
 ###########################################################################
 ## Installing Command Line Tools for Debian, Ubuntu, Linux Mint and etc.
-## Please click 'Install' on the popup window
 ###########################################################################"
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install build-essential
-echo "
-###########################################################################
-## Installing brew, git, wget for those OSs
-###########################################################################"
 
 echo "
 ###########################################################################

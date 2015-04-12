@@ -21,13 +21,10 @@ ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 echo "
 ###########################################################################
 ## Installing Command Line Tools for CentOS, Fedora, RHEL and etc.
-## Please click 'Install' on the popup window
 ###########################################################################"
-
-echo "
-###########################################################################
-## Installing brew, git, wget for those OSs
-###########################################################################"
+sudo yum update
+sudo yum groupinstall 'Development Tools'
+# sudo install gcc gcc-c++ openssl-devel
 
 echo "
 ###########################################################################
