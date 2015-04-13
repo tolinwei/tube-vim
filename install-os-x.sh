@@ -69,14 +69,10 @@ cp zshrc ~/.zshrc
 
 echo "
 ###########################################################################
-## Installing Vim 7.4 compiled from source code
+## Installing Vim 7.4 from brew
+## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ###########################################################################"
-cd $DOWNLOAD_FOLDER
-wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-tar jxf vim-7.4.tar.bz2
-cd vim74/
-./configure --with-features=huge
-make && sudo make install
+brew install vim --with-lua
 
 echo "
 ###########################################################################
