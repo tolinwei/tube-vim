@@ -19,7 +19,7 @@ set smartindent                                 " Copy indentation from previous
 set nowrap                                      " Don't wrap lines
 set hlsearch
 set cursorline
-set clipboard=unnamed                           " Make yank and pasge working between Vims
+set clipboard+=unnamed                           " Make yank and pasge working between Vims
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
