@@ -3,10 +3,7 @@ tube-vim
 
 **tube-vim** is a integrated Vim development environment that you can easily set up by cloning this repo and running a single bash script inside it. It includes decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both of Vim and [iTerm2](http://iterm2.com/) (if you're using OS X), best practical Vim setting with a bunch of must-have plugins managed by [Vundle](https://github.com/gmarik/Vundle.vim). The plugins used will be listed below.
 
-## Preview
 
-![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
-![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 
 ## Installation
 - Strongly recommend to install [iTerm2](https://iterm2.com/index.html) as Terminal replacement ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) if you're using OS X
@@ -19,7 +16,10 @@ tube-vim
 
 ## What's included
 
+## Preview
 
+![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
+![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 
 ## Why tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline project, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I renamed this as tube-vim for a memorial.
