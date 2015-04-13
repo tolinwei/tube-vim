@@ -14,7 +14,7 @@ tube-vim
 2. `sudo ./install-yum.sh` for *nix systems using yum as package management tools like CentOS, Fedora, RHEL and etc.
 3. `sudo ./install-apt-get.sh` for *nix using apt-get as PMT like Debian, Ubuntu, Linux Mint and etc.
 
-- If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. But since it's to build and compile from source code, potential problem would occur.
+- (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. But since it's to build and compile from source code, potential problem would occur.
 
 ## What's included
 
