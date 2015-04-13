@@ -7,7 +7,6 @@ Configuration for setting up Vim development environment.
 
 ![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
 ![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
-![bashrc preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/java-pre.png)
 
 ## Installation
 - Strongly recommend to install [iTerm2](https://iterm2.com/index.html) as Terminal replacement ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)), if you're using OS X
