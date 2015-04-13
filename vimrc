@@ -136,10 +136,6 @@ let NERDSpaceDelims=1	                        " Add extra space after comment sy
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'mhinz/vim-startify'
-""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                " required for Vundle
 filetype plugin indent on	                " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""
