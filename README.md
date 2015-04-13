@@ -30,7 +30,7 @@ tube-vim
 ![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 
 ## Why tube-vim
-I started this project when I was working on a Yahoo! Japan's audience data pipeline project, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I renamed this as tube-vim for a memorial.
+I started this project when I was working on a Yahoo! Japan's audience data pipeline project, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I renamed this as **tube-vim** for a memorial.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-vim)](https://github.com/igrigorik/ga-beacon)
 
