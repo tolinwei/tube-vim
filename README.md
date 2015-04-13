@@ -7,7 +7,7 @@ tube-vim
 
 ## Installation
 - Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement  if you're using OS X
-- Run `echo $SHELL` in iTerm2 to make sure you're using `bash`
+- Run `echo $SHELL` in terminal/iTerm2 to make sure you're using `bash`
 - Clone this project to anywhere locally, cd into it and then run `install-xxx.sh` script for you corresponding operating systems:
 
 1. `sudo ./install-os-x.sh` for OS X
