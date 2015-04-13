@@ -17,8 +17,8 @@ tube-vim
 - Clone this project to anywhere locally, cd into it and then run `install-xxx.sh` script for you corresponding operating systems:
 
 1. `sudo ./install-os-x.sh` for OS X
-2. `sudo ./install-yum.sh` for *nix systems using yum as package management tools like CentOS, Fedora, RHEL and etc.
-3. `sudo ./install-apt-get.sh` for *nix using apt-get as PMT like Debian, Ubuntu and etc.
+2. `sudo ./install-apt-get.sh` for *nix using apt-get as PMT like Debian, Ubuntu and etc.
+3. `sudo ./install-yum.sh` for *nix systems using yum as package management tools like CentOS, Fedora, RHEL and etc.
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. But since it's to build and compile from source code, potential problem would occur.
 
