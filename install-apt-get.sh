@@ -65,17 +65,6 @@ make && sudo make install
 
 echo "
 ###########################################################################
-## Installing Exuberant Ctags to support tagbar from source code
-###########################################################################"
-cd $DOWNLOAD_FOLDER
-wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-tar zxf ctags-5.8.tar.gz
-cd ctags-5.8
-./configure
-make && sudo make install
-
-echo "
-###########################################################################
 ## Installing oh-my-zsh, may need to mannually shell change later
 ###########################################################################"
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
