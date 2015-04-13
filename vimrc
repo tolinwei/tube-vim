@@ -61,6 +61,7 @@ set laststatus=2	                        " Set airline to appear all the time
 set timeoutlen=50	                        " Remove the pause when leaving insert mode
 " let g:airline_theme='badwolf'	                " Load theme at startup
 let g:airline_theme='tomorrow'
+let g:airline#extensions#tagbar#enabled=0	" Delay the startup of tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
