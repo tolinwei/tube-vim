@@ -54,10 +54,9 @@ mkdir -p $DOWNLOAD_FOLDER
 
 echo "
 ###########################################################################
-## Copying configuration files for tmux, bash, zhs and coloe scheme for Vim
+## Copying configuration files for bash, zhs and coloe scheme for Vim
 ###########################################################################"
 cd $PROJECT_FOLDER
-cp tmux.conf ~/.tmux.conf
 cat bashrc >> ~/.bashrc
 mkdir -p $VIM_COLOR_FOLDER
 cp gruvbox.vim $VIM_COLOR_FOLDER
