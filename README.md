@@ -24,9 +24,9 @@ Currently, I can only support for OS X by `install.sh`, there are files `install
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
 - Change the color scheme for Terminal or iTerm2 depends on which one you're using
-1. For Terminal
+    + For Terminal
 
-2. For iTerm2
+    + For iTerm2
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. Similarily, the successful compilation of tmux is not promised
 
