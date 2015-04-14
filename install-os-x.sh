@@ -12,14 +12,31 @@ echo "
 
 echo "
 ###########################################################################
-## Seting up advanced shell environment from within this repo
+## Seting up advanced Shell environment from within this repo
 ## Strongly recommend to install iTerm2 before executing this script
 ###########################################################################"
 
 echo "
 ###########################################################################
+## Installing brew, git, wget for OS X
+###########################################################################"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew upgrade
+brew install git
+brew install wget
+
+echo "
+###########################################################################
+## Cloning repot to home directories
+###########################################################################"
+git clone git@github.com:tolinwei/tube-vim.git ~/.tube-vim
+
+echo "
+###########################################################################
 ## Defining folder variables
 ###########################################################################"
+cd ~/.tube-vim
 PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 DOWNLOAD_FOLDER=~/Downloads/
 VIM_COLOR_FOLDER=~/.vim/colors/
@@ -31,16 +48,6 @@ echo "
 ## Please click 'Install' on the popup window
 ###########################################################################"
 xcode-select --install
-
-echo "
-###########################################################################
-## Installing brew, git, wget for OS X
-###########################################################################"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
-brew install git
-brew install wget
 
 echo "
 ###########################################################################
@@ -115,9 +122,10 @@ sudo make install
 
 echo "
 ###########################################################################
-## Importing color scheme for iTerm2
+## Importing color scheme for iTerm2 and terminal
 ## Please click 'OK' on the popup window
 ###########################################################################"
 cd $PROJECT_FOLDER
 open gruvbox-dark.itermcolors
+open gruvbox-dark.terminal
 
