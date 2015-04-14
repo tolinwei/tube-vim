@@ -7,7 +7,7 @@ tube-vim
     | |_| |_| | |_) |  __/_____\ V /| | | | | | |
     \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
 ```
-**tube-vim** is a integrated Vim development environment that you can easily set up by running a single command
+**tube-vim** is a integrated Vim development environment that you can easily set up by running a single command:
 ```
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
