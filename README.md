@@ -12,7 +12,7 @@ tube-vim
 Currently, I can only support for OS X by `install-os-x.sh`, there are files `install-apt-get.sh` and `install-yum.sh` inside thie repo that are intended for *nix operating systems, they're mostly working on newest distributions. However, due to so many of them, I don't have time to make sure they will be working all the time, pull request is welcomed.
 
 ## Installation
-- Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it
+- (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it
 - Run `echo $SHELL` in terminal/iTerm2 to make sure you're using `bash`
 - Clone this project to anywhere locally, cd into it and then run `./install-os-x.sh`
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. But since it's to build and compile from source code, potential problem would occur.
