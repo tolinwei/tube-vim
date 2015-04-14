@@ -15,8 +15,12 @@ Currently, I can only support for OS X by `install.sh`, there are files `install
 
 ## Installation
 - (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only listed [here](https://iterm2.com/features.html)
-- Run `echo $SHELL` in terminal/iTerm2 to make sure you're using `bash`
-- Clone this project to anywhere locally, cd into it and then run `./install-os-x.sh`
+- Run `echo $SHELL` in Terminal/iTerm2 to make sure you're using `bash`
+- Run the following command to install the environment automatically
+```
+
+```
+- (Optional) Change the color scheme for Terminal or iTerm2 depends on which one you're using
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. Similarily, the successful compilation of tmux is not promised
 
 ## What's included
