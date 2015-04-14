@@ -9,7 +9,7 @@ tube-vim
 ```
 **tube-vim** is a integrated Vim development environment that you can easily set up by cloning this repo and running a single bash script inside it. It includes decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both of Vim and [iTerm2](http://iterm2.com/) (if you're using OS X), best practical Vim setting with a bunch of must-have plugins managed by [Vundle](https://github.com/gmarik/Vundle.vim). The plugins used will be listed below.
 
-Currently, I can only support for OS X, there are `install-apt-get.sh` and `install-yum.sh` files inside thie repo that are intended to write for *nix operating systems, they're mostly working on newest distributions. However, due to so many of them, I don't have time to make sure they will be working all the time, pull request is welcomed.
+Currently, I can only support for OS X, there are `install-apt-get.sh` and `install-yum.sh` files inside thie repo that are intended for *nix operating systems, they're mostly working on newest distributions. However, due to so many of them, I don't have time to make sure they will be working all the time, pull request is welcomed.
 
 
 
