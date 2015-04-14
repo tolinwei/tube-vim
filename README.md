@@ -15,7 +15,6 @@ Currently, I can only support for OS X by `install.sh`, there are files `install
 
 ## Installation
 - (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only listed [here](https://iterm2.com/features.html)
-- Run `echo $SHELL` in Terminal/iTerm2 to make sure you're using `bash`
 - Run the following command to install the environment automatically
 ```
 
