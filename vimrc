@@ -192,7 +192,7 @@ inoremap <expr><C-l>     neocomplete#complete_common_string()
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Added a trailing ."\<TAB>" to make regular TAB be working normally
-inoremap <expr><TAB>  neocomplete#close_popup()."\<TAB>"
+inoremap <expr><TAB>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " AutoComplPop like behavior. (Choose first option in PUM by default)
