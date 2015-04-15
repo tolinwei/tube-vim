@@ -31,14 +31,15 @@ echo "
 ## Cloning repot to home directories
 ###########################################################################"
 rm -rf ~/.tube-vim/
-git clone git@github.com:tolinwei/tube-vim.git ~/.tube-vim
+git clone https://github.com/tolinwei/tube-vim.git ~/.tube-vim
 
 echo "
 ###########################################################################
 ## Defining folder variables
 ###########################################################################"
-cd ~/.tube-vim
+cd ~/.tube-vim/
 PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+echo $PROJECT_FOLDER
 DOWNLOAD_FOLDER=~/Downloads/
 VIM_COLOR_FOLDER=~/.vim/colors/
 ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
