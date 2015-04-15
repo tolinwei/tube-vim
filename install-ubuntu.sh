@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 echo "
 ###########################################################################
 ##           _         _                     _
@@ -13,22 +13,7 @@ echo "
 echo "
 ###########################################################################
 ## Seting up advanced shell environment from within this repo
-## Please install git using the following command in order to clone this repo
-##
-## sudo apt-get update
-## sudo apt-get upgrade
-## sudo apt-get install git
-##
 ###########################################################################"
-
-echo "
-###########################################################################
-## Defining folder variables
-###########################################################################"
-PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-DOWNLOAD_FOLDER=~/Downloads/
-VIM_COLOR_FOLDER=~/.vim/colors/
-ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 
 echo "
 ###########################################################################
@@ -36,7 +21,24 @@ echo "
 ###########################################################################"
 sudo apt-get update
 sudo apt-get upgrade
+sudo install git
 sudo apt-get install build-essential
+
+echo "
+###########################################################################
+## Cloning repot to home directories
+###########################################################################"
+git clone git@github.com:tolinwei/tube-vim.git ~/.tube-vim
+
+echo "
+###########################################################################
+## Defining folder variables
+###########################################################################"
+cd ~/.tube-vim
+PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+DOWNLOAD_FOLDER=~/Downloads/
+VIM_COLOR_FOLDER=~/.vim/colors/
+ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 
 echo "
 ###########################################################################
@@ -66,12 +68,36 @@ echo "
 ###########################################################################
 ## Installing Vim 7.4 compiled from source code
 ###########################################################################"
+# https://gist.github.com/jdewit/9818870
+# https://www.snip2code.com/Snippet/160269/Build-vim-7-4-with-lua-support---Ubuntu-
+# Remove previous installtions
+sudo apt-get remove vim vim-runtime vim-tyny vim-common
+# Install dependencies
+sudo apt-get install libncurses5-dev python-dev libperl-dev ruby-dev liblua5.2-dev
+# Fix liblua paths
+# Fix liblua paths
+sudo ln -s /usr/include/lua5.2 /usr/include/lua
+sudo ln -s /usr/lib/x86_64-linux-gnu/liblua5.2.so /usr/local/lib/liblua.so
+
 cd $DOWNLOAD_FOLDER
 wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
 tar jxf vim-7.4.tar.bz2
 cd vim74/
-./configure --with-features=huge
-make && sudo make install
+./configure --prefix=/usr     \
+    --enable-luainterp=yes    \
+    --enable-perlinterp=yes   \
+    --enable-pythoninterp=yes \
+    --enable-rubyinterp=yes   \
+    --enable-cscope           \
+    --disable-netbeans        \
+    --enable-multibyte        \
+    --enable-largefile        \
+    --enable-gui=no           \
+    --with-features=huge      \
+    --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu
+make VIMRUNTIMEDIR=/usr/share/vim/vim74
+sudo apt-get install checkinstall
+sudo checkinstall
 
 echo "
 ###########################################################################

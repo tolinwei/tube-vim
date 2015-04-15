@@ -3,9 +3,9 @@ alias ll="ls -l"
 alias la="ls -la"
 
 # promotion before every dangerous excution (removal, copy, moving)
-alias rm="rm -i"
-alias cp="cp -i"
-alias mv="mv -i"
+# alias rm="rm -i"
+# alias cp="cp -i"
+# alias mv="mv -i"
 
 # export CLICOLOR=1
 # export LSCOLORS=Exfxcxdxbxegedabagacad
