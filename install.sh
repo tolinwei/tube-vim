@@ -18,13 +18,17 @@ echo "
 
 echo "
 ###########################################################################
-## Installing brew, git, wget for OS X
+## Installing brew, git, wget for OS X if miss any
 ###########################################################################"
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-brew upgrade
-brew install git
-brew install wget
+which -s brew
+if [[ $? != 0 ]] ; then
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    brew update
+    brew upgrade
+fi
+which -s git || brew install git
+which -s wget || brew install wget
 
 echo "
 ###########################################################################
@@ -81,6 +85,10 @@ echo "
 ## Installing Vim 7.4 from brew
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ###########################################################################"
+brew install lua
+sudo chmod a+w /usr/local/include
+sudo chmod a+w /usr/local/lib/pkgconfig
+brew link lua
 brew install vim --with-lua
 
 echo "
