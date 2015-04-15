@@ -11,11 +11,11 @@ tube-vim
 ```
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
-It includes decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both of Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X), best practical Vim setting with a bunch of must-have plugins managed by [Vundle](https://github.com/gmarik/Vundle.vim). The plugins used will be listed and explained below.
+It includes decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal)/[gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X), best practical Vim setting with a bunch of must-have plugins managed by [Vundle](https://github.com/gmarik/Vundle.vim). The plugins used will be listed and explained below.
 
-Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility to bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot of new benefits [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility to bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot of new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
-Currently, I can only support for OS X by `install.sh`, there are files `install-apt-get.sh` and `install-yum.sh` inside thie repo that are intended for *nix operating systems, they're mostly working on newest distributions. However, due to so many of them, I don't have time to make sure they will be working all the time, pull request is welcomed.
+In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life ealier.
 
 ## Installation
 
@@ -37,9 +37,11 @@ wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - 
 
 ### For *nix
 
+(Working in Progress)
+
 ## What's included
 
-（To be editted）
+（To be Editted）
 
 ## Preview
 
