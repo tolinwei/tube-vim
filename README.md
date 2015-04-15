@@ -28,6 +28,7 @@ wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - 
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="500" />
     + For iTerm2
+    
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="600" />
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. Similarily, the successful compilation of tmux is not promised
