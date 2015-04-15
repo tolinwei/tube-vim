@@ -7,7 +7,7 @@ tube-vim
     | |_| |_| | |_) |  __/_____\ V /| | | | | | |
     \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
 ```
-**tube-vim** is a integrated Vim development environment that you can easily set up by running a single command:
+**tube-vim** is a integrated Shell development environment that you can easily set up by running a single command:
 ```
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
@@ -41,7 +41,7 @@ wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - 
 ![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 
 ## Why tube-vim
-I started this project when I was working on a Yahoo! Japan's audience data pipeline project, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
+I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-vim)](https://github.com/igrigorik/ga-beacon)
 
