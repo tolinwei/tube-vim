@@ -9,7 +9,7 @@ tube-vim
 ```
 **tube-vim** is a integrated Shell development environment that you can easily set up by running a single command:
 ```
-wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
+curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh | bash
 ```
 It includes best practical Vim setting with a bunch of must-have plugins managed by [Vundle](https://github.com/gmarik/Vundle.vim) and decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal)/[gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X), . The plugins used will be listed and explained below.
 
@@ -22,6 +22,10 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 ### For OS X
 - (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only listed [here](https://iterm2.com/features.html)
 - Run the following command to install the environment automatically
+```
+curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh | bash
+```
+If you got *wget* installed somehow, you can also run the following command to start the installation:
 ```
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
