@@ -25,12 +25,15 @@ wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - 
 ```
 - Change the color scheme for Terminal or iTerm2 depends on which one you're using
     + For Terminal
-
+    
+        <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="500" />
     + For iTerm2
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen*, you can run `sudo ./install-tmux.sh` to get it set up. Similarily, the successful compilation of tmux is not promised
 
 ## What's included
+
+（To be editted）
 
 ## Preview
 
