@@ -22,10 +22,12 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 ### For OS X
 - (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only listed [here](https://iterm2.com/features.html)
 - Run the following command to install the environment automatically
+#### Using curl
 ```
 curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh | bash
 ```
 If you got *wget* installed somehow, you can also run the following command to start the installation:
+#### Using wget
 ```
 wget https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh -O - | bash
 ```
