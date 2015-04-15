@@ -7,6 +7,13 @@ PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}"  )" && pwd  )
 
 echo "
 ###########################################################################
+## Backing up existing tmux settings if any
+###########################################################################"
+cd ~/
+if [ -e .tmux.conf ]; then mv .tmux.conf .tmux.conf_bak; fi
+
+echo "
+###########################################################################
 ## Copying configuration files for tmux
 ###########################################################################"
 cd $PROJECT_FOLDER
