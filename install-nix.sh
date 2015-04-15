@@ -45,6 +45,7 @@ echo "
 ###########################################################################
 ## Backing up existing Vim settings if any
 ###########################################################################"
+cd ~/
 if [ -e .vimrc ]; then mv .vimrc .vimrc_bak; fi
 if [ -e .vim ]; then mv .vim .vim_bak; fi
 
