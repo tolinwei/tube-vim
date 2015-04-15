@@ -7,8 +7,6 @@ alias la="ls -la"
 # alias cp="cp -i"
 # alias mv="mv -i"
 
-# export CLICOLOR=1
-# export LSCOLORS=Exfxcxdxbxegedabagacad
 # to make vim colorscheme works under tmux
 export TERM=xterm-256color
 
