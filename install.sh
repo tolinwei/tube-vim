@@ -30,6 +30,7 @@ echo "
 ###########################################################################
 ## Cloning repot to home directories
 ###########################################################################"
+rm -rf ~/.tube-vim/
 git clone git@github.com:tolinwei/tube-vim.git ~/.tube-vim
 
 echo "
