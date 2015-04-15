@@ -84,10 +84,13 @@ echo "
 ###########################################################################
 ## Installing Vim 7.4 from brew
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
+## Needs to restart shell session to make installation works
 ###########################################################################"
 brew install lua
-sudo chmod a+w /usr/local/include
-sudo chmod a+w /usr/local/lib/pkgconfig
+# not sure about the directory priviledge
+# looking for re-appearance of situation
+#sudo chmod a+w /usr/local/include
+#sudo chmod a+w /usr/local/lib/pkgconfig
 brew link lua
 brew install vim --with-lua
 
@@ -104,15 +107,17 @@ make && sudo make install
 
 echo "
 ###########################################################################
-## Installing oh-my-zsh, may need to mannually shell change later
+## Installing oh-my-zsh, may need to mannually change shell later
 ###########################################################################"
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+if [ ! -d ~/.oh-my-zsh ]; then
+    wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 
 echo "
 ###########################################################################
 ## Installing Vundle for manegement of Vim plugins
 ###########################################################################"
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "
 ###########################################################################
