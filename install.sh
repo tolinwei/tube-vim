@@ -17,11 +17,21 @@ echo "
 
 echo "
 ################################################################################
+## Defining directory variables
+################################################################################"
+HOME_DIR=~/
+cd ${HOME_DIR}.tube-vim/
+PROJECT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+DOWNLOAD_DIR=${HOME_DIR}Downloads/
+VIM_COLOR_DIR=${HOME_DIR}.vim/colors/
+ZSH_THEME_DIR=${HOME_DIR}.oh-my-zsh/themes/
+
+echo "
+################################################################################
 ## Installing brew, git, wget for OS X if miss any
 ################################################################################"
 which -s brew
-if [[ $? != 0 ]]
-then
+if [[ $? != 0 ]] ; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     brew update
@@ -34,18 +44,8 @@ echo "
 ################################################################################
 ## Cloning repot to home directories
 ################################################################################"
-rm -rf ~/.tube-vim/
+rm -rf ${HOME_DIR}.tube-vim/
 git clone https://github.com/tolinwei/tube-vim.git ~/.tube-vim
-
-echo "
-################################################################################
-## Defining folder variables
-################################################################################"
-cd ~/.tube-vim/
-PROJECT_FOLDER=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-DOWNLOAD_FOLDER=~/Downloads/
-VIM_COLOR_FOLDER=~/.vim/colors/
-ZSH_THEME_FOLDER=~/.oh-my-zsh/themes/
 
 echo "
 ################################################################################
@@ -58,14 +58,12 @@ echo "
 ################################################################################
 ## Backing up existing Vim settings if any
 ################################################################################"
-cd ~/
-if [ -e .vimrc ]
-then
+cd $HOME_DIR
+if [ -e .vimrc ] ; then
     rm -f .vimrc_bak
     mv .vimrc .vimrc_bak
 fi
-if [ -d .vim ]
-then
+if [ -d .vim ] ; then
     rm -rf .vim_bak
     mv .vim .vim_bak
 fi
@@ -74,18 +72,18 @@ echo "
 ################################################################################
 ## Setting up directories
 ################################################################################"
-cd ~/
-mkdir -p $DOWNLOAD_FOLDER
+cd $HOME_DIR
+mkdir -p $DOWNLOAD_DIR
 
 echo "
 ################################################################################
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
-cd $PROJECT_FOLDER
-cat bashrc >> ~/.bashrc
-mkdir -p $VIM_COLOR_FOLDER
-cp gruvbox.vim $VIM_COLOR_FOLDER
-cp zshrc ~/.zshrc
+cd $PROJECT_DIR
+cat bashrc >> ${HOME_DIR}.bashrc
+mkdir -p $VIM_COLOR_DIR
+cp gruvbox.vim $VIM_COLOR_DIR
+cp zshrc ${HOME_DIR}.zshrc
 
 echo "
 ################################################################################
@@ -109,9 +107,8 @@ echo "
 ## Installing Exuberant Ctags to support tagbar from source code
 ################################################################################"
 CTAGS_DIR=`which ctags`
-if [ $CTAGS_DIR != '/usr/local/bin/ctags' ]
-then
-    cd $DOWNLOAD_FOLDER
+if [ $CTAGS_DIR != '/usr/local/bin/ctags' ] ; then
+    cd $DOWNLOAD_DIR
     wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
     tar zxf ctags-5.8.tar.gz
     cd ctags-5.8
@@ -123,7 +120,7 @@ echo "
 ################################################################################
 ## Installing oh-my-zsh, may need to mannually change shell later
 ################################################################################"
-if [ ! -d ~/.oh-my-zsh ]; then
+if [ ! -d ${HOME_DIR}.oh-my-zsh ]; then
     wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 fi
 
@@ -131,23 +128,23 @@ echo "
 ################################################################################
 ## Installing Vundle for manegement of Vim plugins
 ################################################################################"
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-    git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d ${HOME_DIR}.vim/bundle/Vundle.vim ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git ${HOME_DIR}.vim/bundle/Vundle.vim
 fi
 
 echo "
 ################################################################################
 ## Installing Vim plugins defined in vimrc
 ################################################################################"
-cd $PROJECT_FOLDER
-cp vimrc ~/.vimrc
-vim +PluginInstall +qa
+cd $PROJECT_DIR
+cp vimrc ${HOME_DIR}.vimrc
+vim -u ${HOME_DIR}.vimrc - +PluginInstall +qall
 
 echo "
 ################################################################################
 ## Installing vimcat
 ################################################################################"
-cd $DOWNLOAD_FOLDER
+cd $DOWNLOAD_DIR
 git clone git://github.com/rkitover/vimpager
 cd vimpager
 sudo make install
@@ -157,7 +154,7 @@ echo "
 ## Importing color scheme for iTerm2 and terminal
 ## Please click 'OK' on the popup window
 ################################################################################"
-cd $PROJECT_FOLDER
+cd $PROJECT_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 
