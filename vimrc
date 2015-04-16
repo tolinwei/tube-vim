@@ -157,7 +157,7 @@ nnoremap <F4> :set nonumber!<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins used in neocomplete
-Plugin 'vim-script/javacomplete'
+Plugin 'tolinwei/javacomplete'
 Plugin 'c9s/perlomni.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
