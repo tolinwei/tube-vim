@@ -80,6 +80,8 @@ echo "
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
 cd $PROJECT_DIR
+echo "PROJECT_DIR"
+echo $PROJECT_DIR
 cat bashrc >> ${HOME_DIR}.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
