@@ -139,7 +139,7 @@ echo "
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}.vimrc
 SYSTEM_SHELL=$SHELL
-export SHELL='bin/sh'
+export SHELL=/bin/bash
 vim +PluginInstall +qa
 export SHELL=$SYSTEM_SHELL
 
