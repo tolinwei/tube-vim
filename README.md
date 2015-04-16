@@ -17,6 +17,12 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 
 In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life ealier.
 
+## Preview
+
+![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
+![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
+![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
+
 ## Installation
 
 ### For OS X
@@ -35,23 +41,41 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen* ([Screen User's Mannual](https://www.gnu.org/software/screen/manual/screen.html)), you can run
 ```
-bash ./.tube-vim/install-tmux.sh
+bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-tmux.sh)
 ```
-to get it set up. Similarily, the successful compilation of tmux is not promised
+to get it set up. Since it needs some dependencies, the successful compilation of tmux is not promised
 
 ### For *nix
 **Prerequisite**
 
-(Working in Progress)
-
+- If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
+    + Have [lua](http://www.lua.org/) installed in your system. It is normally included in system's package source and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion
+    + Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
+    + 
+        ```
+        wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+        tar jxf vim-7.4.tar.bz2
+        cd vim74/
+        ./configure --prefix=/usr/loca/ --with-feature=huge --with-lua
+        make && sudo make install
+        ```
+        
+    + Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+    
+        ```
+        sudo apt-get update
+        sudo apt-get upgrade
+        sudo apt-get install wget git
+        sudo apt-get install build-essential
+        ```
+        
+- Then boom! you can just use the similar command to start the installation
+```
+bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
+```
 ## What's included
 
 （To be Editted）
-
-## Preview
-
-![Java preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/bashrc-pre.png)
-![shell preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/shell-pre.png)
 
 ## Why tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
