@@ -9,6 +9,7 @@ colorscheme gruvbox
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General setting	                            " http://vim.wikia.com/wiki/Indenting_source_code
 set number
+nnoremap <F4> :set nonumber!<CR>
 set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4		                        " Set it the same sa shiftwidth when using SPACE indention
@@ -148,14 +149,6 @@ let NERDSpaceDelims=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin 'myusuf3/numbers.vim'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:numbers_exclude=['tagbar', 'nerdtree']
-nnoremap <F3> :NumbersToggle<CR>
-nnoremap <F4> :set nonumber!<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins used in neocomplete
 Plugin 'tolinwei/javacomplete'
 Plugin 'c9s/perlomni.vim'
@@ -231,12 +224,12 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call vundle#end()		                        " required for Vundle
 filetype plugin indent on	                    " required for Vundle
-""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape between insert and normal mode in iTerm2.app
