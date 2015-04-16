@@ -17,6 +17,12 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 
 In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life ealier.
 
+## Preview
+
+![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
+![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
+![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
+
 ## Installation
 
 ### For OS X
@@ -47,12 +53,6 @@ to get it set up. Similarily, the successful compilation of tmux is not promised
 ## What's included
 
 （To be Editted）
-
-## Preview
-
-![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
-![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
-![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
 
 ## Why tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
