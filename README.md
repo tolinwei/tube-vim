@@ -41,7 +41,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 
 - (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen* ([Screen User's Mannual](https://www.gnu.org/software/screen/manual/screen.html)), you can run
 ```
-bash ./.tube-vim/install-tmux.sh
+bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-tmux.sh)
 ```
 to get it set up. Since it needs some dependencies, the successful compilation of tmux is not promised
 
