@@ -56,7 +56,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
         wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
         tar jxf vim-7.4.tar.bz2
         cd vim74/
-        ./configure --prefix=/usr/loca/ --with-feature=huge --with-lua
+        ./configure --prefix=/usr/local/ --with-features=huge --enable-luainterp
         make && sudo make install
         ```
         
