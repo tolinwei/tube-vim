@@ -11,7 +11,7 @@ tube-vim
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
-It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim) and decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) and [gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal)/[gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X), . The plugins used will be listed and explained below.
+It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal)/[gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X), . The plugins used will be listed and explained below.
 
 Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility to bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot of new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
