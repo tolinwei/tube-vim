@@ -49,7 +49,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 **Prerequisite**
 
 - If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
-    + Have [lua](http://www.lua.org/) installed in your system. It is normally included in system's package source abd used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion
+    + Have [lua](http://www.lua.org/) installed in your system. It is normally included in system's package source and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion
     + Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
     + 
         ```
