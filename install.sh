@@ -17,6 +17,13 @@ echo "
 
 echo "
 ################################################################################
+## Cloning repot to home directories
+################################################################################"
+rm -rf ${HOME_DIR}.tube-vim/
+git clone https://github.com/tolinwei/tube-vim.git ${HOME_DIR}.tube-vim
+
+echo "
+################################################################################
 ## Defining directory variables
 ################################################################################"
 HOME_DIR=~/
@@ -39,13 +46,6 @@ else
 fi
 which -s git || brew install git
 which -s wget || brew install wget
-
-echo "
-################################################################################
-## Cloning repot to home directories
-################################################################################"
-rm -rf ${HOME_DIR}.tube-vim/
-git clone https://github.com/tolinwei/tube-vim.git ${HOME_DIR}.tube-vim
 
 echo "
 ################################################################################
