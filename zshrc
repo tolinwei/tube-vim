@@ -52,7 +52,7 @@ plugins=(ls z d sudo git tmux)
 
 # User configuration
 
-export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/linwei/bin:/home/linwei/bin"
+export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
