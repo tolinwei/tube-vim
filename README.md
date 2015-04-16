@@ -80,6 +80,12 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 ## Why tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
 
+## Feedback, please!
+
+If you use this repo, please start it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
+
+Thanks you for enjoying tube-vim.
+
 ## License
 
 Copyright © [Wei Lin](http://www.linkedin.com/in/tolinwei). Distributed under the same terms as Vim itself. See `:help license`.
