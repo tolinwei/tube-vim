@@ -138,7 +138,8 @@ echo "
 ################################################################################"
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}.vimrc
-vim +PluginInstall
+export TERM=xterm-256color
+vim +PluginInstall +qall
 
 echo "
 ################################################################################
