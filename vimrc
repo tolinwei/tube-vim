@@ -7,14 +7,14 @@ colorscheme gruvbox
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General setting	                        " http://vim.wikia.com/wiki/Indenting_source_code
+" General setting	                            " http://vim.wikia.com/wiki/Indenting_source_code
 set number
 set backspace=indent,eol,start
 set tabstop=4
-set softtabstop=4		                " Set it the same sa shiftwidth when using SPACE indention
+set softtabstop=4		                        " Set it the same sa shiftwidth when using SPACE indention
                                                 " , default value is the same as 'tabstop'
-set shiftwidth=4		                " Affects when press >>, << or ==
-set expandtab			                " When press <TAB> key, insert 'softtabstop' amount of space
+set shiftwidth=4		                        " Affects when press >>, << or ==
+set expandtab			                        " When press <TAB> key, insert 'softtabstop' amount of space
 set smartindent                                 " Copy indentation from previous line
                                                 " , and add extra level in some cases
 set nowrap                                      " Don't wrap lines
@@ -51,10 +51,10 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible		                " be iMproved, required
-filetype off			                " Required, open later
-set rtp+=~/.vim/bundle/Vundle.vim	        " Set the runtime path to include Vundle and initialize
-call vundle#begin()	                        " Let Vundle manage Vundle, required
+set nocompatible		                        " be iMproved, required
+filetype off			                        " Required, open later
+set rtp+=~/.vim/bundle/Vundle.vim	            " Set the runtime path to include Vundle and initialize
+call vundle#begin()	                            " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -64,8 +64,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tolinwei/vim-airline'	                " forked repo to switch mode color of tomorrow theme
 """"""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2	                        " Set airline to appear all the time
-set timeoutlen=50	                        " Remove the pause when leaving insert mode
+set laststatus=2	                            " Set airline to appear all the time
+set timeoutlen=50	                            " Remove the pause when leaving insert mode
 " let g:airline_theme='badwolf'	                " Load theme at startup
 let g:airline_theme='tomorrow'
 let g:airline#extensions#tagbar#enabled=0
@@ -234,8 +234,8 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()		                " required for Vundle
-filetype plugin indent on	                " required for Vundle
+call vundle#end()		                        " required for Vundle
+filetype plugin indent on	                    " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
