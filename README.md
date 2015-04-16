@@ -73,7 +73,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
 ```
-## What's included
+## What's included and feature key mappings
 
 （To be Editted）
 
