@@ -139,7 +139,7 @@ echo "
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}.vimrc
 export TERM=xterm-256color
-vim +PluginInstall +qall
+vim - +PluginInstall +qall
 
 echo "
 ################################################################################
