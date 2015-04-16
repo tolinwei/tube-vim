@@ -51,21 +51,20 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 - If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
     1. Have [lua](http://www.lua.org/) installed in your system. It is normally included in system's package source abd used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion
     2. Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
-
-```
-wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-tar jxf vim-7.4.tar.bz2
-cd vim74/
-./configure --prefix=/usr/loca/ --with-feature=huge --with-lua
-make && sudo make install
-```
+        
+        wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+        tar jxf vim-7.4.tar.bz2
+        cd vim74/
+        ./configure --prefix=/usr/loca/ --with-feature=huge --with-lua
+        make && sudo make install
+        
     3. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
-```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install wget git
-sudo apt-get install build-essential
-```
+        
+        sudo apt-get update
+        sudo apt-get upgrade
+        sudo apt-get install wget git
+        sudo apt-get install build-essential
+        
 - Then boom! you can just use the similar command to start the installation
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
