@@ -111,6 +111,7 @@ echo "
 ###########################################################################"
 if [ ! -d ~/.oh-my-zsh ]; then
     wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+fi
 
 echo "
 ###########################################################################
@@ -118,6 +119,7 @@ echo "
 ###########################################################################"
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
     git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 
 echo "
 ###########################################################################
