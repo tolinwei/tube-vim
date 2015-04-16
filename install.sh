@@ -17,21 +17,20 @@ echo "
 
 echo "
 ################################################################################
-## Cloning repo to home directories
-################################################################################"
-rm -rf ${HOME_DIR}.tube-vim/
-git clone https://github.com/tolinwei/tube-vim.git ${HOME_DIR}.tube-vim
-
-echo "
-################################################################################
 ## Defining directory variables
 ################################################################################"
 HOME_DIR=~/
-cd ${HOME_DIR}.tube-vim/
-PROJECT_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+PROJECT_DIR=${HOME_DIR}.tube-vim/
 DOWNLOAD_DIR=${HOME_DIR}Downloads/
 VIM_COLOR_DIR=${HOME_DIR}.vim/colors/
 ZSH_THEME_DIR=${HOME_DIR}.oh-my-zsh/themes/
+
+echo "
+################################################################################
+## Cloning repo to home directories
+################################################################################"
+rm -rf $PROJECT_DIR
+git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 
 echo "
 ################################################################################
@@ -80,8 +79,6 @@ echo "
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
 cd $PROJECT_DIR
-echo "PROJECT_DIR"
-echo $PROJECT_DIR
 cat bashrc >> ${HOME_DIR}.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
@@ -140,10 +137,7 @@ echo "
 ################################################################################"
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}.vimrc
-SYSTEM_SHELL=$SHELL
-export SHELL=/bin/bash
 vim +PluginInstall +qa
-export SHELL=$SYSTEM_SHELL
 
 echo "
 ################################################################################
