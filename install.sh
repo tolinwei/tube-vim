@@ -45,7 +45,7 @@ echo "
 ## Cloning repot to home directories
 ################################################################################"
 rm -rf ${HOME_DIR}.tube-vim/
-git clone https://github.com/tolinwei/tube-vim.git ~/.tube-vim
+git clone https://github.com/tolinwei/tube-vim.git ${HOME_DIR}.tube-vim
 
 echo "
 ################################################################################
