@@ -150,7 +150,7 @@ let NERDSpaceDelims=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin 'myusuf3/numbers.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:numbers_exclude=['tagbar', 'nerdtree']
+" let g:numbers_exclude=['tagbar', 'nerdtree']
 nnoremap <F3> :NumbersToggle<CR>
 nnoremap <F4> :set nonumber!<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
