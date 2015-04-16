@@ -47,23 +47,18 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The begining of Vunble
-""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible		                        " be iMproved, required
 filetype off			                        " Required, open later
 set rtp+=~/.vim/bundle/Vundle.vim	            " Set the runtime path to include Vundle and initialize
 call vundle#begin()	                            " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'tolinwei/vim-airline'	                " forked repo to switch mode color of tomorrow theme
-""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2	                            " Set airline to appear all the time
 set timeoutlen=50	                            " Remove the pause when leaving insert mode
@@ -71,7 +66,6 @@ set timeoutlen=50	                            " Remove the pause when leaving in
 let g:airline_theme='tomorrow'
 let g:airline#extensions#tagbar#enabled=0
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'scrooloose/nerdtree'
