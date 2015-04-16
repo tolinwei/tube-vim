@@ -138,7 +138,10 @@ echo "
 ################################################################################"
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}.vimrc
-vim - +PluginInstall +qa!
+SYSTEM_SHELL=$SHELL
+export SHELL='bin/sh'
+vim +PluginInstall +qa
+export SHELL=$SYSTEM_SHELL
 
 echo "
 ################################################################################
