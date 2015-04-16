@@ -78,11 +78,11 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
 ```
-## What's included and feature key mappings
+## Major features and key mappings
 
 （To be Editted）
 
-## Why it is called tube-vim
+## Why it's called tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
 
 ## Feedback, please!
