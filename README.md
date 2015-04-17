@@ -1,12 +1,14 @@
 tube-vim
 ============
 ```
-    _         _                     _
+     _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \ / _ \____\ \ / / | '_ ` _ \
     | |_| |_| | |_) |  __/_____\ V /| | | | | | |
-    \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
+     \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
+         
 ```
+
 **tube-vim** is a integrated shell development environment that you can easily set up by running a single command:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
