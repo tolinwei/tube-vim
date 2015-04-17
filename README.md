@@ -18,10 +18,12 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life ealier.
 
 ## Preview
-
+- Default color scheme [gruvbox](https://github.com/morhetz/gruvbox) for Vim, iTerm2/Terminal
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
-![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
 ![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
+
+- Optional color scheme [Solarized](http://ethanschoonover.com/solarized)
+![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
 
 ## Installation
 
