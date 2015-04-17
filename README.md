@@ -22,11 +22,11 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
 ![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
 
-- Optional color scheme [Solarized dark](http://ethanschoonover.com/solarized)
+- Optional color scheme [Solarized Dark](http://ethanschoonover.com/solarized)
 ![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
 
-- Optional color scheme [Tomorrow-Night](https://github.com/chriskempson/tomorrow-theme)
-
+- Optional color scheme [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme)
+![tomorrow-night-eighties]()
 
 ## Installation
 
