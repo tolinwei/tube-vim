@@ -91,7 +91,7 @@ I started this project when I was working on a Yahoo! Japan's audience data pipe
 
 ## Feedback, please!
 
-If you use this repo, please start it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
+If you use this repo, please **start** it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
 
 Thanks you for using tube-vim, enjoy!
 
