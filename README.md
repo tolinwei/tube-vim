@@ -93,7 +93,7 @@ I started this project when I was working on a Yahoo! Japan's audience data pipe
 
 If you use this repo, please start it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
 
-Thanks you for enjoying tube-vim!
+Thanks you for using tube-vim, enjoy!
 
 ## License
 
