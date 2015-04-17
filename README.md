@@ -25,9 +25,6 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 - Optional color scheme [Solarized Dark](http://ethanschoonover.com/solarized)
 ![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
 
-- Optional color scheme [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme)
-![tomorrow-night-eighties]()
-
 ## Installation
 
 ### For OS X
