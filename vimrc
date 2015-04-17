@@ -9,7 +9,7 @@ colorscheme gruvbox
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General setting	                            " http://vim.wikia.com/wiki/Indenting_source_code
 set number
-nnoremap <F4> :set nonumber!<CR>
+nnoremap <F3> :set nonumber!<CR>
 set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4		                        " Set it the same sa shiftwidth when using SPACE indention

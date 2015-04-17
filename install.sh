@@ -83,6 +83,7 @@ cat bashrc >> ${HOME_DIR}.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 cp solorized.vim $VIM_COLOR_DIR
+cp tomorrow-night-eighties.vim $VIM_COLOR_DIR
 cp zshrc ${HOME_DIR}.zshrc
 
 echo "
@@ -91,7 +92,7 @@ echo "
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
 ################################################################################"
-brew install macvim --with-cscope --with-lua
+brew install macvim --with-lua
 brew linkapps macvim
 
 # not sure about the directory priviledge
@@ -158,7 +159,10 @@ cd $PROJECT_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 open solarized-dark.itermcolors
-open solarized-dark xterm-256color.terminal
+open solarized-dark-xterm-256color.terminal
+open tomorrow-night-eighties.itermcolors
+open tomorrow-night-eighties.terminal
+
 
 echo "
 ################################################################################
