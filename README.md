@@ -78,6 +78,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
         sudo apt-get install build-essential
         ```
         
+** Installation for *nix**
 - Then boom! You can just use the similar command to start the installation
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
