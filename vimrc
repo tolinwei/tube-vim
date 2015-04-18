@@ -4,38 +4,42 @@
 syntax on
 set background=dark
 colorscheme gruvbox
+" Optional color scheme, if you want to enable this, you need to:
+" 1. comment out line 6 of this file
+" 2. un-comment line 12 of this file
+" 3. Change the color scheme of your Terminal/iTerm 2 to corresponding theme
+
+" colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General setting	                            " http://vim.wikia.com/wiki/Indenting_source_code
+" General setting
 set number
 nnoremap <F3> :set nonumber!<CR>
-set backspace=indent,eol,start
-set tabstop=4
-set softtabstop=4		                        " Set it the same sa shiftwidth when using SPACE indention
-                                                " , default value is the same as 'tabstop'
-set shiftwidth=4		                        " Affects when press >>, << or ==
-set expandtab			                        " When press <TAB> key, insert 'softtabstop' amount of space
-set smartindent                                 " Copy indentation from previous line
-                                                " , and add extra level in some cases
-set nowrap                                      " Don't wrap lines
-set hlsearch
+set backspace=indent,eol,start                  " Enable backspace all the time
+set hlsearch                                    " Highlight search result"
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
-                                                " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Wrap settings
+" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+set nowrap                                      " Don't wrap lines
+
+" Indent setting, use 4 spaces for tab
+" http://vim.wikia.com/wiki/Indenting_source_code
+set expandtab			                        " When press <TAB> key, insert 'softtabstop' amount of space
+set softtabstop=4		                        " Set it the same as shiftwidth when using SPACE indention
+set shiftwidth=4		                        " Affects when press >>, << or ==
+set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
+
 " Folding
 set foldmethod=indent	                        " http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
 set foldlevelstart=20                           " files will be loaded with opend folds
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 80 words onwards as 'warning' and 120 words as 'danger'
 " For both industry standard (80 columns) and 120 columns above
 if exists('+colorcolumn')
@@ -43,14 +47,14 @@ if exists('+colorcolumn')
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
 endif
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The begining of Vunble
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The begining of Vunble
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible		                        " be iMproved, required
+set nocompatible		                        " be iMproved, required by Vundle
 filetype off			                        " Required, open later
 set rtp+=~/.vim/bundle/Vundle.vim	            " Set the runtime path to include Vundle and initialize
 call vundle#begin()	                            " Let Vundle manage Vundle, required
@@ -62,9 +66,8 @@ Plugin 'tolinwei/vim-airline'	                " forked repo to switch mode color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2	                            " Set airline to appear all the time
 set timeoutlen=50	                            " Remove the pause when leaving insert mode
-" let g:airline_theme='badwolf'	                " Load theme at startup
 let g:airline_theme='tomorrow'
-let g:airline#extensions#tagbar#enabled=0
+let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -73,13 +76,13 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 " Open NERDTree automatically when vim starts up
 autocmd VimEnter * NERDTree | wincmd p
-" Set NERDTree on right side, would be conflick with tagbar
-"let g:NERDTreeWinPos="right"
+" Set NERDTree on right side, would be conflict with tagbar
+" let g:NERDTreeWinPos="right"
+" Set NERDTree length
 let g:NERDTreeWinSize=30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-" Close all open buffers on entering a window if the only
-" buffer that's left is the NERDTree buffer
+" Close all open buffers on entering a window if the only buffer that's left is the NERDTree buffer
 function! s:CloseIfOnlyNerdTreeLeft()
   if exists("t:NERDTreeBufName")
     if bufwinnr(t:NERDTreeBufName) != -1
@@ -109,7 +112,7 @@ nmap <C-t> :TagbarToggle<CR>
 " Set width
 let g:tagbar_width=40
 " Open tagbar when open Vim with supported file/files
-"autocmd VimEnter * nested :call tagbar#autoopen(1)
+" autocmd VimEnter * nested :call tagbar#autoopen(1)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -196,7 +199,7 @@ inoremap <expr><Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 " AutoComplPop like behavior. (Choose first option in PUM by default)
-let g:neocomplete#enable_auto_select = 1
+let g:neocomplete#enable_auto_select=1
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -211,13 +214,13 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.php='[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c= [^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp='[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.perl='\h\w*->\h\w*\|\h\w*::'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
