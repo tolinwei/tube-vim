@@ -1,12 +1,14 @@
 tube-vim
 ============
 ```
-    _         _                     _
+     _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \ / _ \____\ \ / / | '_ ` _ \
     | |_| |_| | |_) |  __/_____\ V /| | | | | | |
-    \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
+     \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
+         
 ```
+
 **tube-vim** is a integrated shell development environment that you can easily set up by running a single command:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
@@ -24,9 +26,6 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 
 - Optional color scheme [Solarized Dark](http://ethanschoonover.com/solarized)
 ![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
-
-- Optional color scheme [Tomorrow Night Eighties](https://github.com/chriskempson/tomorrow-theme)
-![tomorrow-night-eighties]()
 
 ## Installation
 
@@ -79,6 +78,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
         sudo apt-get install build-essential
         ```
         
+__Installation for *nix__
 - Then boom! You can just use the similar command to start the installation
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
@@ -87,14 +87,14 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 
 （To be Editted）
 
-## Why it's called tube-vim
+## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
 
 ## Feedback, please!
 
-If you use this repo, please start it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
+If you use this repo, please **start** it on Github, this is a great way of getting feedback! The same as opening issues or pull requests.
 
-Thanks you for enjoying tube-vim!
+Thanks you for using tube-vim, enjoy!
 
 ## License
 
