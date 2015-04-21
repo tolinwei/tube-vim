@@ -17,7 +17,7 @@ It includes best practical Vim setting with a bunch of must-have plugins managed
 
 Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
-In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life ealier.
+In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life easier.
 
 ## Preview
 - Default color scheme [gruvbox](https://github.com/morhetz/gruvbox) for Vim, iTerm2/Terminal
