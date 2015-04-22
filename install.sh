@@ -41,7 +41,7 @@ if [[ $? != 0 ]] ; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
     brew update
-    brew upgrade
+    # brew upgrade
 fi
 which -s git || brew install git
 which -s wget || brew install wget
