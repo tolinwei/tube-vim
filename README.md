@@ -86,6 +86,62 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 ## Major features and key mappings
 
 （To be Editted）
+####Color Schemes
+We prepared two sets of color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) (refer to the screenshot above), which are all pretty fantastic and eye-protective for you. **Notes that** if you want to switch over from one to the other, remember to changev **both** Vim and Terminal/iTerm2's color theme, or there might be some conflict.
+
+The method of changing Vim color scheme is go to edit your `.vimrc`, keep either line 6 or line 12 un-commented and the other one commented. Then go to **Preferences...** of your Terminal (or iTerms), change the color as the installation process above.
+
+####Vundle
+**tube-vim** is using [Vundle](https://github.com/gmarik/Vundle.vim) as the plugin management tool, it allows you to kkep track of and configure your plugins right inside `.vimrc` file and you can download all the plugins in one command if you change your development environment, of course you can also update, clean conviniently.
+
+**feature commands**
+- Enter Vim and then run `:PluginInstall` to install plugins defined in your `.vimrc`
+- Run `vim +PluginInstall +qall` from shell for installation too
+- Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
+
+####vim-airline
+vim-airline is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the color scheme and make it more clear when switching between NORMAL mode and INSERT mode.
+
+####NERDTree
+[NERDTree](https://github.com/scrooloose/nerdtree) is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
+
+**feature shortcuts**
+
+- Control+n - Toggle NERDTree
+- Control+w then w - Switch between panes of Vim
+- Control+w then <left> - Switch to the left pane of Vim
+- Control+w then <right> - Switch to the right pane of Vim
+
+when your cursor is in NERDTree's pane
+- o - Open that file or expend that directory the cursor points to
+- R (Shift+r) - Refresh the tree, useful if files change outside of Vim
+- U (Shift+u) - Show upper level directory
+
+For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
+
+####vim-indent-guides
+**vim-indent-guides** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
+
+**feature shortcuts**
+
+- z then a - Fold or un-fold the code trunk, by the deepest level of indent guide
+
+####tagbar
+**Tagbar** is a Vim plugin that provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
+
+**shortcuts**
+
+- Control+t - Toggle Tagbar
+
+####rainbow_parentheses.vim
+
+####auto-pairs
+
+####accelerated-smooth-scroll
+
+####NERDCommenter
+
+####neocomplete.vim
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
