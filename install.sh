@@ -133,7 +133,7 @@ echo "
 ################################################################################
 ## Installing Vundle for manegement of Vim plugins
 ################################################################################"
-if [ ! -d ${HOME_DIR}.vim/bundle/Vundle.vim ]; then
+if [ ! -d ${HOME_DIR}.vim/bundle/Vundle.vim ] ; then
     git clone https://github.com/gmarik/Vundle.vim.git ${HOME_DIR}.vim/bundle/Vundle.vim
 fi
 

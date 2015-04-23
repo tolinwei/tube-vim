@@ -36,14 +36,17 @@ echo "
 ## Backing up existing Vim settings if any
 ################################################################################"
 cd $HOME_DIR
-if [ -e .vimrc ]; then
+if [ -e .vimrc ] ; then
     rm -f .vimrc_bak
     mv .vimrc .vimrc_bak
 fi
-if [ -d .vim ]; then
+if [ -d .vim ] ; then
     rm -rf .vim_bak
     mv .vim .vimrc_bak
 fi
+if [ -e .screenrc ] ; then
+    rm -f .screenrc
+    mv .screenrc .screenrc_bak
 
 echo "
 ################################################################################
