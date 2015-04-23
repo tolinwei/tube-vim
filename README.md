@@ -9,7 +9,7 @@ tube-vim
          
 ```
 
-**tube-vim** is a integrated shell development environment that you can easily set up by running a single command:
+**tube-vim** is a integrated shell development environment that you can easily set up by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
