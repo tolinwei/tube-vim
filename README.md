@@ -107,15 +107,15 @@ vim-airline is a super pretty lean & mean status/tabline that's light as air, wh
 
 **feature shortcuts**
 
-- Control+n - Toggle NERDTree
-- Control+w then w - Switch between panes of Vim
-- Control+w then \<left\> - Switch to the left pane of Vim
-- Control+w then \<right\> - Switch to the right pane of Vim
+- \<Control\>+n - Toggle NERDTree
+- \<Control\>+w then w - Switch between panes of Vim
+- \<Control\>+w then \<left\> - Switch to the left pane of Vim
+- \<Control\>+w then \<right\> - Switch to the right pane of Vim
 
 when your cursor is in NERDTree's pane
 - o - Open that file or expend that directory the cursor points to
-- R (Shift+r) - Refresh the tree, useful if files change outside of Vim
-- U (Shift+u) - Show upper level directory
+- R (\<Shift\>+r) - Refresh the tree, useful if files change outside of Vim
+- U (\<Shift\>+u) - Show upper level directory
 
 For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
@@ -131,13 +131,13 @@ For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07
 
 **feature shortcuts**
 
-- Control+t - Toggle Tagbar
+- \<Control\>+t - Toggle Tagbar
 
 ####- rainbow_parentheses.vim and auto-pairs
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
 
 ####- accelerated-smooth-scroll
-The default behavior of scrolling inside Vim would jump for the whole page (Control+f or Control+b) or half page instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
+The default behavior of scrolling inside Vim would jump for the whole page (\<Control\>+f or \<Control\>+b) or half page instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
 
 ####- NERDCommenter
 **[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
@@ -161,9 +161,9 @@ This is the most amazing part of those plugins! It increases the power of Vim si
 
 - \<Tab\> or \<Enter\> - Select the chosen option in popup menu
 - \<Up\> or \<Down\> - Move selected option in popup menu up or down 
-- Control+p or Control+n - The same as \<Up\> or \<Down\>
-- Control+e - Close the popup menu
-- Control+l - Enter the next letter of the chosen option in popup menu
+- \<Control\>+p or \<Control\>+n - The same as \<Up\> or \<Down\>
+- \<Control\>+e - Close the popup menu
+- \<Control\>+l - Enter the next letter of the chosen option in popup menu
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
