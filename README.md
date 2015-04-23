@@ -140,16 +140,23 @@ Complex code may come with multiple level of parenthesis and quote (includes but
 The default behavior of 
 
 ####NERDCommenter
+**[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
 
-Notes that not all the shortcuts listed in [official Github repo] are working, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
+**Notes** that not all the shortcuts listed in [official Github repo](https://github.com/scrooloose/nerdcommenter) are working for some reason, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
 
+**\<Leader\>** means `.` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
+
+- \<Leader\>+c+c - Comment the line(s) you selected
+- \<Leader\>+c+u - Un-comment the line(s) you selected
+- \<Leader\>+c+c - Toggle the comment status of selected line(s)
+- \<Leader\>+c+y - Same as <Leader>+c+c expect that the commented line(s) are yanked first
+- \<Leader\>+c+A - Add comment delimiter to the end of current line and go into INSERT mode
 
 ####neocomplete.vim
 This is the most amazing part of those plugins! 
 
 **feature shortcuts**
 
-- <Leader>+c+c - Comments the lines you selected
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
