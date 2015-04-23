@@ -99,10 +99,10 @@ The method of changing Vim color scheme is go to edit your `.vimrc`, keep either
 - Run `vim +PluginInstall +qall` from shell for installation too
 - Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
 
-####vim-airline
+####- vim-airline
 vim-airline is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
 
-####NERDTree
+####- NERDTree
 [NERDTree](https://github.com/scrooloose/nerdtree) is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
 
 **feature shortcuts**
