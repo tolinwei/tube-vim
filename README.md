@@ -100,7 +100,7 @@ The method of changing Vim color scheme is go to edit your `.vimrc`, keep either
 - Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
 
 ####vim-airline
-vim-airline is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the color scheme and make it more clear when switching between NORMAL mode and INSERT mode.
+vim-airline is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
 
 ####NERDTree
 [NERDTree](https://github.com/scrooloose/nerdtree) is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
@@ -129,19 +129,27 @@ For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07
 ####tagbar
 **Tagbar** is a Vim plugin that provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
 
-**shortcuts**
+**feature shortcuts**
 
 - Control+t - Toggle Tagbar
 
-####rainbow_parentheses.vim
-
-####auto-pairs
+####rainbow_parentheses.vim and auto-pairs
+Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], "")
 
 ####accelerated-smooth-scroll
+The default behavior of 
 
 ####NERDCommenter
 
+Notes that not all the shortcuts listed in [official Github repo] are working, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
+
+
 ####neocomplete.vim
+This is the most amazing part of those plugins! 
+
+**feature shortcuts**
+
+- <Leader>+c+c - Comments the lines you selected
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
