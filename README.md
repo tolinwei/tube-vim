@@ -86,12 +86,12 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 ## Major features and key mappings
 
 （To be Editted）
-####Color Schemes
+####- Color Schemes
 We prepared two sets of color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) (refer to the screenshot above), which are all pretty fantastic and eye-protective for you. **Notes that** if you want to switch over from one to the other, remember to changev **both** Vim and Terminal/iTerm2's color theme, or there might be some conflict.
 
 The method of changing Vim color scheme is go to edit your `.vimrc`, keep either line 6 or line 12 un-commented and the other one commented. Then go to **Preferences...** of your Terminal (or iTerms), change the color as the installation process above.
 
-####Vundle
+####- Vundle
 **tube-vim** is using [Vundle](https://github.com/gmarik/Vundle.vim) as the plugin management tool, it allows you to kkep track of and configure your plugins right inside `.vimrc` file and you can download all the plugins in one command if you change your development environment, of course you can also update, clean conviniently.
 
 **feature commands**
@@ -119,30 +119,32 @@ when your cursor is in NERDTree's pane
 
 For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
-####vim-indent-guides
+####- vim-indent-guides
 **vim-indent-guides** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
 
 **feature shortcuts**
 
 - z then a - Fold or un-fold the code trunk, by the deepest level of indent guide
 
-####tagbar
+####- tagbar
 **Tagbar** is a Vim plugin that provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
 
 **feature shortcuts**
 
 - Control+t - Toggle Tagbar
 
-####rainbow_parentheses.vim and auto-pairs
+####- rainbow_parentheses.vim and auto-pairs
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], "")
 
-####accelerated-smooth-scroll
+####- accelerated-smooth-scroll
 The default behavior of 
 
-####NERDCommenter
+####- NERDCommenter
 **[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
 
 **Notes** that not all the shortcuts listed in [official Github repo](https://github.com/scrooloose/nerdcommenter) are working for some reason, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
+
+**feature shortcuts**
 
 **\<Leader\>** means `.` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
 
@@ -152,11 +154,16 @@ The default behavior of
 - \<Leader\>+c+y - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 - \<Leader\>+c+A - Add comment delimiter to the end of current line and go into INSERT mode
 
-####neocomplete.vim
+####- neocomplete.vim
 This is the most amazing part of those plugins! 
 
 **feature shortcuts**
 
+- \<Tab\> or \<Enter\> - Select the chosen option in popup menu
+- \<Up\> or \<Down\> - Move selected option in popup menu up or down 
+- Control+p or Control+n - The same as \<Up\> or \<Down\>
+- Control+e - Close the popup menu
+- Control+l - Enter the next letter of the chosen option in popup menu
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
