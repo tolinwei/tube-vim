@@ -109,8 +109,8 @@ vim-airline is a super pretty lean & mean status/tabline that's light as air, wh
 
 - Control+n - Toggle NERDTree
 - Control+w then w - Switch between panes of Vim
-- Control+w then <left> - Switch to the left pane of Vim
-- Control+w then <right> - Switch to the right pane of Vim
+- Control+w then \<left\> - Switch to the left pane of Vim
+- Control+w then \<right\> - Switch to the right pane of Vim
 
 when your cursor is in NERDTree's pane
 - o - Open that file or expend that directory the cursor points to
