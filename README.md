@@ -125,7 +125,7 @@ For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07
 
 - `z then a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
-####- tagbar
+####- Tagbar
 **[Tagbar](https://github.com/majutsushi/tagbar)** is a Vim plugin as class outline viewer, which provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
 
 **Shortcuts**
