@@ -86,7 +86,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 ## Major features and key mappings
 
 ####- Color Schemes
-We prepared two sets of color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) (refer to the screenshot above), which are all pretty fantastic and eye-protective for you. **Notes that** if you want to switch over from one to the other, remember to changev **both** Vim and Terminal/iTerm2's color theme, or there might be some conflict.
+We prepared two sets of color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and **[Solarized](http://ethanschoonover.com/solarized)** (refer to the screenshot above), which are all pretty fantastic and eye-protective for you. **Notes that** if you want to switch over from one to the other, remember to changev **both** Vim and Terminal/iTerm2's color theme, or there might be some conflict.
 
 The method of changing Vim color scheme is go to edit your `.vimrc`, keep either line 6 or line 12 un-commented and the other one commented. Then go to **Preferences...** of your Terminal (or iTerms), change the color as the installation process above.
 
@@ -99,10 +99,10 @@ The method of changing Vim color scheme is go to edit your `.vimrc`, keep either
 - Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
 
 ####- vim-airline
-vim-airline is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
+**[vim-airline](https://github.com/tolinwei/vim-airline)** is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
 
 ####- NERDTree
-[NERDTree](https://github.com/scrooloose/nerdtree) is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
+**[NERDTree](https://github.com/scrooloose/nerdtree)** is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
 
 **Shortcuts**
 
@@ -119,14 +119,14 @@ when your cursor is in NERDTree's pane
 For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
 ####- vim-indent-guides
-**vim-indent-guides** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
+**[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
 
 **Shortcuts**
 
 - `z then a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
 ####- tagbar
-**Tagbar** is a Vim plugin that provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
+**[Tagbar](https://github.com/majutsushi/tagbar)** is a Vim plugin as class outline viewer, which provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
 
 **Shortcuts**
 
@@ -154,7 +154,7 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 - `<Leader>+c+A` - Add comment delimiter to the end of current line and go into INSERT mode
 
 ####- neocomplete.vim
-This is the most amazing part of those plugins! It increases the power of Vim significantly to enable the auto-completion of most IDEs.
+This is the most amazing part of those plugins! It increases the power of Vim significantly to enable the auto-completion function that is similar to most IDEs.
 
 **Shortcuts**
 
