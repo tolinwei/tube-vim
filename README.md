@@ -91,7 +91,7 @@ We prepared two sets of color schemes **[gruvbox](https://github.com/morhetz/gru
 The method of changing Vim color scheme is go to edit your `.vimrc`, keep either line 6 or line 12 un-commented and the other one commented. Then go to **Preferences...** of your Terminal (or iTerms), change the color as the installation process above.
 
 ####- Vundle
-**tube-vim** is using [Vundle](https://github.com/gmarik/Vundle.vim) as the plugin management tool, it allows you to kkep track of and configure your plugins right inside `.vimrc` file and you can download all the plugins in one command if you change your development environment, of course you can also update, clean conviniently.
+**tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to kkep track of and configure your plugins right inside `.vimrc` file and you can download all the plugins in one command if you change your development environment, of course you can also update, clean conviniently.
 
 **Commands**
 - Enter Vim and then run `:PluginInstall` to install plugins defined in your `.vimrc`
