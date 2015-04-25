@@ -143,7 +143,7 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 
 **Notes** that not all the shortcuts listed in [official Github repo](https://github.com/scrooloose/nerdcommenter) are working for some reason, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
 
-**feature shortcuts**
+**Shortcuts**
 
 `<Leader>` means `.` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
 
@@ -156,7 +156,7 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 ####- neocomplete.vim
 This is the most amazing part of those plugins! It increases the power of Vim significantly to enable the auto-completion of most IDEs.
 
-**feature shortcuts**
+**Shortcuts**
 
 - `<Tab>` or `<Enter>` - Select the chosen option in popup menu
 - `<Up>` or `<Down>` - Move selected option in popup menu up or down 
