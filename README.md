@@ -118,7 +118,7 @@ when your cursor is in NERDTree's pane
 
 For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
-####- vim-indent-guides
+####- Indent Guides
 **[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
 
 **Shortcuts**
