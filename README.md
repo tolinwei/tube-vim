@@ -132,7 +132,7 @@ For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07
 
 - `<Control>+t` - Toggle Tagbar
 
-####- rainbow_parentheses.vim / auto-pairs
+####- Rainbow Parentheses / Auto Pairs
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
 
 ####- accelerated-smooth-scroll
