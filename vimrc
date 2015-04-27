@@ -62,7 +62,7 @@ Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'tolinwei/vim-airline'	                " forked repo to switch mode color of tomorrow theme
+Plugin 'tolinwei/vim-airline'                   " forked repo to switch mode color of tomorrow theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                                " Set airline to appear all the time
 set timeoutlen=50                               " Remove the pause when leaving insert mode
