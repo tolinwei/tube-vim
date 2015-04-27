@@ -27,9 +27,9 @@ set nowrap                                      " Don't wrap lines
 
 " Indent setting, use 4 spaces for tab
 " http://vim.wikia.com/wiki/Indenting_source_code
-set expandtab			                        " When press <TAB> key, insert 'softtabstop' amount of space
-set softtabstop=4		                        " Set it the same as shiftwidth when using SPACE indention
-set shiftwidth=4		                        " Affects when press >>, << or ==
+set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
+set softtabstop=4                               " Set it the same as shiftwidth when using SPACE indention
+set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
 
 " Folding
@@ -54,18 +54,18 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible		                        " be iMproved, required by Vundle
-filetype off			                        " Required, open later
-set rtp+=~/.vim/bundle/Vundle.vim	            " Set the runtime path to include Vundle and initialize
-call vundle#begin()	                            " Let Vundle manage Vundle, required
+set nocompatible                                " be iMproved, required by Vundle
+filetype off                                    " Required, open later
+set rtp+=~/.vim/bundle/Vundle.Vims              " Set the runtime path to include Vundle and initialize
+call vundle#begin()                             " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'tolinwei/vim-airline'	                " forked repo to switch mode color of tomorrow theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set laststatus=2	                            " Set airline to appear all the time
-set timeoutlen=50	                            " Remove the pause when leaving insert mode
+set laststatus=2                                " Set airline to appear all the time
+set timeoutlen=50                               " Remove the pause when leaving insert mode
 let g:airline_theme='tomorrow'
 let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -224,8 +224,8 @@ let g:neocomplete#sources#omni#input_patterns.perl='\h\w*->\h\w*\|\h\w*::'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()		                        " required for Vundle
-filetype plugin indent on	                    " required for Vundle
+call vundle#end()                               " required for Vundle
+filetype plugin indent on                       " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
