@@ -170,7 +170,7 @@ This is the most amazing part of those plugins! It increases the power of Vim si
 - `<Control>+l` - Enter the next letter of the chosen option in popup menu
 
 ## Why it is tube-vim
-I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** for a memorial.
+I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
 
 ## License
 
