@@ -17,7 +17,7 @@ colorscheme gruvbox
 set number
 nnoremap <F3> :set nonumber!<CR>
 set backspace=indent,eol,start                  " Enable backspace all the time
-set hlsearch                                    " Highlight search result"
+set hlsearch                                    " Highlight search result
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
 

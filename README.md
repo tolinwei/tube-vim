@@ -81,7 +81,7 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 __Installation for *nix__
 - Then boom! You can just use the similar command to start the installation
 ```
-bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-nix.sh)
+bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
 ```
 ## Major features and key mappings
 
@@ -118,7 +118,7 @@ when your cursor is in NERDTree's pane
 
 For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
-####- vim-indent-guides
+####- Indent Guides
 **[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
 
 **Shortcuts**
@@ -132,7 +132,7 @@ For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07
 
 - `<Control>+t` - Toggle Tagbar
 
-####- rainbow_parentheses.vim / auto-pairs
+####- Rainbow Parentheses / Auto Pairs
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
 
 ####- accelerated-smooth-scroll
@@ -145,7 +145,7 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 
 **Shortcuts**
 
-`<Leader>` means `.` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
+`<Leader>` means `,` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
 
 - `<Leader>+c+c` - Comment the line(s) you selected
 - `<Leader>+c+u` - Un-comment the line(s) you selected
