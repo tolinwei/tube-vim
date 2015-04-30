@@ -115,7 +115,7 @@ The method of changing Vim color scheme is go to edit your `.vimrc`, keep either
 - `<Control>+w` then `<right>` - Switch to the right pane of Vim
 
 when your cursor is in NERDTree's pane
-- `o` - Open that file or expend that directory the cursor points to
+- `o` or `<Enter>` - Open that file or expend that directory the cursor points to
 - `R` (`<Shift>+r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift>+u`) - Show upper level directory
 
