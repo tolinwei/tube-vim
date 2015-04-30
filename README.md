@@ -166,7 +166,7 @@ This is the most amazing part of those plugins! It increases the power of Vim si
 - `<Tab>` or `<Enter>` - Select the chosen option in popup menu
 - `<Up>` or `<Down>` - Move selected option in popup menu up or down 
 - `<Control>+p` or `<Control>+n` - The same as \<Up\> or \<Down\>
-- `<Control>+e` - Close the popup menu
+- `<Control>+e` - Close the popup menu (**note** that this is fairly important since if you choose any item in the popup menu, this shortcut would let you close it and go back to regular typing)
 - `<Control>+l` - Enter the next letter of the chosen option in popup menu
 
 ## Why it is tube-vim
