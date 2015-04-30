@@ -56,7 +56,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible                                " be iMproved, required by Vundle
 filetype off                                    " Required, open later
-set rtp+=~/.vim/bundle/Vundle.Vim               " Set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim               " Set the runtime path to include Vundle and initialize
 call vundle#begin()                             " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
