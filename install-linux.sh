@@ -47,6 +47,7 @@ fi
 if [ -e .screenrc ] ; then
     rm -f .screenrc
     mv .screenrc .screenrc_bak
+fi
 
 echo "
 ################################################################################
