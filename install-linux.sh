@@ -42,7 +42,7 @@ if [ -e .vimrc ] ; then
 fi
 if [ -d .vim ] ; then
     rm -rf .vim_bak
-    mv .vim .vimrc_bak
+    mv .vim .vim_bak
 fi
 if [ -e .screenrc ] ; then
     rm -f .screenrc
