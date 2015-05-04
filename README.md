@@ -47,7 +47,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-tmux.sh)
 ```
-to get it set up. Since it needs some dependencies, the successful compilation of tmux is not promised
+to get it set up. Since it needs some dependencies, the successful compilation of tmux is not promised. Of course we also provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
 
 ### For *nix
 **Prerequisite**
