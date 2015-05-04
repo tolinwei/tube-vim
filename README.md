@@ -53,36 +53,34 @@ to get it set up. Since it needs some dependencies, the successful compilation o
 **Prerequisite**
 
 - If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
-    + Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
+     + Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
     
-        ```
-        lua -v
-        ```
+     ```
+     lua -v
+     ```
      If you can't see any version information printed out, you may, for example, install Lua on a Ubuntu box using the following command 
      
-       ```
-       sudo apt-get install lua5.2
-       ```
-     
-    + Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
-    
-        ```
-        wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-        tar jxf vim-7.4.tar.bz2
-        cd vim74/
-        ./configure --prefix=/usr/local/ --with-features=huge --enable-luainterp
-        make && sudo make install
-        ```
-        
-    + Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
-    
-        ```
-        sudo apt-get update
-        sudo apt-get upgrade
-        sudo apt-get install wget git
-        sudo apt-get install build-essential
-        ```
-        
+     ```
+     sudo apt-get install lua5.2
+     ```
+     + Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+
+     ```
+     sudo apt-get update
+     sudo apt-get upgrade
+     sudo apt-get install wget git
+     sudo apt-get install build-essential
+     ```
+     + Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
+
+     ```
+     wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+     tar jxf vim-7.4.tar.bz2
+     cd vim74/
+     ./configure --prefix=/usr/local/ --with-features=huge --enable-luainterp
+     make && sudo make install
+     ```
+       
 __Installation for *nix__
 - Then boom! You can just use the similar command to start the installation
 ```
@@ -117,7 +115,7 @@ The method of changing Vim color scheme is go to edit your `.vimrc`, keep either
 - `<Control>+w` then `<right>` - Switch to the right pane of Vim
 
 when your cursor is in NERDTree's pane
-- `o` - Open that file or expend that directory the cursor points to
+- `o` or `<Enter>` - Open that file or expend that directory the cursor points to
 - `R` (`<Shift>+r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift>+u`) - Show upper level directory
 
@@ -166,7 +164,7 @@ This is the most amazing part of those plugins! It increases the power of Vim si
 - `<Tab>` or `<Enter>` - Select the chosen option in popup menu
 - `<Up>` or `<Down>` - Move selected option in popup menu up or down 
 - `<Control>+p` or `<Control>+n` - The same as \<Up\> or \<Down\>
-- `<Control>+e` - Close the popup menu
+- `<Control>+e` - Close the popup menu (**note** that this is fairly important since if you choose any item in the popup menu, this shortcut would let you close it and go back to regular typing)
 - `<Control>+l` - Enter the next letter of the chosen option in popup menu
 
 ## Why it is tube-vim
