@@ -73,9 +73,19 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
      tar jxf vim-7.4.tar.bz2
      cd vim74/
-     ./configure --prefix=/usr/local/ --with-features=huge --enable-luainterp
+     ./configure --prefix=/usr/local/ \
+                 --with-features=huge \
+                 --enable-multibyte \
+                 --enable-rubyinterp \
+                 --enable-pythoninterp \
+                 --with-python-config-dir=/usr/lib/python2.7/config \
+                 --enable-perlinterp \
+                 --enable-luainterp \
+                 --enable-gui=gtk2 --enable-cscope --prefix=/usr
      make && sudo make install
      ```
+     
+     If you encounter issues during installation, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  
@@ -85,10 +95,10 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 
 ## Major features and key mappings
 
-####- Color Schemes
+####>>> Color Schemes <<<
 We prepared color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)), which is all fantastic and eye-protective for you.
 
-####- Vundle
+####>>> Vundle <<<
 **tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to keep track of and configure your plugins right inside `.vimrc` file, so that you can download all the plugins in one command if you change your development environment, of course you can also update, clean them conveniently.
 
 **Commands**
@@ -96,10 +106,10 @@ We prepared color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gr
 - Run `vim +PluginInstall +qall` from shell for installation too
 - Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
 
-####- vim-airline
+####>>> vim-airline <<<
 **[vim-airline](https://github.com/tolinwei/vim-airline)** is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
 
-####- NERDTree
+####>>> NERDTree <<<
 **[NERDTree](https://github.com/scrooloose/nerdtree)** is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
 
 **Shortcuts**
@@ -116,27 +126,27 @@ when your cursor is in NERDTree's pane
 
 For more shortcuts, please refer to a external [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
-####- Indent Guides
+####>>> Indent Guides <<<
 **[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
 
 **Shortcuts**
 
 - `z then a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
-####- Tagbar
+####>>> Tagbar <<<
 **[Tagbar](https://github.com/majutsushi/tagbar)** is a Vim plugin as class outline viewer, which provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
 
 **Shortcuts**
 
 - `<Control>+t` - Toggle Tagbar
 
-####- Rainbow Parentheses / Auto Pairs
+####>>> Rainbow Parentheses / Auto Pairs <<<
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
 
-####- accelerated-smooth-scroll
+####>>> accelerated-smooth-scroll <<<
 The default behavior of scrolling inside Vim would jump for the whole page (`<Control>+f` or `<Control>+b`) or half page instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
 
-####- NERDCommenter
+####>>> NERDCommenter <<<
 **[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
 
 **Notes** that not all the shortcuts listed in [official Github repo](https://github.com/scrooloose/nerdcommenter) are working for some reason, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
@@ -151,16 +161,12 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 - `<Leader>+c+y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 - `<Leader>+c+A` - Add comment delimiter to the end of current line and go into INSERT mode
 
-####- neocomplete.vim
-This is the most amazing part of those plugins! It increases the power of Vim significantly to enable the auto-completion function that is similar to most IDEs.
+####>>> neocomplete.vim <<<
+I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
 
-**Shortcuts**
+Notes that in order to support Java auto-completion, the installtion script will have Ecplise for Java installed by Homebrew-cask and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
 
-- `<Tab>` or `<Enter>` - Select the chosen option in popup menu
-- `<Up>` or `<Down>` - Move selected option in popup menu up or down 
-- `<Control>+p` or `<Control>+n` - The same as \<Up\> or \<Down\>
-- `<Control>+e` - Close the popup menu (**note** that this is fairly important since if you choose any item in the popup menu, this shortcut would let you close it and go back to regular typing)
-- `<Control>+l` - Enter the next letter of the chosen option in popup menu
+<To Be Edited>
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
