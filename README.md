@@ -73,9 +73,19 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
      tar jxf vim-7.4.tar.bz2
      cd vim74/
-     ./configure --prefix=/usr/local/ --with-features=huge --enable-luainterp
+     ./configure --prefix=/usr/local/ \
+                 --with-features=huge \
+                 --enable-multibyte \
+                 --enable-rubyinterp \
+                 --enable-pythoninterp \
+                 --with-python-config-dir=/usr/lib/python2.7/config \
+                 --enable-perlinterp \
+                 --enable-luainterp \
+                 --enable-gui=gtk2 --enable-cscope --prefix=/usr
      make && sudo make install
      ```
+     
+     If you encounter issues during installation, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  
