@@ -24,9 +24,6 @@ In addition, it provides an optional installation of [tmux](), which is a termin
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
 ![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
 
-- Optional color scheme [Solarized Dark](http://ethanschoonover.com/solarized)
-![solarized-bashrc-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/solarized-bashrc-pre.png)
-
 ## Installation
 
 ### For OS X
@@ -43,11 +40,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-- (Optional) If you find [tmux](http://tmux.sourceforge.net/), which is a terminal multiplexer, more useful over built-in *screen* ([Screen User's Mannual](https://www.gnu.org/software/screen/manual/screen.html)), you can run
-```
-bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-tmux.sh)
-```
-to get it set up. Since it needs some dependencies, the successful compilation of tmux is not promised. Of course we also provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
+- We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
 
 ### For *nix
 **Prerequisite**
