@@ -1,21 +1,16 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The setting before Vundle
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
-syntax on
 set background=dark
 colorscheme gruvbox
-" Optional color scheme, if you want to enable this, you need to:
-" 1. comment out line 6 of this file
-" 2. un-comment line 12 of this file
-" 3. Change the color scheme of your Terminal/iTerm 2 to corresponding theme
-
-" colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General setting
+syntax on
 set number
-nnoremap <F3> :set nonumber!<CR>
 set backspace=indent,eol,start                  " Enable backspace all the time
 set hlsearch                                    " Highlight search result
 set cursorline
@@ -27,8 +22,8 @@ set nowrap                                      " Don't wrap lines
 
 " Indent setting, use 4 spaces for tab
 " http://vim.wikia.com/wiki/Indenting_source_code
-set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
 set softtabstop=4                               " Set it the same as shiftwidth when using SPACE indention
+set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
 set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
 
@@ -41,7 +36,7 @@ autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 80 words onwards as 'warning' and 120 words as 'danger'
-" For both industry standard (80 columns) and 120 columns above
+" For both 80 columns and 120 columns limitation
 if exists('+colorcolumn')
     let &colorcolumn="81,".join(range(121,999),",")
 else
@@ -50,7 +45,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The begining of Vunble
+" The begining of Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -231,11 +226,11 @@ filetype plugin indent on                       " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change cursor shape between insert and normal mode in iTerm2.app
 " block(default) vs vertical bar
-if $TERM_PROGRAM =~ "iTerm"
+" if $TERM_PROGRAM =~ "iTerm"
     " Vertical bar in insert mode
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
     " Block in normal mode
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-endif
+"   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
