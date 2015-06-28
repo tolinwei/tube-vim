@@ -18,11 +18,11 @@ echo "
 ################################################################################
 ## Defining folder variables
 ################################################################################"
-HOME_DIR=~/
-PROJECT_DIR=${HOME_DIR}.tube-vim/
-DOWNLOAD_DIR=${HOME_DIR}Downloads/
-VIM_COLOR_DIR=${HOME_DIR}.vim/colors/
-ZSH_THEME_DIR=${HOME_DIR}.oh-my-zsh/themes/
+HOME_DIR=~
+PROJECT_DIR=${HOME_DIR}/.tube-vim/
+DOWNLOAD_DIR=${HOME_DIR}/Downloads/
+VIM_COLOR_DIR=${HOME_DIR}/.vim/colors/
+ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
 
 echo "
 ################################################################################
@@ -61,11 +61,11 @@ echo "
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
 cd $PROJECT_DIR
-cat bashrc >> ${HOME_DIR}.bashrc
+cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 cp solarized.vim $VIM_COLOR_DIR
-cp zshrc ${HOME_DIR}.zshrc
+cp zshrc ${HOME_DIR}/.zshrc
 
 echo "
 ################################################################################
@@ -84,7 +84,7 @@ echo "
 ## Installing Vim plugins defined in vimrc
 ################################################################################"
 cd $PROJECT_DIR
-cp vimrc ${HOME_DIR}.vimrc
+cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
 
 echo "
