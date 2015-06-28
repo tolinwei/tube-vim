@@ -95,8 +95,8 @@ echo "
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
 ################################################################################"
-brew install macvim --with-lua
-brew linkapps macvim
+# brew install macvim --with-lua
+# brew linkapps macvim
 
 # not sure about the directory priviledge
 # looking for re-appearance of situation
@@ -104,7 +104,7 @@ brew linkapps macvim
 #sudo chmod a+w /usr/local/lib/pkgconfig
 #brew link lua
 
-brew install vim --with-lua
+brew install vim
 
 echo "
 ################################################################################
