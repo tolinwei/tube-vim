@@ -163,12 +163,6 @@ open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 open gruvbox-light.itermcolors
 open gruvbox-light.terminal
-open solarized-dark.itermcolors
-open solarized-dark.terminal
-open solarized-light.itermcolors
-# Haven't find solorized-light.terminal yet
-
-
 
 echo "
 ################################################################################
