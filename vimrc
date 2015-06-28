@@ -71,7 +71,7 @@ Plugin 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
 " Open NERDTree automatically when vim starts up
-autocmd VimEnter * NERDTree | wincmd p
+"autocmd VimEnter * NERDTree | wincmd p
 " Set NERDTree on right side, would be conflict with tagbar
 " let g:NERDTreeWinPos="right"
 " Set NERDTree length
