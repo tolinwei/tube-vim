@@ -27,12 +27,11 @@ ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
 
 echo "
 ################################################################################
-## Installing brew, Homebrew-Cask, git, wget for OS X if miss any
+## Installing brew, git, wget for OS X if miss any
 ################################################################################"
 which -s brew
 if [[ $? != 0 ]] ; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    brew install caskroom/cask/brew-cask
 else
     brew update
     brew upgrade
