@@ -26,7 +26,7 @@ ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
 
 echo "
 ################################################################################
-## Cloning repot to home directories
+## Cloning repo to home directories
 ################################################################################"
 rm -rf $PROJECT_DIR
 git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
@@ -36,17 +36,15 @@ echo "
 ## Backing up existing Vim settings if any
 ################################################################################"
 cd $HOME_DIR
+current_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    rm -f .vimrc_bak
-    mv .vimrc .vimrc_bak
+    mv .vimrc .vimrc_bak-${current_time}
 fi
 if [ -d .vim ] ; then
-    rm -rf .vim_bak
-    mv .vim .vim_bak
+    mv .vim .vim_bak-${current_time}
 fi
 if [ -e .screenrc ] ; then
-    rm -f .screenrc
-    mv .screenrc .screenrc_bak
+    mv .screenrc .screenrc_bak-${current_time}
 fi
 
 echo "
@@ -86,6 +84,16 @@ echo "
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
+
+
+echo "
+################################################################################
+## Compiling YouCompleteMe
+################################################################################"
+cd $HOME_DIR/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer \
+             --omnisharp-completer \
+             --gocode-completer
 
 echo "
 ################################################################################

@@ -138,17 +138,21 @@ fi
 
 echo "
 ################################################################################
-## Installing Ecplise for Java, for Java auto completion in Vim
-################################################################################"
-brew cask install eclipse-java
-
-echo "
-################################################################################
 ## Installing Vim plugins defined in vimrc
 ################################################################################"
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qa
+
+echo "
+################################################################################
+## Installing cmake, then compile YouCompleteMe
+################################################################################"
+brew install cmake
+cd $HOME_DIR/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer \
+             --omnisharp-completer \
+             --gocode-completer
 
 echo "
 ################################################################################
