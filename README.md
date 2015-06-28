@@ -10,29 +10,30 @@ tube-vim
 ```
 
 **tube-vim** is a integrated shell development environment that you can easily set up by **running a single command**:
+
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
+
 It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X). The used plugins will be listed and explained below.
 
 Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
-In addition, it provides an optional installation of [tmux](), which is a terminal multiplexer that allows you to switch easily between several programs in one terminal, detach them and re-attach them to a different terminal as you want to accelarate your workflow and make your life easier.
-
 ## Preview
-- Default color scheme [gruvbox](https://github.com/morhetz/gruvbox) for Vim, iTerm2/Terminal
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
 ![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
 
 ## Installation
 
 ### For OS X
-- (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
-- Run the following command to install the environment automatically
-```
-bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
-```
-- Change the color scheme for Terminal or iTerm2 depends on which one you're using
+1. (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
+
+2. Run the following command to install the environment automatically
+     ```
+     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
+     ```
+
+3. Change the color scheme for Terminal or iTerm2 depends on which one you're using
     + For Terminal
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="400" />
@@ -40,23 +41,24 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-- We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
+4. We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
 
 ### For *nix
-**Prerequisite**
 
-- If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
-     + Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
+－ If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
+
+1. Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
     
      ```
      lua -v
      ```
+     
      If you can't see any version information printed out, you may, for example, install Lua on a Ubuntu box using the following command 
      
      ```
      sudo apt-get install lua5.2
      ```
-     + Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+2. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
 
      ```
      sudo apt-get update
@@ -64,7 +66,8 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
      sudo apt-get install wget git
      sudo apt-get install build-essential
      ```
-     + Have Vim 7.4 with lua support (to verify this, you can ype `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list). A suggested way of installation is to compile from source code in the following way (similarily, the potential error would occur)
+     
+3. Have Vim 7.4 with lua support. To verify this, you can type `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list. A suggested way of installation is to compile from source code in the following way
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -74,11 +77,12 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
      make && sudo make install
      ```
        
-__Installation for *nix__
-- Then boom! You can just use the similar command to start the installation
-```
-bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
-```
+4. Then boom! You can just use the similar command to start the installation
+ 
+     ```
+     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
+     ```
+
 ## Major features and key mappings
 
 ####- Color Schemes
