@@ -9,15 +9,15 @@ tube-vim
          
 ```
 
-**tube-vim** is a integrated shell development environment that you can easily set up by **running a single command**:
+**tube-vim** is a integrated shell-based development environment that you can easily set up by **running a single command**:
 
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
 
-It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and [Solarized](http://ethanschoonover.com/solarized) for both Vim and Terminal/[iTerm2](http://iterm2.com/) (if you're using OS X). The used plugins will be listed and explained below.
+It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), together with decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
 
-Different from other integrated Vim configuration, **tube-vim** also uses Z shell (a true hacker's shell)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+Different from other integrated Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
@@ -86,12 +86,10 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 ## Major features and key mappings
 
 ####- Color Schemes
-We prepared two sets of color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)) and **[Solarized](http://ethanschoonover.com/solarized)** (refer to the screenshot above), which are all pretty fantastic and eye-protective for you. **Notes that** if you want to switch over from one to the other, remember to changev **both** Vim and Terminal/iTerm2's color theme, or there might be some conflict.
-
-The method of changing Vim color scheme is go to edit your `.vimrc`, keep either line 6 or line 12 un-commented and the other one commented. Then go to **Preferences...** of your Terminal (or iTerms), change the color as the installation process above.
+We prepared color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)), which is all fantastic and eye-protective for you.
 
 ####- Vundle
-**tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to kkep track of and configure your plugins right inside `.vimrc` file and you can download all the plugins in one command if you change your development environment, of course you can also update, clean conviniently.
+**tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to keep track of and configure your plugins right inside `.vimrc` file, so that you can download all the plugins in one command if you change your development environment, of course you can also update, clean them conveniently.
 
 **Commands**
 - Enter Vim and then run `:PluginInstall` to install plugins defined in your `.vimrc`
@@ -116,7 +114,7 @@ when your cursor is in NERDTree's pane
 - `R` (`<Shift>+r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift>+u`) - Show upper level directory
 
-For more shortcuts, please refer to a [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
+For more shortcuts, please refer to a external [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
 
 ####- Indent Guides
 **[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
