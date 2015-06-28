@@ -15,6 +15,7 @@ set backspace=indent,eol,start                  " Enable backspace all the time
 set hlsearch                                    " Highlight search result
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
+set mouse=a                                     " Mouse Navigation
 
 " Wrap settings
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
@@ -143,6 +144,8 @@ let NERDSpaceDelims=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'Valloric/YouCompleteMe'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ycm_autoclose_preview_window_after_completion=1
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
