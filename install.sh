@@ -27,24 +27,25 @@ ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
 
 echo "
 ################################################################################
-## Cloning repo to home directories
-################################################################################"
-rm -rf $PROJECT_DIR
-git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
-
-echo "
-################################################################################
-## Installing brew, git, wget for OS X if miss any
+## Installing brew, Homebrew-Cask, git, wget for OS X if miss any
 ################################################################################"
 which -s brew
 if [[ $? != 0 ]] ; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    brew install caskroom/cask/brew-cask
 else
     brew update
-    # brew upgrade
+    brew upgrade
 fi
 which -s git || brew install git
 which -s wget || brew install wget
+
+echo "
+################################################################################
+## Cloning repo to home directories (must be after git installation)
+################################################################################"
+rm -rf $PROJECT_DIR
+git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 
 echo "
 ################################################################################
@@ -58,17 +59,16 @@ echo "
 ## Backing up existing Vim settings if any
 ################################################################################"
 cd $HOME_DIR
+current_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    rm -f .vimrc_bak
-    mv .vimrc .vimrc_bak
+    mv .vimrc .vimrc_bak-${current_time}
 fi
 if [ -d .vim ] ; then
-    rm -rf .vim_bak
-    mv .vim .vim_bak
+    mv .vim .vim_bak-${current_time}
 fi
 if [ -e .screenrc ] ; then
     rm -f .screenrc
-    mv .screen .screenrc_bak
+    mv .screen .screenrc_bak-${current_time}
 fi
 
 echo "
@@ -135,6 +135,12 @@ echo "
 if [ ! -d ${HOME_DIR}/.vim/bundle/Vundle.vim ] ; then
     git clone https://github.com/gmarik/Vundle.vim.git ${HOME_DIR}/.vim/bundle/Vundle.vim
 fi
+
+echo "
+################################################################################
+## Installing Ecplise for Java, for Java auto completion in Vim
+################################################################################"
+brew cask install eclipse-java
 
 echo "
 ################################################################################
