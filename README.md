@@ -161,7 +161,7 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 - `<Leader>+c+y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 - `<Leader>+c+A` - Add comment delimiter to the end of current line and go into INSERT mode
 
-####>>> neocomplete.vim <<<
+####>>> YouCompleteMe <<<
 I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
 
 YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype". If you want Java auto completion suppport mannually followed the official guide [here](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages). You basically need to have Ecplise for Java and [Eclim](http://eclim.org/) installed for accessing Eclipse code editing feature.
