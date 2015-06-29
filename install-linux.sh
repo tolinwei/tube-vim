@@ -62,7 +62,6 @@ cd $PROJECT_DIR
 cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
-cp solarized.vim $VIM_COLOR_DIR
 cp zshrc ${HOME_DIR}/.zshrc
 
 echo "
