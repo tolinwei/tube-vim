@@ -78,7 +78,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
      make && sudo make install
      ```
      
-     If you encounter issues during installation, or you need some guide for other distributions, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
+     If you encounter issues during installation, or you need some guide for other distributions, try to refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  
