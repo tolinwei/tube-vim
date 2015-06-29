@@ -69,7 +69,7 @@ echo "
 ################################################################################
 ## Installing oh-my-zsh, may need to mannually shell change later
 ################################################################################"
-wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "
 ################################################################################
