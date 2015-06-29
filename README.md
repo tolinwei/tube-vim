@@ -47,18 +47,7 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 
 － If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
-1. Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
-    
-     ```
-     lua -v
-     ```
-     
-     If you can't see any version information printed out, you may, for example, install Lua on a Ubuntu box using the following command 
-     
-     ```
-     sudo apt-get install lua5.2
-     ```
-2. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+1. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
 
      ```
      sudo apt-get update
@@ -67,7 +56,7 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
      sudo apt-get install build-essential
      ```
      
-3. Have Vim 7.4 with lua support. To verify this, you can type `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list. A suggested way of installation is to compile from source code in the following way
+3. Have Vim 7.4 installed. Since most of the linux distributions don't include the newest version of Vim in system software repositories, the suggested way is to compile and install Vim from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -85,7 +74,7 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
      make && sudo make install
      ```
      
-     If you encounter issues during installation, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
+     If you encounter issues during installation, or you need some guide for other distributions, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  
