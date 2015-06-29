@@ -37,7 +37,6 @@ else
     brew upgrade
 fi
 which -s git || brew install git
-which -s wget || brew install wget
 
 echo "
 ################################################################################
