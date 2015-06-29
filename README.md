@@ -15,9 +15,9 @@ tube-vim
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
 
-It includes best practical Vim setting with a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), together with decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
+It includes best practical Vim setting and a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), together with decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
 
-Different from other integrated Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without any learning curse while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
@@ -47,27 +47,16 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
 
 － If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
-1. Have [Lua](http://www.lua.org/) installed in your system. It is normally included in system's package and used by [neocopmlete](https://github.com/Shougo/neocomplete.vim) for auto comletion. Type the following command to check installation:
-    
-     ```
-     lua -v
-     ```
-     
-     If you can't see any version information printed out, you may, for example, install Lua on a Ubuntu box using the following command 
-     
-     ```
-     sudo apt-get install lua5.2
-     ```
-2. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+1. Have your `git`, and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install wget git
+     sudo apt-get install git
      sudo apt-get install build-essential
      ```
      
-3. Have Vim 7.4 with lua support. To verify this, you can type `echo has("lua")` inside Vim then check whether the output is `1`, or you can type `vim --version` to see if `+lua` is among the list. A suggested way of installation is to compile from source code in the following way
+3. Have Vim 7.4 installed. Since most of the linux distributions don't include the newest version of Vim in system software repositories, the suggested way is to compile and install Vim from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -81,11 +70,12 @@ Different from other integrated Vim configuration, **tube-vim** also uses Z shel
                  --with-python-config-dir=/usr/lib/python2.7/config \
                  --enable-perlinterp \
                  --enable-luainterp \
-                 --enable-gui=gtk2 --enable-cscope --prefix=/usr
+                 --enable-gui=gtk2 \
+                 --enable-cscope
      make && sudo make install
      ```
      
-     If you encounter issues during installation, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
+     If you encounter issues during installation, or you need some guide for other distributions, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  

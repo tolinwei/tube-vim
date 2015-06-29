@@ -92,8 +92,8 @@ echo "
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
 ################################################################################"
-# brew install macvim --with-lua
-# brew linkapps macvim
+#brew install macvim --with-lua
+#brew linkapps macvim
 
 # not sure about the directory priviledge
 # looking for re-appearance of situation
@@ -110,7 +110,7 @@ echo "
 CTAGS_DIR=`which ctags`
 if [ $CTAGS_DIR != '/usr/local/bin/ctags' ] ; then
     cd $DOWNLOAD_DIR
-    wget http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+    curl -L http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
     tar zxf ctags-5.8.tar.gz
     cd ctags-5.8
     ./configure -prefix=/usr/local
@@ -122,7 +122,7 @@ echo "
 ## Installing oh-my-zsh, may need to mannually change shell later
 ################################################################################"
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
-    wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 echo "
