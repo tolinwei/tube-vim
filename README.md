@@ -70,7 +70,8 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                  --with-python-config-dir=/usr/lib/python2.7/config \
                  --enable-perlinterp \
                  --enable-luainterp \
-                 --enable-gui=gtk2 --enable-cscope --prefix=/usr
+                 --enable-gui=gtk2 \
+                 --enable-cscope
      make && sudo make install
      ```
      
