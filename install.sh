@@ -110,7 +110,7 @@ echo "
 CTAGS_DIR=`which ctags`
 if [ $CTAGS_DIR != '/usr/local/bin/ctags' ] ; then
     cd $DOWNLOAD_DIR
-    curl http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+    curl -L http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
     tar zxf ctags-5.8.tar.gz
     cd ctags-5.8
     ./configure -prefix=/usr/local
