@@ -52,8 +52,11 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install git
-     sudo apt-get install build-essential
+     sudo apt-get install git \
+                          build-essential \
+                          libncurses5-dev \
+                          ruby-dev \
+                          python-dev \
      ```
      
 3. Have Vim 7.4 installed. Since most of the linux distributions don't include the newest version of Vim in system software repositories, the suggested way is to compile and install Vim from source code.
@@ -70,7 +73,6 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                  --with-python-config-dir=/usr/lib/python2.7/config \
                  --enable-perlinterp \
                  --enable-luainterp \
-                 --enable-gui=gtk2 \
                  --enable-cscope
      make && sudo make install
      ```
