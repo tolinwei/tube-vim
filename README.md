@@ -47,12 +47,12 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 － If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
-1. Have your `git`, `wget` and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+1. Have your `git`, and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install wget git
+     sudo apt-get install git
      sudo apt-get install build-essential
      ```
      
