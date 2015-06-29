@@ -57,6 +57,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                           libncurses5-dev \
                           ruby-dev \
                           python-dev \
+                          libperl-dev
      ```
      
 3. Have Vim 7.4 installed. Since most of the linux distributions don't include the newest version of Vim in system software repositories, the suggested way is to compile and install Vim from source code.
