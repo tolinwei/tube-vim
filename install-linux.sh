@@ -87,8 +87,14 @@ vim +PluginInstall +qall
 
 echo "
 ################################################################################
-## Compiling YouCompleteMe
+## Compiling Clang, to compile YouCompleteMe
 ################################################################################"
+cd $DOWNLOAD_DIR
+wget http://llvm.org/releases/3.6.1/cfe-3.6.1.src.tar.xz
+tar xvfJ llvm-3.6.1.src.tar.xz
+cd llvm-3.6.1.src
+./configure
+make && sudo make install
 cd $HOME_DIR/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer \
              --omnisharp-completer \
