@@ -43,9 +43,9 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 4. We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
 
-### For *nix
+### For Linux
 
-－ If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
+－ If you're using Linux, we value you as an experienced user, and due to many Linux distributions, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
 1. Have your `git`, and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
@@ -60,7 +60,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                           libperl-dev
      ```
      
-3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system's software repositories, you may consider to compile, make and install Vim from source code.
+3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system's software manager (like `apt-get` of Debian-like Linux), you may consider to compile, make and install Vim from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -85,6 +85,8 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
      ```
      bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
      ```
+     
+     It takes a longer time for Linux installation than that of OS X since we need to compile Clang/LLVM in order to power YCM's semantic completion engine. For more information, please refer to the [Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) in YouCompleteMe's Github README.
 
 ## Major features and key mappings
 
