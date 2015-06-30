@@ -47,19 +47,20 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 － If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
-1. Have your `git`, and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+1. Have your `git`, and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
      sudo apt-get install git \
                           build-essential \
+                          cmake \
                           ruby-dev \
                           python-dev \
                           libperl-dev
      ```
      
-3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system software repositories, you may consider to compile and install Vim from source code.
+3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system's software repositories, you may consider to compile, make and install Vim from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
