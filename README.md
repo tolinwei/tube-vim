@@ -30,7 +30,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 2. Run the following command to install the environment automatically
      ```
-     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
+     curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh | bash
      ```
 
 3. Change the color scheme for Terminal or iTerm2 depends on which one you're using
@@ -47,16 +47,20 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 － If you're using *nix, we value you as an experienced user, and due to so many variation of *nix distribution, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
 
-1. Have your `git`, and other compilation tools installed. In a typical Ubuntu machine, you can normally install them using
+1. Have your `git`, and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install git
-     sudo apt-get install build-essential
+     sudo apt-get install git \
+                          build-essential \
+                          cmake \
+                          ruby-dev \
+                          python-dev \
+                          libperl-dev
      ```
      
-3. Have Vim 7.4 installed. Since most of the linux distributions don't include the newest version of Vim in system software repositories, the suggested way is to compile and install Vim from source code.
+3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system's software repositories, you may consider to compile, make and install Vim from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -70,17 +74,16 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                  --with-python-config-dir=/usr/lib/python2.7/config \
                  --enable-perlinterp \
                  --enable-luainterp \
-                 --enable-gui=gtk2 \
                  --enable-cscope
      make && sudo make install
      ```
      
-     If you encounter issues during installation, or you need some guide for other distributions, try to refer to [this](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source) in YouCompleteMe's Github wiki.
+     If you encounter issues during installation, or you need some instruction for other Linux distributions, try to refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
        
 4. Then boom! You can just use the similar command to start the installation
  
      ```
-     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
+     wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh | bash
      ```
 
 ## Major features and key mappings
@@ -154,7 +157,9 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 ####>>> YouCompleteMe <<<
 I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
 
-YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype". If you want Java auto completion suppport mannually followed the official guide [here](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages). You basically need to have Ecplise for Java and [Eclim](http://eclim.org/) installed for accessing Eclipse code editing feature.
+YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype".
+
+If you want **Java** auto completion suppport, which might be needed by some users, you would have to mannually follow the official guide [here](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
 
 ## Why it is tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
