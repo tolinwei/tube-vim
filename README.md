@@ -30,7 +30,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 
 2. Run the following command to install the environment automatically
      ```
-     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
+     curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh | bash
      ```
 
 3. Change the color scheme for Terminal or iTerm2 depends on which one you're using
@@ -83,7 +83,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 4. Then boom! You can just use the similar command to start the installation
  
      ```
-     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
+     wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh | bash
      ```
 
 ## Major features and key mappings
