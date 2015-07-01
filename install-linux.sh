@@ -84,7 +84,6 @@ cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
 
-
 echo "
 ################################################################################
 ## Compiling Clang, to compile YouCompleteMe
@@ -95,17 +94,8 @@ echo "
 #cd llvm-3.6.1.src
 #./configure
 #make && sudo make install
-cd $HOME_DIR/.vim/bundle/YouCompleteMe
-./install.sh
-
-echo "
-################################################################################
-## Installing vimcat
-################################################################################"
-cd $DOWNLOAD_DIR
-git clone git://github.com/rkitover/vimpager
-cd vimpager
-sudo make install
+#cd $HOME_DIR/.vim/bundle/YouCompleteMe
+#./install.sh
 
 echo "
 ################################################################################
