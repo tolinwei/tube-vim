@@ -41,7 +41,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation.
+4. Tmux, together with its configuration file are included in the installation script, it helps you to manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, we also provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation.
 
 ### For Linux
 
