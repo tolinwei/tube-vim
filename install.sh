@@ -153,15 +153,6 @@ cd $HOME_DIR/.vim/bundle/YouCompleteMe
 
 echo "
 ################################################################################
-## Installing vimcat
-################################################################################"
-cd $DOWNLOAD_DIR
-git clone git://github.com/rkitover/vimpager
-cd vimpager
-sudo make install
-
-echo "
-################################################################################
 ## Importing color scheme for iTerm2 and terminal
 ## Please click 'OK' on the popup window
 ################################################################################"
