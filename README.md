@@ -28,12 +28,12 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 ### For OS X
 1. (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
 
-2. Run the following command to install the environment automatically
+2. Run the following command to install the environment automatically.
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
 
-3. Change the color scheme for Terminal or iTerm2 depends on which one you're using
+3. Change the color scheme for Terminal or iTerm2 depends on which one you're using.
     + For Terminal
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="400" />
@@ -41,26 +41,21 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation
+4. We provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation.
 
 ### For Linux
 
-－ If you're using Linux, we value you as an experienced user, and due to many Linux distributions, it's nearly impossible to provide a single installation script to cover all the cases. We ask you to have some prerequisites before running the setup script
+－ If you're using Linux, we value you as experienced user, and ask you to have some prerequisites before running the setup script. Except this, due to so many Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X, we only provide a simplified version that covers color scheme, most Vim plugins except [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for auto completion, and remove tmux installation.
 
-1. Have your `git`, and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
+1. Have your `git`, `wget` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install git \
-                          build-essential \
-                          cmake \
-                          ruby-dev \
-                          python-dev \
-                          libperl-dev
+     sudo apt-get install git wget
      ```
      
-3. Have Vim 7.4 installed. Some of the Linux distributions don't include the newest version of Vim in system's software manager (like `apt-get` of Debian-like Linux), you may consider to compile, make and install Vim from source code.
+3. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` depending on what OS you're in, and then type `vim -version` to check the version. Some of the Linux distributions don't include the newest version of Vim in software manager, you may consider to compile, make and install it from source code.
 
      ```
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
@@ -71,22 +66,23 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
                  --enable-multibyte \
                  --enable-rubyinterp \
                  --enable-pythoninterp \
-                 --with-python-config-dir=/usr/lib/python2.7/config \
                  --enable-perlinterp \
                  --enable-luainterp \
                  --enable-cscope
      make && sudo make install
      ```
      
-     If you encounter issues during installation, or you need some instruction for other Linux distributions, try to refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
+     If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
        
-4. Then boom! You can just use the similar command to start the installation
+4. Then boom! You can just use the similar command to start the installation.
  
      ```
      bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
      ```
      
-     It takes a longer time for Linux installation than that of OS X since we need to compile Clang/LLVM in order to power YCM's semantic completion engine. For more information, please refer to the [Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) in YouCompleteMe's Github README.
+5. (Optional) If you want to install [tmux](http://tmux.github.io/), try to install it via your system's software manager using `sudo apt-get install tmux` or `sudo yum install tmux`, or go to the official site to downlad source code and compile it.
+6. (Optional) If you need auto completion of Vim, refer to [YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe) to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
+
 
 ## Major features and key mappings
 
