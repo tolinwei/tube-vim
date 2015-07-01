@@ -102,6 +102,7 @@ echo "
 #brew link lua
 
 brew install vim
+brew install tmux
 
 echo "
 ################################################################################
