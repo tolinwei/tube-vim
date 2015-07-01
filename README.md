@@ -58,6 +58,8 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 3. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` depending on what OS you're in, and then type `vim -version` to check the version. Some of the Linux distributions don't include the newest version of Vim in software manager, you may consider to compile, make and install it from source code.
 
      ```
+     sudo mkdir ~/Downloads
+     cd ~/Downloads
      wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
      tar jxf vim-7.4.tar.bz2
      cd vim74/
@@ -81,7 +83,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
      ```
      
 5. (Optional) If you want to install [tmux](http://tmux.github.io/), try to install it via your system's software manager using `sudo apt-get install tmux` or `sudo yum install tmux`, or go to the official site to downlad source code and compile it.
-6. (Optional) If you need auto completion of Vim, refer to [YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe) to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
+6. (Optional) If you need auto completion for Vim, refer to [YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe) to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured [Vundle](https://github.com/gmarik/Vundle.vim) and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
 
 
 ## Major features and key mappings
