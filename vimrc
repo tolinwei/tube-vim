@@ -39,7 +39,7 @@ autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespace
 " 80 words onwards as 'warning' and 120 words as 'danger'
 " For both 80 columns and 120 columns limitation
 if exists('+colorcolumn')
-    let &colorcolumn="81,".join(range(121,999),",")
+    let &colorcolumn = "81,".join(range(121,999),",")
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
 endif
@@ -62,7 +62,7 @@ Plugin 'tolinwei/vim-airline'                   " forked repo to switch mode col
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                                " Set airline to appear all the time
 set timeoutlen=50                               " Remove the pause when leaving insert mode
-let g:airline_theme='tomorrow'
+let g:airline_theme = 'tomorrow'
 let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -75,7 +75,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Set NERDTree on right side, would be conflict with tagbar
 " let g:NERDTreeWinPos="right"
 " Set NERDTree length
-let g:NERDTreeWinSize=30
+let g:NERDTreeWinSize = 30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only buffer that's left is the NERDTree buffer
@@ -94,9 +94,9 @@ endfunction
 Plugin 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Startup vim-indent-guides with vim
-let g:indent_guides_enable_on_vim_startup=1
+let g:indent_guides_enable_on_vim_startup = 1
 " Set width of vim-indent-guides
-let g:indent_guides_guide_size=1
+let g:indent_guides_guide_size = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,8 +114,8 @@ let g:tagbar_width=40
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'kien/rainbow_parentheses.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:rbpt_max=16
-let g:rbpt_loadcmd_toggle=0
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
 " Always on
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -134,18 +134,18 @@ Plugin 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'scrooloose/nerdcommenter'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader=","
+let mapleader = ","
 " http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
 set timeout timeoutlen=1500
 " Add extra space after comment symbol
-let NERDSpaceDelims=1
+let NERDSpaceDelims = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'Valloric/YouCompleteMe'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+let g:ycm_key_list_select_completion = ['<Down>']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
