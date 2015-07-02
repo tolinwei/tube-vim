@@ -59,14 +59,16 @@ echo "
 cd $HOME_DIR
 current_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    mv .vimrc .vimrc_bak-${current_time}
+    mv .vimrc .vimrc.bak-${current_time}
 fi
 if [ -d .vim ] ; then
-    mv .vim .vim_bak-${current_time}
+    mv .vim .vim.bak-${current_time}
 fi
 if [ -e .screenrc ] ; then
-    rm -f .screenrc
-    mv .screen .screenrc_bak-${current_time}
+    mv .screen .screenrc.bak-${current_time}
+fi
+if [ -e .tmux.conf ] ; then
+    mv .tmux.conf .tmux.conf.bak-${current_time}
 fi
 
 echo "
@@ -94,12 +96,6 @@ echo "
 ################################################################################"
 #brew install macvim --with-lua
 #brew linkapps macvim
-
-# not sure about the directory priviledge
-# looking for re-appearance of situation
-#sudo chmod a+w /usr/local/include
-#sudo chmod a+w /usr/local/lib/pkgconfig
-#brew link lua
 
 brew install vim
 brew install tmux

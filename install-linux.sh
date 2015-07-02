@@ -38,13 +38,16 @@ echo "
 cd $HOME_DIR
 current_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    mv .vimrc .vimrc_bak-${current_time}
+    mv .vimrc .vimrc.bak-${current_time}
 fi
 if [ -d .vim ] ; then
-    mv .vim .vim_bak-${current_time}
+    mv .vim .vim.bak-${current_time}
 fi
 if [ -e .screenrc ] ; then
-    mv .screenrc .screenrc_bak-${current_time}
+    mv .screenrc .screenrc.bak-${current_time}
+fi
+if [ -e .tmux.conf ] ; then
+    mv .tmux.conf .tmux.conf.bak-${current_time}
 fi
 
 echo "
