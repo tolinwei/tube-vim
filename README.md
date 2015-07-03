@@ -15,9 +15,11 @@ tube-vim
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
 
-It includes best practical Vim setting and a bunch of must-have plugins managed by modern [Vundle](https://github.com/gmarik/Vundle.vim), together with decent color schemes [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
+It includes best practical Vim setting and a bunch of must-have **plugins** managed by modern **[Vundle](https://github.com/gmarik/Vundle.vim)**, together with decent color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
 
 Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+
+We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, to helps you manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file will be placed during the installation that helps you to have better control of it.
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
@@ -26,7 +28,7 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
 ## Installation
 
 ### For OS X
-1. (Optional) Strongly recommend to install [iTerm2](https://iterm2.com/index.html) ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
+1. (Optional) Strongly recommend to install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
 
 2. Run the following command to install the environment automatically.
      ```
@@ -41,7 +43,6 @@ Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s w
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. Tmux, together with its configuration file are included in the installation script, it helps you to manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, we also provide a `.screenrc` configuration file that helps you to better use `screen` command, it will be placed during the installation.
 
 ### For Linux
 
