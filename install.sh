@@ -57,18 +57,18 @@ echo "
 ## Backing up existing Vim settings if any
 ################################################################################"
 cd $HOME_DIR
-current_time=`date +"%y-%m-%d-%H:%M"`
+date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    mv .vimrc .vimrc.bak-${current_time}
+    mv .vimrc .vimrc.bak-${date_time}
 fi
 if [ -d .vim ] ; then
-    mv .vim .vim.bak-${current_time}
+    mv .vim .vim.bak-${date_time}
 fi
 if [ -e .screenrc ] ; then
-    mv .screen .screenrc.bak-${current_time}
+    mv .screen .screenrc.bak-${date_time}
 fi
 if [ -e .tmux.conf ] ; then
-    mv .tmux.conf .tmux.conf.bak-${current_time}
+    mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
 
 echo "
@@ -80,8 +80,12 @@ mkdir -p $DOWNLOAD_DIR
 
 echo "
 ################################################################################
-## Copying configuration files for bash, zhs and coloe scheme for Vim
+## Copying configuration files for bash, zhs and color scheme for Vim
 ################################################################################"
+cd $HOME_DIR
+if [ -e .bashrc ] ; then
+    mv .bashrc .bashrc.bak-${date_time}
+fi
 cd $PROJECT_DIR
 cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
@@ -90,13 +94,12 @@ cp zshrc ${HOME_DIR}/.zshrc
 
 echo "
 ################################################################################
-## Installing Vim 7.4 from brew
+## Installing Vim and tmux via brew
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
 ################################################################################"
 #brew install macvim --with-lua
 #brew linkapps macvim
-
 brew install vim
 brew install tmux
 
