@@ -97,7 +97,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 6. (Optional) If you need auto completion for Vim, refer to **[YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe)** to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured [Vundle](https://github.com/gmarik/Vundle.vim) and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
 
 
-## Major features and key mappings
+## Vim plugins and key mappings
 
 ####>>> Color Schemes <<<
 We prepared color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)), which is all fantastic and eye-protective for you.
