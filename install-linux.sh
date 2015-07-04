@@ -36,18 +36,18 @@ echo "
 ## Backing up existing Vim settings if any
 ################################################################################"
 cd $HOME_DIR
-current_time=`date +"%y-%m-%d-%H:%M"`
+date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
-    mv .vimrc .vimrc.bak-${current_time}
+    mv .vimrc .vimrc.bak-${date_time}
 fi
 if [ -d .vim ] ; then
-    mv .vim .vim.bak-${current_time}
+    mv .vim .vim.bak-${date_time}
 fi
 if [ -e .screenrc ] ; then
-    mv .screenrc .screenrc.bak-${current_time}
+    mv .screenrc .screenrc.bak-${date_time}
 fi
 if [ -e .tmux.conf ] ; then
-    mv .tmux.conf .tmux.conf.bak-${current_time}
+    mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
 
 echo "
@@ -62,6 +62,9 @@ echo "
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
 cd $PROJECT_DIR
+if [ -e .bashrc ] ; then
+    mv .bashrc .bashrc.bak-${date_time}
+fi
 cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
