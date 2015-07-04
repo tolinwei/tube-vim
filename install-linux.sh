@@ -88,19 +88,19 @@ echo "
 ## Installing Vim plugins defined in vimrc
 ################################################################################"
 cd $PROJECT_DIR
-cp vimrc ${HOME_DIR}/.vimrc
+cp vimrc-linux ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
 
-echo "
+#echo "
 ################################################################################
 ## Compiling ycm_support_libs, then compile YouCompleteMe
 ################################################################################"
-mkdir -p $YCM_DIR
-cd $YCM_DIR
-cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
-make ycm_support_libs
-cd $HOME_DIR/.vim/bundle/YouCompleteMe
-./install.sh
+#mkdir -p $YCM_DIR
+#cd $YCM_DIR
+#cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+#make ycm_support_libs
+#cd $HOME_DIR/.vim/bundle/YouCompleteMe
+#./install.sh
 
 echo "
 ################################################################################
