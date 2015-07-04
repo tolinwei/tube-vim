@@ -53,10 +53,10 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install git wget
+     sudo apt-get install git
      ```
      
-3. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim -version` to print out the version on console.
+2. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim -version` to print out the version on console.
 
      Some of the Linux distributions include older version of Vim (< 7.3) in software manager's repositories, you may consider to compile, make and install it from source code.
 
@@ -79,6 +79,10 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      
      If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
        
+3. Install **zsh**, ideally also from software manger using like `sudo apt-get install zsh`. If you fail at some point, try to follow this **[Installing ZSH(https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)** in oh-my-zsh's Github wiki page.
+
+     If you don't do this step successfully, you would encounter some error when the installtion script of this repo try to set `zsh` as your system's default shell.
+
 4. Then you can just use the similar command to start the installation.
  
      ```
