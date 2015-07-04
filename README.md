@@ -78,7 +78,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      make && sudo make install
      ```
      
-     If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
+     If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github wiki.
        
 3. Install **zsh**, ideally also from software manger using like `sudo apt-get install zsh` or `sudo yum install zsh` or others. If you fail at certain point, try to follow this **[Installing ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)** in [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)'s Github wiki page.
 
