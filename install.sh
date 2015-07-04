@@ -80,20 +80,6 @@ mkdir -p $DOWNLOAD_DIR
 
 echo "
 ################################################################################
-## Copying configuration files for bash, zhs and color scheme for Vim
-################################################################################"
-cd $HOME_DIR
-if [ -e .bashrc ] ; then
-    mv .bashrc .bashrc.bak-${date_time}
-fi
-cd $PROJECT_DIR
-cat bashrc >> ${HOME_DIR}/.bashrc
-mkdir -p $VIM_COLOR_DIR
-cp gruvbox.vim $VIM_COLOR_DIR
-cp zshrc ${HOME_DIR}/.zshrc
-
-echo "
-################################################################################
 ## Installing Vim and tmux via brew
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
@@ -124,6 +110,20 @@ echo "
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+
+echo "
+################################################################################
+## Copying configuration files for bash, zhs and color scheme for Vim
+################################################################################"
+cd $HOME_DIR
+if [ -e .bashrc ] ; then
+    mv .bashrc .bashrc.bak-${date_time}
+fi
+cd $PROJECT_DIR
+cat bashrc >> ${HOME_DIR}/.bashrc
+mkdir -p $VIM_COLOR_DIR
+cp gruvbox.vim $VIM_COLOR_DIR
+cp zshrc ${HOME_DIR}/.zshrc
 
 echo "
 ################################################################################

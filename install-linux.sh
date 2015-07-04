@@ -59,6 +59,12 @@ mkdir -p $DOWNLOAD_DIR
 
 echo "
 ################################################################################
+## Installing oh-my-zsh, may need to mannually shell change later
+################################################################################"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "
+################################################################################
 ## Copying configuration files for bash, zhs and coloe scheme for Vim
 ################################################################################"
 cd $PROJECT_DIR
@@ -69,12 +75,6 @@ cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 cp zshrc ${HOME_DIR}/.zshrc
-
-echo "
-################################################################################
-## Installing oh-my-zsh, may need to mannually shell change later
-################################################################################"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "
 ################################################################################
