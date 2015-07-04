@@ -74,7 +74,7 @@ echo "
 ################################################################################
 ## Installing oh-my-zsh, may need to mannually shell change later
 ################################################################################"
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "
 ################################################################################
@@ -95,7 +95,7 @@ echo "
 ## Compiling Clang, to compile YouCompleteMe
 ################################################################################"
 #cd $DOWNLOAD_DIR
-#wget http://llvm.org/releases/3.6.1/cfe-3.6.1.src.tar.xz
+#curl http://llvm.org/releases/3.6.1/cfe-3.6.1.src.tar.xz
 #tar xvfJ llvm-3.6.1.src.tar.xz
 #cd llvm-3.6.1.src
 #./configure
