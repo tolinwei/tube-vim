@@ -167,9 +167,9 @@ I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** 
 
 YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype".
 
-If you want **Java** auto completion suppport, which might be needed by some users, you would have to mannually follow the official guide [here](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
+If you want **Java** auto completion suppport, which might be needed by some users, you would have to mannually follow the official guide [Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
 
-## Why it is tube-vim
+## Why it is named tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
 
 ## License
