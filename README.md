@@ -167,11 +167,11 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
 
 **Note
-that** we temporarily decided to remove the installation of YCM for Linux, since it requires to pre-compile too many libraries that makes the installation process **extremely slow**. if you're interested in making YCM work on Linux, refer to **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README.
+that** we temporarily decided to remove the installation of YCM for Linux, since it requires to pre-compile too many libraries that makes the installation process **extremely slow**. If you're interested in making YCM work on Linux, refer to **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README.
 
 To OS X user, YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype".
 
-As we have mentioned in previous section, if you want **Java** auto completion suppport, which might be needed by some users, you would have to mannually follow the official guide [Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
+As we have mentioned in previous section, if you want **Java** auto completion suppport, you would have to mannually follow the official guide [Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
 
 ## Why it is named tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
