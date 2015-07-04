@@ -99,9 +99,6 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 
 ## Vim plugins and key mappings
 
-####>>> Color Schemes <<<
-We prepared color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)), which is all fantastic and eye-protective for you.
-
 ####>>> Vundle <<<
 **tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to keep track of and configure your plugins right inside `.vimrc` file, so that you can download all the plugins in one command if you change your development environment, of course you can also update, clean them conveniently.
 
