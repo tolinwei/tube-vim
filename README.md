@@ -56,7 +56,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      sudo apt-get install git wget
      ```
      
-3. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` depending on what OS you're in, and then type `vim -version` to print out the version on console.
+3. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim -version` to print out the version on console.
 
      Some of the Linux distributions include older version of Vim (< 7.3) in software manager's repositories, you may consider to compile, make and install it from source code.
 
