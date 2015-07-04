@@ -19,7 +19,7 @@ It includes best practical Vim setting and a bunch of must-have **plugins** mana
 
 Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
-We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, to helps you manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file will be placed during the installation that helps you to have better control of it.
+We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, together with its configuration file `.tmux.conf`, to helps you manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file `.screenrc` will be placed during the installation that helps you to have better control of it.
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
@@ -43,6 +43,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
+4. (Optional) Until now, you have most of the power of this repository, **except Java auto completion** support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README. You bascally need to have latest Eclim and Ecplipse installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
 
 ### For Linux
 
