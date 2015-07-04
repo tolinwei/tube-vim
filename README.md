@@ -49,7 +49,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 
 － If you're using Linux, we value you as experienced user, and ask you to have some prerequisites before running the setup script. Except this, due to so many Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X, we only provide a simplified version that covers color scheme, most Vim plugins except [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for auto completion, and remove tmux installation.
 
-1. Have your `git`, `wget` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
+1. Have your `git` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
@@ -80,9 +80,9 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      
      If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in YouCompleteMe's Github wiki.
        
-3. Install **zsh**, ideally also from software manger using like `sudo apt-get install zsh`. If you fail at some point, try to follow this **[Installing ZSH(https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)** in oh-my-zsh's Github wiki page.
+3. Install **zsh**, ideally also from software manger using like `sudo apt-get install zsh` or `sudo yum install zsh` or others. If you fail at certain point, try to follow this **[Installing ZSH(https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)** in oh-my-zsh's Github wiki page.
 
-     If you don't do this step successfully, you would encounter some error when the installtion script of this repo try to set `zsh` as your system's default shell.
+     If you don't do this step successfully, you would encounter some errors when the installtion script of this repository tries to set `zsh` as your system's default shell.
 
 4. Then you can just use the similar command to start the installation.
  
@@ -90,7 +90,9 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
      ```
      
-5. (Optional) If you want to install *tmux*, try to install it via your system's software manager using `sudo apt-get install tmux` or `sudo yum install tmux`, or go to the **[official site](http://tmux.github.io/)** to download source code and compile it.
+5. (Optional) If you want to use *tmux*, try also to install it via your system's software manager using `sudo apt-get install tmux` or `sudo yum install tmux` or others, or go to the **[official site](http://tmux.github.io/)** to download source code and compile it.
+     
+     If you choose to compile it from the newset version of source code, most likely you will fail due to some of the system's packages are outdated, try to search for solutions, maybe like this [one](https://gist.github.com/shime/5706655), but the successful compilation can not be promised.
 
 6. (Optional) If you need auto completion for Vim, refer to **[YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe)** to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured [Vundle](https://github.com/gmarik/Vundle.vim) and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
 
