@@ -49,12 +49,13 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 
 － If you're using Linux, we value you as experienced user, and ask you to have some prerequisites before running the setup script. Except this, due to so many Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X, we only provide a simplified version that covers color scheme, most Vim plugins except [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for auto completion, and remove tmux installation.
 
-1. Have your `git` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
+1. Have your `git`, `python-dev` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install git
+     sudp apt-get install build-essential cmake
+     sudo apt-get install git python-dev
      ```
      
 2. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim -version` to print out the version on console.
