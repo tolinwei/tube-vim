@@ -23,6 +23,7 @@ PROJECT_DIR=${HOME_DIR}/.tube-vim/
 DOWNLOAD_DIR=${HOME_DIR}/Downloads/
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors/
 ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
+YCM_DIR=${HOME_DIR}/ycm_build
 
 echo "
 ################################################################################
@@ -92,16 +93,14 @@ vim +PluginInstall +qall
 
 echo "
 ################################################################################
-## Compiling Clang, to compile YouCompleteMe
+## Compiling ycm_support_libs, then compile YouCompleteMe
 ################################################################################"
-#cd $DOWNLOAD_DIR
-#curl http://llvm.org/releases/3.6.1/cfe-3.6.1.src.tar.xz
-#tar xvfJ llvm-3.6.1.src.tar.xz
-#cd llvm-3.6.1.src
-#./configure
-#make && sudo make install
-#cd $HOME_DIR/.vim/bundle/YouCompleteMe
-#./install.sh
+mkdir -p $YCM_DIR
+cd $YCM_DIR
+cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp
+make ycm_support_libs
+cd $HOME_DIR/.vim/bundle/YouCompleteMe
+./install.sh
 
 echo "
 ################################################################################
