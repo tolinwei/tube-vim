@@ -43,7 +43,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. (Optional) Until now, you have most of the power of this repository, **except Java auto completion** support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README. You bascally need to have latest Eclim and Ecplipse installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
+4. (Optional) Until now, you have most of the powers from this repository, **except Java auto completion** support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README. You bascally need to have latest Eclim and Ecplipse installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
 
 ### For Linux
 
