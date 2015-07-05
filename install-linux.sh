@@ -88,7 +88,7 @@ echo "
 ## Installing Vim plugins defined in vimrc
 ################################################################################"
 cd $PROJECT_DIR
-cp vimrc-linux ${HOME_DIR}/.vimrc
+cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
 
 echo "
