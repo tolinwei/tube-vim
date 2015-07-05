@@ -49,7 +49,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 
 － If you're using Linux, we value you as experienced user, and due to the discrepancies among multiple Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X.
 
-We would ask you to have **some prerequisites** before running the setup script, and the version for Linux has been simplified that covers color scheme, most Vim plugins except YCM that requires too complecated manually compilation process, then remove tmux. You could install **YouCompleteMe** mannually by refering to the **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
+We would ask you to have **some prerequisites** before running the setup script, and the version for Linux has been simplified that only covers color scheme, most Vim plugins except YCM that requires too complecated manually compilation process, then remove tmux. You could install **YouCompleteMe** mannually by refering to the **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
 
 You could also install **tmux** at 5th step to reach more parity as tube-vim for OS X.
 
