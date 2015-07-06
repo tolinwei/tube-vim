@@ -6,8 +6,7 @@ echo "
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|"
 
-echo "
-## Seting up advanced Shell environment from within this repo..."
+echo "## Seting up advanced Shell environment from within this repo...\n"
 
 echo "## Defining directory variables..."
 HOME_DIR=~
@@ -128,7 +127,7 @@ open gruvbox-light.itermcolors
 open gruvbox-light.terminal
 echo "...Done\n"
 
-echo "## Finish installation, please enjoy..."
+echo "## Finish installation, please enjoy!"
 echo "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
