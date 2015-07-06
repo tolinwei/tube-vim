@@ -92,7 +92,7 @@ else
 fi
 echo -e "## [STAGE] ...Done\n"
 
-echo -e "## [STAGE] Copying configuration files for bash, zsh and color scheme for Vim..."
+echo -e "## [STAGE] Copying configuration file for bash and color scheme for Vim..."
 cd $HOME_DIR
 if [ -e .bashrc ] ; then
     echo -e "## [INFO] Backing up existing .bashrc to .bashrc.bak-${date_time}"
@@ -102,7 +102,6 @@ cd $PROJECT_DIR
 cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
-cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [STAGE] Installing Vundle for manegement of Vim plugins..."
@@ -133,10 +132,12 @@ open gruvbox-light.itermcolors
 open gruvbox-light.terminal
 echo -e "## [STAGE] ...Done\n"
 
-echo -e "## [STAGE] Installing oh-my-zsh..."
+echo -e "## [STAGE] Installing oh-my-zsh, and copying configuration file..."
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+cd $PROJECT_DIR
+cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [DONE] Finish installation, please enjoy!!"

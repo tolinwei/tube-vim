@@ -47,7 +47,7 @@ cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
 echo -e "## [STAGE] ...Done\n"
 
-echo -e "## [STAGE] Copying configuration files for bash, zsh and color scheme for Vim..."
+echo -e "## [STAGE] Copying configuration file for bash and color scheme for Vim..."
 cd $PROJECT_DIR
 if [ -e .bashrc ] ; then
     echo -e "## [INFO] Backing up existing .bashrc to .bashrc.bak-${date_time}"
@@ -56,7 +56,6 @@ fi
 cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
-cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [STAGE] Installing Vundle for manegement of Vim plugins..."
@@ -77,7 +76,7 @@ echo -e "## [STAGE] ...Done\n"
 #cd $HOME_DIR/.vim/bundle/YouCompleteMe
 #./install.sh
 
-echo -e "## [STAGE] Installing oh-my-zsh..."
+echo -e "## [STAGE] Installing oh-my-zsh, and copying configuration file..."
 if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
     echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
     rm -rf ${HOME_DIR}/.oh-my-zsh
@@ -86,6 +85,8 @@ else
     echo -e "## [INFO] Installing new oh-my-zsh only"
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+cd $PROJECT_DIR
+cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [DONE] Finish installation, please enjoy!!"
