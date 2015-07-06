@@ -37,7 +37,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
 
-3. Change the color scheme in the **Preferences...    ⌘,** for **Terminal** or **iTerm2** depends on which one you're using.
+3. Change the color scheme in **Preferences...    ⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
     + For Terminal
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="400" />
