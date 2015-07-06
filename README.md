@@ -150,7 +150,14 @@ For more shortcuts, please refer to a external [NERDTree Guide](http://usevim.co
 Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
 
 ####>>> accelerated-smooth-scroll <<<
-The default behavior of scrolling inside Vim would jump for the whole page (`<Control>+f` or `<Control>+b`) or half page instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
+The default behavior of scrolling inside Vim would jump for the whole page (`<Control>+f` or `<Control>+b`) or half page (`<Control>+d` or `<Control>+u`) instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
+
+**Shortcuts**
+
+- `<Control>+f` - Scroll full page down smoothly
+- `<Control>+d` - Scroll half page down smoothly
+- `<Control>+b` - Scroll full page up smoothly
+- `<Control>+u` - Scroll half page up smoothly
 
 ####>>> NERDCommenter <<<
 **[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
