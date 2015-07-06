@@ -105,13 +105,13 @@ You could also install **tmux** at 5th step to reach more parity as tube-vim for
 
 ## Usage Guide
 
-#### Vim
+### Vim
 
 - Type `vimtutor` in your shell emulator like **Terminal** or **iTerm2** to open the most rudimental yet intuitive tutorial of Vim
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 
-#### Vim plugins and key mappings
+### Vim plugins and key mappings
 
 #####>>> Vundle <<<
 **tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to keep track of and configure your plugins right inside `.vimrc` file, so that you can download all the plugins in one command if you change your development environment, of course you can also update, clean them conveniently.
@@ -193,7 +193,7 @@ To OS X user, YouCompleteMe by default provides auto completion support of C-fam
 
 As we have mentioned in previous section, if you want **Java** auto completion suppport, you would have to mannually follow the official guide **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)**, to install **Ecplise for Java** and **[Eclim](http://eclim.org/)** for accessing Eclipse code editing feature.
 
-####tmux
+###tmux
 
 - [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
 - [A tmux Primer](https://danielmiessler.com/study/tmux/)
