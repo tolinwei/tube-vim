@@ -9,17 +9,17 @@ tube-vim
          
 ```
 
-**tube-vim** is a integrated shell-based development environment that you can easily set up by **running a single command**:
+**tube-vim** is a integrated shell-based development environment mainly designed for OS X that you can easily set up by **running a single command**:
 
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
 
-It includes best practical Vim setting and a bunch of must-have **plugins** managed by modern **[Vundle](https://github.com/gmarik/Vundle.vim)**, together with decent color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and explained below.
+It includes best practical Vim setting, a bunch of must-have **plugins** managed by modern **[Vundle](https://github.com/gmarik/Vundle.vim)**, and decent color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and introduced below.
 
-Different from other Vim configuration, **tube-vim** also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+Different from other Vim configuration, tube-vim also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
 
-We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, together with its configuration file `.tmux.conf`, to helps you manage, accelerate and stream your shell operation in a unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file `.screenrc` will be placed during the installation that helps you to have better control of it.
+We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, together with its configuration file `.tmux.conf`, to helps you manage, accelerate and stream your shell operation in an unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file `.screenrc` will be placed during the installation that helps you to get better control of it.
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
@@ -28,7 +28,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
 ## Installation
 
 ### For OS X
-1. (Optional) Strongly recommend to install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html)
+1. (Optional, but strongly recommended) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html).
 
 2. Run the following command to install the environment automatically.
      ```
@@ -43,18 +43,22 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. (Optional) Until now, you have most of the powers from this repository, **except Java auto completion** support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README. You bascally need to have latest Eclim and Ecplipse installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
+4. (Optional) Until now, you have most of the powers from this repository, **except** Java auto completion support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in YouCompleteMe's Github README. You bascally need to have latest **[Eclim](http://eclim.org/)** and **Ecplipse** installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
 
 ### For Linux
 
-－ If you're using Linux, we value you as experienced user, and ask you to have some prerequisites before running the setup script. Except this, due to so many Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X, we only provide a simplified version that covers color scheme, most Vim plugins except [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) for auto completion, and remove tmux installation.
+－ If you're using Linux, we value you as experienced user, and due to the discrepancies among multiple Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X.
+
+We would ask you to have **some prerequisites** before running the setup script, and the version for Linux has been simplified that only covers color scheme, most Vim plugins except YCM that requires too complecated manually compilation process, then remove tmux. You could install **YouCompleteMe** mannually by refering to the **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
+
+You could also install **tmux** at 5th step to reach more parity as tube-vim for OS X.
 
 1. Have your `git`, `python-dev` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudp apt-get install build-essential cmake
+     sudo apt-get install build-essential cmake
      sudo apt-get install git python-dev
      ```
      
@@ -95,7 +99,7 @@ We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, L
      
      If you choose to compile it from the newset version of source code, most likely you will fail due to some of the system's packages are outdated, try to search for solutions, maybe like [this one](https://gist.github.com/shime/5706655), but the successful compilation can not be promised.
 
-6. (Optional) If you need auto completion for Vim, refer to **[YouCompleteMe's Github page](https://github.com/Valloric/YouCompleteMe)** to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured [Vundle](https://github.com/gmarik/Vundle.vim) and go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. It should be easy to set up on most famous distributions, however, if you run into some problem, you may have to read the [Full Installtion Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide) and possibly the [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below.
+6. (Optional) If you need auto completion for Vim, read **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured **Vundle**, then compile *ycm_support_libs*, and  finally go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. If you run into some problems, try to read [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below or open a issue in its repository.
 
 
 ## Vim plugins and key mappings
@@ -167,11 +171,11 @@ The default behavior of scrolling inside Vim would jump for the whole page (`<Co
 I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
 
 **Note
-that** we temporarily decided to remove the installation of YCM for Linux, since it requires to pre-compile too many libraries that makes the installation process **extremely slow**. If you're interested in making YCM work on Linux, refer to **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github README.
+that** we temporarily decided to remove the installation of YCM for Linux, since it requires to pre-compile too many libraries that makes the installation process **extremely slow**. If you're interested in making YCM work on Linux, refer to **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
 
 To OS X user, YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype".
 
-As we have mentioned in previous section, if you want **Java** auto completion suppport, you would have to mannually follow the official guide [Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages), to install Ecplise for Java and [Eclim](http://eclim.org/) for accessing Eclipse code editing feature.
+As we have mentioned in previous section, if you want **Java** auto completion suppport, you would have to mannually follow the official guide **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)**, to install **Ecplise for Java** and **[Eclim](http://eclim.org/)** for accessing Eclipse code editing feature.
 
 ## Why it is named tube-vim
 I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
