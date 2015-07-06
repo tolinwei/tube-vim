@@ -4,8 +4,7 @@ echo -e "
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
-     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|"
-
+     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
 echo -e "## Seting up advanced shell environment from within this repo...\n"
 
@@ -42,7 +41,7 @@ echo -e "## ...Done\n"
 echo -e "## Setting up directories..."
 cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
-echo -e "## ...Done"
+echo -e "## ...Done\n"
 
 echo -e "## Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -67,7 +66,7 @@ echo -e "## Installing Vim plugins defined in vimrc..."
 cd $PROJECT_DIR
 cp vimrc-linux ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
-echo -e "## ...Done"
+echo -e "## ...Done\n"
 
 #echo -e "## Compiling ycm_support_libs, then compile YouCompleteMe..."
 #mkdir -p $YCM_DIR
@@ -83,5 +82,5 @@ echo -e "
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
-     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|"
+     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
