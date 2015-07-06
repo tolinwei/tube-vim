@@ -47,17 +47,6 @@ cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
 echo -e "## [STAGE] ...Done\n"
 
-echo -e "## [STAGE] Installing oh-my-zsh..."
-if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
-    echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
-    rm -rf ${HOME_DIR}/.oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-else
-    echo -e "## [INFO] Installing new oh-my-zsh only"
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
-echo -e "## [STAGE] ...Done\n"
-
 echo -e "## [STAGE] Copying configuration files for bash, zsh and color scheme for Vim..."
 cd $PROJECT_DIR
 if [ -e .bashrc ] ; then
@@ -87,6 +76,17 @@ echo -e "## [STAGE] ...Done\n"
 #make ycm_support_libs
 #cd $HOME_DIR/.vim/bundle/YouCompleteMe
 #./install.sh
+
+echo -e "## [STAGE] Installing oh-my-zsh..."
+if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
+    echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
+    rm -rf ${HOME_DIR}/.oh-my-zsh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+else
+    echo -e "## [INFO] Installing new oh-my-zsh only"
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [DONE] Finish installation, please enjoy!!"
 echo -e "
