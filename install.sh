@@ -120,7 +120,7 @@ cd $HOME_DIR/.vim/bundle/YouCompleteMe
              --gocode-completer
 echo -e "...Done\n"
 
-echo -e "## Importing color scheme for iTerm2 and terminal, (please click 'OK' on the popup window..."
+echo -e "## Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window..."
 cd $PROJECT_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
