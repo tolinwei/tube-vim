@@ -9,29 +9,42 @@ colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General setting
+set encoding=utf-8                              " Set the encoding for new file
+set ffs=unix,dos,mac                            " Set Unix as standard file type
 syntax on
 set number
 set backspace=indent,eol,start                  " Enable backspace all the time
+set whichwrap+=<,>,h,l                          " ?
 set hlsearch                                    " Highlight search result
+set incsearch                                   " Incremental search
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
 set mouse=a                                     " Mouse Navigation
-
 " Wrap settings
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set nowrap                                      " Don't wrap lines
+" Auto reload .vimrc if it has been changed
+autocmd! bufwritepost _vimrc source %           " Windows
+autocmd! bufwritepost .vimrc source %           " *nix
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Indent setting, use 4 spaces for tab
 " http://vim.wikia.com/wiki/Indenting_source_code
-set softtabstop=4                               " Set it the same as shiftwidth when using SPACE indention
+set tabstop=4                                   " length of <TAB>
+set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
 set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
 set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Folding
 set foldmethod=indent	                        " http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
 set foldlevelstart=20                           " files will be loaded with opend folds
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
