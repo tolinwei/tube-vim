@@ -103,6 +103,11 @@ You could also install **tmux** at 5th step to reach more parity as tube-vim for
 
 6. (Optional) If you need auto completion for Vim, read **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured **Vundle**, then compile *ycm_support_libs*, and  finally go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. If you run into some problems, try to read [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below or open a issue in its repository.
 
+##### Installation Example for Linux
+
+- [Installation Guide on Newly Created DigitalOcean Ubuntu 14.04 x64 LTS Droplet](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-Ubuntu-14.04-x64-LTS-Droplet)
+- [Installation Guide on Newly Created DigitalOcean CentOS 7 x64](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-CentOS-7-x64)
+
 ## Usage Guide
 
 ### Vim
