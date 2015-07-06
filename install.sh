@@ -1,22 +1,22 @@
 #!/bin/bash
-echo "
+echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
-     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|"
+     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
-echo "## Seting up advanced Shell environment from within this repo...\n"
+echo -e "## Seting up advanced Shell environment from within this repo...\n"
 
-echo "## Defining directory variables..."
+echo -e "## Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-vim/
 DOWNLOAD_DIR=${HOME_DIR}/Downloads/
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors/
 ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing brew, git, wget for OS X if miss any..."
+echo -e "## Installing brew, git, wget for OS X if miss any..."
 which -s brew
 if [[ $? != 0 ]] ; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -25,18 +25,18 @@ else
     brew upgrade
 fi
 which -s git || brew install git
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Cloning repo to home directories..."
+echo -e "## Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
 git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing Command Line Tools for OS X (lease click 'Install' on the popup window)..."
+echo -e "## Installing Command Line Tools for OS X (lease click 'Install' on the popup window)..."
 xcode-select --install
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Backing up existing Vim settings..."
+echo -e "## Backing up existing Vim settings..."
 cd $HOME_DIR
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ] ; then
@@ -51,14 +51,14 @@ fi
 if [ -e .tmux.conf ] ; then
     mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Setting up directories..."
+echo -e "## Setting up directories..."
 cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing Vim and tmux via brew..."
+echo -e "## Installing Vim and tmux via brew..."
 ## https://github.com/Homebrew/homebrew/blob/master/Library/Formula/vim.rb
 ## Needs to restart shell session to make installation works
 
@@ -67,27 +67,28 @@ echo "## Installing Vim and tmux via brew..."
 
 brew install vim
 brew install tmux
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing Exuberant Ctags to support tagbar from source code..."
+echo -e "## Installing Exuberant Ctags to support tagbar from brew..."
 CTAGS_DIR=`which ctags`
 if [ $CTAGS_DIR != '/usr/local/bin/ctags' ] ; then
-    cd $DOWNLOAD_DIR
-    curl -L http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-    tar zxf ctags-5.8.tar.gz
-    cd ctags-5.8
-    ./configure -prefix=/usr/local
-    make && sudo make install
+    #cd $DOWNLOAD_DIR
+    #curl -L http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
+    #tar zxf ctags-5.8.tar.gz
+    #cd ctags-5.8
+    #./configure -prefix=/usr/local
+    #make && sudo make install
+    brew install ctags
 fi
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing oh-my-zsh..."
+echo -e "## Installing oh-my-zsh..."
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Copying configuration files for bash, zhs and color scheme for Vim..."
+echo -e "## Copying configuration files for bash, zhs and color scheme for Vim..."
 cd $HOME_DIR
 if [ -e .bashrc ] ; then
     mv .bashrc .bashrc.bak-${date_time}
@@ -97,41 +98,41 @@ cat bashrc >> ${HOME_DIR}/.bashrc
 mkdir -p $VIM_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 cp zshrc ${HOME_DIR}/.zshrc
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing Vundle for manegement of Vim plugins..."
+echo -e "## Installing Vundle for manegement of Vim plugins..."
 if [ ! -d ${HOME_DIR}/.vim/bundle/Vundle.vim ] ; then
     git clone https://github.com/gmarik/Vundle.vim.git ${HOME_DIR}/.vim/bundle/Vundle.vim
 fi
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing Vim plugins defined in vimrc..."
+echo -e "## Installing Vim plugins defined in vimrc..."
 cd $PROJECT_DIR
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PluginInstall +qa
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Installing cmake, then compile YouCompleteMe..."
+echo -e "## Installing cmake, then compile YouCompleteMe..."
 brew install cmake
 cd $HOME_DIR/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer \
              --omnisharp-completer \
              --gocode-completer
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Importing color scheme for iTerm2 and terminal, (please click 'OK' on the popup window..."
+echo -e "## Importing color scheme for iTerm2 and terminal, (please click 'OK' on the popup window..."
 cd $PROJECT_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 open gruvbox-light.itermcolors
 open gruvbox-light.terminal
-echo "...Done\n"
+echo -e "...Done\n"
 
-echo "## Finish installation, please enjoy!"
-echo "
+echo -e "## Finish installation, please enjoy!"
+echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
-     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|"
+     \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
