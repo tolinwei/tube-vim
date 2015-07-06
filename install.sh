@@ -6,7 +6,7 @@ echo -e "
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
-echo -e "## [START] Seting up advanced Shell environment from within this repo...\n"
+echo -e "## [START] Seting up shell-based development environment from within this repo...\n"
 
 echo -e "## [STAGE] Defining directory variables..."
 HOME_DIR=~
