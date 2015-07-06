@@ -92,12 +92,6 @@ else
 fi
 echo -e "## [STAGE] ...Done\n"
 
-echo -e "## [STAGE] Installing oh-my-zsh..."
-if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
-echo -e "## [STAGE] ...Done\n"
-
 echo -e "## [STAGE] Copying configuration files for bash, zsh and color scheme for Vim..."
 cd $HOME_DIR
 if [ -e .bashrc ] ; then
@@ -137,6 +131,12 @@ open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 open gruvbox-light.itermcolors
 open gruvbox-light.terminal
+echo -e "## [STAGE] ...Done\n"
+
+echo -e "## [STAGE] Installing oh-my-zsh..."
+if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
 echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [DONE] Finish installation, please enjoy!!"
