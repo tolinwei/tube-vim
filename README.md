@@ -106,7 +106,7 @@ You could also install **tmux** at 5th step to reach more parity as tube-vim for
 #### Installation Examples for Linux
 
 - [Installation Guide on Newly Created DigitalOcean Ubuntu 14.04 x64 LTS Droplet](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-Ubuntu-14.04-x64-LTS-Droplet)
-- [Installation Guide on Newly Created DigitalOcean CentOS 7 x64](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-CentOS-7-x64)
+- [Installation Guide on Newly Created DigitalOcean CentOS 7 x64](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-CentOS-7-x64) (to be edited)
 
 ## Usage Guide
 
