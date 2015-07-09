@@ -58,7 +58,6 @@ echo -e "## [STAGE] ...Done\n"
 
 
 echo -e "## [STAGE] Setting up directories..."
-cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
 echo -e "## [STAGE] ...Done\n"
 
