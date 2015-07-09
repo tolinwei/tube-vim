@@ -71,6 +71,7 @@ cp tmux.conf ${HOME_DIR}/.tmux.conf
 cp screenrc ${HOME_DIR}/.screenrc
 
 mkdir -p $VIM_COLOR_DIR
+cd $PROJECT_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 echo -e "## [STAGE] ...Done\n"
 
@@ -83,7 +84,7 @@ echo -e "## [STAGE] ...Done\n"
 
 
 echo -e "## [STAGE] Installing Vim plugins defined in vimrc..."
-cd $PROJECT_DIR
+cd $PROJECT_CONFIG_DIR
 cp vimrc-linux ${HOME_DIR}/.vimrc
 vim +PluginInstall +qall
 echo -e "## [STAGE] ...Done\n"

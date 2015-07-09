@@ -125,6 +125,7 @@ cp tmux.conf ${HOME_DIR}/.tmux.conf
 cp screenrc ${HOME_DIR}/.screenrc
 
 mkdir -p $VIM_COLOR_DIR
+cd $PROJECT_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
 echo -e "## [STAGE] ...Done\n"
 
