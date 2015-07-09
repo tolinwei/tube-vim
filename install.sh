@@ -26,11 +26,11 @@ echo -e "## [STAGE] ...Done\n"
 
 echo -e "## [STAGE] Installing brew, git, wget for OS X..."
 which -s brew
-if [[ $? != 0 ]] ; then
+if [ $? != 0 ] ; then
     echo -e "## [INFO] Installing new Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    echo -e "## [INFO] Updating and Upgrading Homebrew"
+    echo -e "## [INFO] Updating and upgrading Homebrew"
     brew update
     brew upgrade
 fi
@@ -81,7 +81,6 @@ echo -e "## [STAGE] ...Done\n"
 
 
 echo -e "## [STAGE] Setting up directories..."
-cd $HOME_DIR
 mkdir -p $DOWNLOAD_DIR
 echo -e "## [STAGE] ...Done\n"
 
