@@ -158,7 +158,6 @@ let NERDSpaceDelims = 1
 Plugin 'Valloric/YouCompleteMe'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-let g:ycm_key_list_select_completion = ['<Down>']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
