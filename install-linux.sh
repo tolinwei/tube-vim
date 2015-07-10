@@ -104,10 +104,10 @@ echo -e "## [STAGE] Installing oh-my-zsh, and copying configuration file..."
 if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
     echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
     rm -rf ${HOME_DIR}/.oh-my-zsh
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && exit
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
     echo -e "## [INFO] Installing new oh-my-zsh only"
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" && exit
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 cd $PROJECT_CONFIG_DIR
 cp zshrc ${HOME_DIR}/.zshrc
