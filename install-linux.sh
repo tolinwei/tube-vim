@@ -101,7 +101,7 @@ echo -e "## [STAGE] ...Done\n"
 
 
 echo -e "## [STAGE] Installing oh-my-zsh, and copying configuration file..."
-echo -e "## [INFO] **PLEASE TYPE 'exit' AFTER OH-MY-ZSH INSTALLATION, THEN RE-LOGIN**"
+echo -e "\n## [INFO] **PLEASE TYPE 'exit' AFTER OH-MY-ZSH INSTALLATION, THEN RE-LOGIN**\n"
 
 if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
     echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
