@@ -101,6 +101,8 @@ echo -e "## [STAGE] ...Done\n"
 
 
 echo -e "## [STAGE] Installing oh-my-zsh, and copying configuration file..."
+echo -e "## [INFO] **PLEASE TYPE 'exit' AFTER OH-MY-ZSH INSTALLATION, THEN RE-LOGIN**"
+
 if [ -d ${HOME_DIR}/.oh-my-zsh ]; then
     echo -e "## [INFO] Deleting existing oh-my-zsh and installing new one"
     rm -rf ${HOME_DIR}/.oh-my-zsh
@@ -109,14 +111,13 @@ else
     echo -e "## [INFO] Installing new oh-my-zsh only"
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-exit
-#cd $PROJECT_CONFIG_DIR
-#cp zshrc ${HOME_DIR}/.zshrc
+cd $PROJECT_CONFIG_DIR
+cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 
 
-echo -e "## [DONE] Finish installation, please **re-login** to enjoy!!"
+echo -e "## [DONE] Finish installation, please enjoy!!"
 echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
