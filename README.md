@@ -60,8 +60,7 @@ You could also install **tmux** at 5th step to reach more parity as tube-vim for
      ```
      sudo apt-get update
      sudo apt-get upgrade
-     sudo apt-get install build-essential cmake
-     sudo apt-get install git python-dev
+     sudo apt-get install git
      ```
      
 2. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim --version` to print out the version on console.
