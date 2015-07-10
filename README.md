@@ -55,12 +55,17 @@ We would ask you to have **some prerequisites** before running the setup script,
 
 You could also install **tmux** at 5th step to reach more parity as tube-vim for OS X.
 
-1. Have your `git`, `python-dev` and other compilation tools installed. In a typical **Ubuntu** machine, you can install them using
+1. Update your system packages and have your `git` installed. In a typical Debian-linux machine (like Debian, Ubuntu or others), you can install them using
 
      ```
      sudo apt-get update
      sudo apt-get upgrade
      sudo apt-get install git
+     ```
+     or you can get similar things done on systems with `yum` as software manager:
+     ```
+     sudo yum upgrade
+     sudo yum install git
      ```
      
 2. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim --version` to print out the version on console.
