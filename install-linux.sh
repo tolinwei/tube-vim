@@ -109,13 +109,14 @@ else
     echo -e "## [INFO] Installing new oh-my-zsh only"
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-cd $PROJECT_CONFIG_DIR
-cp zshrc ${HOME_DIR}/.zshrc
+exit
+#cd $PROJECT_CONFIG_DIR
+#cp zshrc ${HOME_DIR}/.zshrc
 echo -e "## [STAGE] ...Done\n"
 
 
 
-echo -e "## [DONE] Finish installation, please re-login to enjoy!!"
+echo -e "## [DONE] Finish installation, please **re-login** to enjoy!!"
 echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
