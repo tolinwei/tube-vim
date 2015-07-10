@@ -97,6 +97,8 @@ You could also install **tmux** at 5th step to reach more parity as tube-vim for
      bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
      ```
      
+     **Remember**, please type `exit` after oh-my-zsh installation, then re-login.
+     
 5. (Optional) If you want to use **tmux**, try also to install it via your system's software manager using `sudo apt-get install tmux` or `sudo yum install tmux` or others, or go to the **[official site](http://tmux.github.io/)** to download source code and compile it.
      
      If you choose to compile it from the newset version of source code, most likely you will fail due to some of the system's packages are outdated, try to search for solutions, maybe like [this one](https://gist.github.com/shime/5706655), but the successful compilation can not be promised.
