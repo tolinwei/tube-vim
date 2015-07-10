@@ -115,7 +115,7 @@ echo -e "## [STAGE] ...Done\n"
 
 
 
-echo -e "## [DONE] Finish installation, please enjoy!!"
+echo -e "## [DONE] Finish installation, please re-login to enjoy!!"
 echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
