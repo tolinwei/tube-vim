@@ -9,9 +9,9 @@ tube-vim
          
 ```
 
-**tube-vim** is a integrated shell-based development environment mainly designed for OS X that you can easily set up by **running a single command**:
+中文文档[请戳我]()正在编辑当中
 
-在终端执行下面命令，快速安装**tube-vim**命令行集成开发环境（OS X系统)：
+**tube-vim** is a integrated shell-based development environment mainly designed for OS X that you can easily set up by **running a single command**:
 
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
