@@ -9,7 +9,7 @@ tube-vim
          
 ```
 
-中文文档[请戳我]()正在编辑当中
+[简体中文版文档正在编辑中]()
 
 **tube-vim** is a integrated shell-based development environment mainly designed for OS X that you can easily set up by **running a single command**:
 
