@@ -19,7 +19,7 @@ set hlsearch                                    " Highlight search result
 set incsearch                                   " Incremental search
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
-set mouse=a                                     " Mouse Navigation
+set mouse-=a                                     " Mouse Navigation
 " Wrap settings
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set nowrap                                      " Don't wrap lines
