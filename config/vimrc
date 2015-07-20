@@ -32,10 +32,16 @@ autocmd! bufwritepost .vimrc source %           " *nix
 " Indent setting, use 4 spaces for tab
 " http://vim.wikia.com/wiki/Indenting_source_code
 set tabstop=4                                   " length of <TAB>
-set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
 set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
+set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
 set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" File indent specifically for certain files
+autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
