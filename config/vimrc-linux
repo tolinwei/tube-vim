@@ -9,30 +9,45 @@ colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General setting
+set encoding=utf-8                              " Set the encoding for new file
+set ffs=unix,dos,mac                            " Set Unix as standard file type
 syntax on
 set number
 set backspace=indent,eol,start                  " Enable backspace all the time
+set whichwrap+=<,>,h,l
 set hlsearch                                    " Highlight search result
+set incsearch                                   " Incremental search
 set cursorline
 set clipboard+=unnamed                          " Make yank and pasge working across Vims
-set mouse=a                                     " Mouse Navigation
+set mouse-=a                                    " Disable mouse Navigation
 
 " Wrap settings
 " http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
 set nowrap                                      " Don't wrap lines
-
-" Indent setting, use 4 spaces for tab
-" http://vim.wikia.com/wiki/Indenting_source_code
-set softtabstop=4                               " Set it the same as shiftwidth when using SPACE indention
-set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
-set shiftwidth=4                                " Affects when press >>, << or ==
-set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
 
 " Folding
 set foldmethod=indent	                        " http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
 set foldlevelstart=20                           " files will be loaded with opend folds
 
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
+
+" Auto reload .vimrc if it has been changed
+autocmd! bufwritepost _vimrc source %           " Windows
+autocmd! bufwritepost .vimrc source %           " *nix
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent setting, use 4 spaces for tab
+" http://vim.wikia.com/wiki/Indenting_source_code
+set tabstop=4                                   " Length of <TAB>
+set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
+set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
+set shiftwidth=4                                " Affects when press >>, << or ==
+set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
+
+" File indent specifically for certain files
+autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,7 +121,7 @@ Plugin 'majutsushi/tagbar'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-t> :TagbarToggle<CR>
 " Set width
-let g:tagbar_width=40
+let g:tagbar_width=30
 " Open tagbar when open Vim with supported file/files
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -145,15 +160,3 @@ let NERDSpaceDelims = 1
 call vundle#end()                               " required for Vundle
 filetype plugin indent on                       " required for Vundle
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Change cursor shape between insert and normal mode in iTerm2.app
-" block(default) vs vertical bar
-" if $TERM_PROGRAM =~ "iTerm"
-    " Vertical bar in insert mode
-"   let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    " Block in normal mode
-"   let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
