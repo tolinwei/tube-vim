@@ -17,7 +17,6 @@ PROJECT_DIR=${HOME_DIR}/.tube-vim/
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 
-DOWNLOAD_DIR=${HOME_DIR}/Downloads/
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors/
 ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes/
 echo -e "## [STAGE] ...Done\n"
@@ -28,6 +27,7 @@ echo -e "## [STAGE] Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
 git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 echo -e "## [STAGE] ...Done\n"
+
 
 
 echo -e "## [STAGE] Backing up existing Vim, screen, tmux settings and bashrc..."
@@ -53,12 +53,6 @@ if [ -e .bashrc ] ; then
     echo -e "## [INFO] Backing up .bashrc to .bashrc.bak-${date_time}"
     mv .bashrc .bashrc.bak-${date_time}
 fi
-echo -e "## [STAGE] ...Done\n"
-
-
-
-echo -e "## [STAGE] Setting up directories..."
-mkdir -p $DOWNLOAD_DIR
 echo -e "## [STAGE] ...Done\n"
 
 
