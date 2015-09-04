@@ -47,6 +47,7 @@ set smartindent                                 " Add extra level of indent in s
 
 " File indent specifically for certain files
 autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
