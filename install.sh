@@ -119,6 +119,7 @@ cp screenrc ${HOME_DIR}/.screenrc
 mkdir -p $VIM_COLOR_DIR
 cd $PROJECT_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
+cp solaried.vim $VIM_COLOR_DIR
 echo -e "## [STAGE] ...Done\n"
 
 
@@ -153,8 +154,8 @@ echo -e "## [STAGE] Importing color scheme for iTerm2 and terminal (please click
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
-open gruvbox-light.itermcolors
-open gruvbox-light.terminal
+open solorized-dark.itermcolors
+open solorized-dark.terminal
 echo -e "## [STAGE] ...Done\n"
 
 
