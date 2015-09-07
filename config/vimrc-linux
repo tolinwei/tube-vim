@@ -51,17 +51,18 @@ set smartindent                                 " Add extra level of indent in s
 
 " File indent specifically for certain files
 autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 80 words onwards as 'warning' and 120 words as 'danger'
 " For both 80 columns and 120 columns limitation
-if exists('+colorcolumn')
-    let &colorcolumn = "81,".join(range(121,999),",")
-else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
-endif
+"if exists('+colorcolumn')
+"    let &colorcolumn = "81,".join(range(121,999),",")
+"else
+"    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
+"endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
