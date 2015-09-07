@@ -4,7 +4,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 set background=dark
-colorscheme gruvbox
+
+" if you wanna switch color scheme, change the comment symbol " to keep
+" one of line 10 and line 11 un-commented
+"colorscheme gruvbox
+colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -40,7 +44,7 @@ autocmd! bufwritepost .vimrc source %           " *nix
 " Indent setting, use 4 spaces for tab
 " http://vim.wikia.com/wiki/Indenting_source_code
 set tabstop=4                                   " Length of <TAB>
-set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
+set softtabstop=4                               " Delete 4 spaces, if it's generated using <TAB>
 set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
 set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent

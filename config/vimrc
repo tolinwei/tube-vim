@@ -4,7 +4,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 set background=dark
-colorscheme gruvbox
+
+" if you wanna switch color scheme, change the comment symbol " to keep
+" one of line 10 and line 11 un-commented
+"colorscheme gruvbox
+colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
