@@ -120,18 +120,6 @@ let g:indent_guides_guide_size = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Need to install Exuberant Ctags before usage
-" http://ctags.sourceforge.net/
-Plugin 'majutsushi/tagbar'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <C-t> :TagbarToggle<CR>
-" Set width
-let g:tagbar_width=30
-" Open tagbar when open Vim with supported file/files
-" autocmd VimEnter * nested :call tagbar#autoopen(1)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plugin 'kien/rainbow_parentheses.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rbpt_max = 16
@@ -141,10 +129,6 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'jiangmiao/auto-pairs'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
