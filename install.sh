@@ -153,8 +153,6 @@ echo -e "## [STAGE] Importing color scheme for iTerm2 and terminal (please click
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
-open gruvbox-light.itermcolors
-open gruvbox-light.terminal
 echo -e "## [STAGE] ...Done\n"
 
 
