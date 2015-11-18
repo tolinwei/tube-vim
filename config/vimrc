@@ -13,12 +13,12 @@ set encoding=utf-8                              " Set the encoding for new file
 set ffs=unix,dos,mac                            " Set Unix as standard file type
 syntax on
 set number
-set backspace=indent,eol,start                  " Enable backspace all the time
+set backspace=indent,eol,start                  " Enable backspace to default behavior
 set whichwrap+=<,>,h,l                          " ?
 set hlsearch                                    " Highlight search result
 set incsearch                                   " Incremental search
 set cursorline
-set clipboard+=unnamed                          " Make yank and pasge working across Vims
+set clipboard+=unnamed                          " Make yank and paste work across Vims
 set mouse-=a                                    " Disable mouse Navigation
 
 " Wrap settings
@@ -160,7 +160,7 @@ nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'motus/pig.vim'
+Plugin 'godlygeek/tabular'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
