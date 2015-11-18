@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function println {
+    echo "[" `date` "] " $1
+    if [ $1 == "\[Step\]\ ...Done" ]; then
+        echo
+    fi
+}
+
 echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
@@ -8,15 +15,8 @@ echo -e "
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
 
+
 println " [Start] Seting up advanced CLI environment..."
-
-
-function println {
-    echo "[" `date` "] " $1
-    if [ $1 == "\[Step\]\ ...Done" ]; then
-        echo
-    fi
-}
 
 
 println "[Step] Defining directory variables..."
