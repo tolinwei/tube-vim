@@ -13,6 +13,9 @@ println " [Start] Seting up advanced CLI environment..."
 
 function println {
     echo "[" `date` "] " $1
+    if [ $1 == "[Step] ...Done" ]; then
+        echo
+    fi
 }
 
 
@@ -23,7 +26,7 @@ PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes
-println " Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing brew, git for OS X..."
@@ -38,18 +41,18 @@ else
 fi
 println "[Info] Installing git via Homebrew..."
 which -s git || brew install git
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
 git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing Command Line Tools for OS X (Please click 'Install' on popup window)..."
 xcode-select --install
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Backing up existing Vim, screen, tmux settings and bashrc..."
@@ -75,7 +78,7 @@ if [ -e .bashrc ] ; then
     println "[Info] Backing up .bashrc to .bashrc.bak-${date_time}"
     mv .bashrc .bashrc.bak-${date_time}
 fi
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing Vim and tmux via Homebrew..."
@@ -84,7 +87,7 @@ println "[Step] Installing Vim and tmux via Homebrew..."
 # brew linkapps macvim
 brew install vim
 brew install tmux
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing Exuberant Ctags to support tagbar via Homebrew..."
@@ -101,7 +104,7 @@ if [ $CTAGS_DIR != '/usr/local/bin/ctags' ]; then
 else
     println "[Info] Exuberant Ctags (Homebrew version) has already installed"
 fi
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Copying configuration file for bash, tmux, screen and color scheme for Vim..."
@@ -113,7 +116,7 @@ cp screenrc ${HOME_DIR}/.screenrc
 mkdir -p $VIM_COLOR_DIR
 cd $PROJECT_COLOR_DIR
 cp gruvbox.vim $VIM_COLOR_DIR
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing junegunn/vim-plug as Vim plugins manager..."
@@ -122,7 +125,7 @@ println "[Step] Installing junegunn/vim-plug as Vim plugins manager..."
 # fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing Vim plugins defined in vimrc..."
@@ -131,7 +134,7 @@ cp vimrc ${HOME_DIR}/.vimrc
 vim PlugClean!
 vim PlugInstall
 # vim +PluginInstall +qa
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing cmake, then compile YouCompleteMe..."
@@ -140,14 +143,14 @@ cd $HOME_DIR/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer \
              --omnisharp-completer \
              --gocode-completer
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Importing color scheme for iTerm2 and terminal (Please click 'OK' on the popup window..."
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[Step] Installing oh-my-zsh, and copying configuration file..."
@@ -156,11 +159,11 @@ if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
 fi
 cd $PROJECT_CONFIG_DIR
 cp zshrc ${HOME_DIR}/.zshrc
-println "[Step] ...Done\n"
+println "[Step] ...Done"
 
 
 println "[End] Finish installation, please enjoy!!"
-println "
+echo -e "
      _         _                     _
     | |_ _   _| |__   ___     __   _(_)_ __ ___
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
