@@ -13,7 +13,7 @@ println " [Start] Seting up advanced CLI environment..."
 
 function println {
     echo "[" `date` "] " $1
-    if [ $1 == "[Step] ...Done" ]; then
+    if [ $1 == "\[Step\]\ ...Done" ]; then
         echo
     fi
 }
@@ -131,7 +131,6 @@ println "[Step] ...Done"
 println "[Step] Installing Vim plugins defined in vimrc..."
 cd $PROJECT_CONFIG_DIR
 cp vimrc ${HOME_DIR}/.vimrc
-vim PlugClean!
 vim PlugInstall
 # vim +PluginInstall +qa
 println "[Step] ...Done"
