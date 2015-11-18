@@ -2,7 +2,7 @@
 
 function println {
     echo "[" `date` "] " $1
-    if [ $1 == "\[Step\]\ ...Done" ]; then
+    if [ "$1" == "\[Step\]\ ...Done" ]; then
         echo
     fi
 }
