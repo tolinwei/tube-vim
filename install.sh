@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function println {
-    echo "[" `date` "] " $1
+    echo "[" `date` "]" $1
     if [ "$1" == "[Info] ...Done" ]; then
         echo
     fi
@@ -16,7 +16,7 @@ echo -e "
 
 
 
-println " [Start] Seting up advanced CLI environment..."
+println "[Start] Seting up advanced CLI environment..."
 
 
 println "[Info] Defining directory variables..."
