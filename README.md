@@ -9,8 +9,6 @@ tube-vim
          
 ```
 
-[简体中文文档正在编辑中]()
-
 **tube-vim** is a integrated command line environment mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
@@ -20,6 +18,8 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 **tube-vim** also installs Z shell `zsh`'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system's default `bash`. You can switch to it easily due to its full compatibility to `bash`.
 
 As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiplexer, will be installed to accerate your operation. If you feel `screen` better than `tmux`, a configuration for the former is also provided to help you manage the sessions.
+
+[简体中文文档正在编辑中]()
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
