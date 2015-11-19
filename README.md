@@ -9,19 +9,17 @@ tube-vim
          
 ```
 
-[简体中文版文档正在编辑中]()
-
-**tube-vim** is a integrated shell-based development environment mainly designed for OS X that you can easily set up by **running a single command**:
-
+**tube-vim** is a integrated command line environment mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
+**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug), and decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
 
-It includes best practical Vim setting, a bunch of must-have **plugins** managed by modern **[Vundle](https://github.com/gmarik/Vundle.vim)**, and decent color schemes **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) | [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized)). The used plugins will be listed and introduced below.
+**tube-vim** also installs Z shell `zsh`'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system's default `bash`. You can switch to it easily due to its full compatibility to `bash`.
 
-Different from other Vim configuration, tube-vim also uses Z shell (zsh)'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system default bash shell. Due to its full compatibility with bash, you can switch to zsh easily without too much learning curve while you can also enjoy a lot new benefits listed [here](https://github.com/robbyrussell/oh-my-zsh/wiki).
+As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiplexer, will be installed to accerate your operation. If you feel `screen` better than `tmux`, a configuration for the former is also provided to help you manage the sessions.
 
-We also help you to install **[tmux](http://tmux.github.io/)** (for OS X only, Linux users have to install it manually), which is a terminal multiplexer, together with its configuration file `.tmux.conf`, to helps you manage, accelerate and stream your shell operation in an unbelievable way. If you're not in favor of tmux, a **`screen`** configuration file `.screenrc` will be placed during the installation that helps you to get better control of it.
+[简体中文文档正在编辑中]()
 
 ## Preview
 ![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
