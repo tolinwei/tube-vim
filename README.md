@@ -28,13 +28,12 @@ As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiple
 ## Installation
 
 ### For OS X
-1. (Optional, but **strongly recommended**) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement since this repo includes color scheme spesifically for it, and you can enjoy more features not only [here](https://iterm2.com/features.html).
+1. (Optional) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement, check out more features [here](https://iterm2.com/features.html)
 
-2. Run the following command to install the environment automatically.
+2. Run the following command to install **tube-vim**
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
-
 3. Change the color scheme in **Preferences...    ⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
     + For Terminal
     
@@ -43,91 +42,13 @@ As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiple
     
         <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
 
-4. (Optional) Until now, you have most of the powers from this repository, **except Java auto completion** support inside Vim. If you do need this, try to read **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)** in YouCompleteMe's Github README. You bascally need to have latest **[Eclim](http://eclim.org/)** and **Ecplipse** installed (this means Eclim >= 2.2.* and Eclipse >= 4.2.*) and some extra steps to have this supported.
-
 ### For Linux
 
-－ If you're using Linux, we value you as experienced user, and due to the discrepancies among multiple Linux distributions, it's nearly impossible to provide a single installation script to cover all the funcions as that of OS X. Plus, most of the cases, it's recommended and easier to manage by installing packages via software managers like `apt-get` or `yum` rather than compiling everything from source code.
-
-We would ask you to have **some prerequisites** before running the setup script, and the version for Linux has been **simplified** that only covers color scheme, most Vim plugins except YCM that requires too complecated manually compilation process, then remove tmux. You could install **YouCompleteMe** mannually by refering to the **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
-
-You could also install **tmux** at 5th step to reach more parity as tube-vim for OS X.
-
-1. Update your system packages and have your `git` installed. In a typical Debian-linux machine (like Debian, Ubuntu or others), you can install them using
-
-     ```
-     sudo apt-get update
-     sudo apt-get upgrade
-     sudo apt-get install git
-     ```
-     or you can get similar things done on systems with `yum` as software manager:
-     ```
-     sudo yum upgrade
-     sudo yum install git
-     ```
-     
-2. Have Vim at least 7.3 installed (7.4 is recommanded). You may try to install it via the software manager (like `apt-get` of Debian-like Linux) using `sudo apt-get install vim` or `sudo yum install vim` or others depending on what OS you're running, and then type `vim --version` to print out the version on console.
-
-     Some of the Linux distributions include older version of Vim (< 7.3) in software manager's repositories, you may consider to compile, make and install it from source code.
-
-     ```
-     sudo mkdir ~/Downloads
-     cd ~/Downloads
-     wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-     tar jxf vim-7.4.tar.bz2
-     cd vim74/
-     ./configure --prefix=/usr/local/ \
-                 --with-features=huge \
-                 --enable-multibyte \
-                 --enable-rubyinterp \
-                 --enable-pythoninterp \
-                 --enable-perlinterp \
-                 --enable-luainterp \
-                 --enable-cscope
-     make && sudo make install
-     ```
-     
-     If you encounter issues during Vim installation, or you need some instruction for other Linux distributions, try refer to this **[Building Vim from Source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)** in [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)'s Github wiki.
-       
-3. Install **zsh**, ideally also from software manger using like 
-     ```
-     sudo apt-get install zsh
-     ``` 
-     or 
-     ```
-     sudo yum install zsh
-     ```
-     or others. If you fail at certain point, try to follow this **[Installing ZSH](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH)** in [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)'s Github wiki page.
-
-     If you don't do this step successfully, you would encounter some errors when the installtion script is trying to set `zsh` as your system's default shell.
-
-4. Then you can just use the similar command to start the installation.
- 
+**tube-vim** provides a simplified version for server side Linux. Makie sure you have rencent `git` and `wget` installed, then run the following command:
      ```
      bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
      ```
      
-     **Remember**, please type `exit` after oh-my-zsh installation, then re-login.
-     
-5. (Optional) If you want to use **tmux**, try also to install it via your system's software manager using
-     ```
-     sudo apt-get install tmux
-     ```
-     or
-     ```
-     sudo yum install tmux
-     ```
-     or others, or go to the **[official site](http://tmux.github.io/)** to download source code and compile it.
-     
-     If you choose to compile it from the newset version of source code, most likely you will fail due to some of the system's packages are outdated, try to search for solutions, maybe like [this one](https://gist.github.com/shime/5706655), but the successful compilation can not be promised.
-
-6. (Optional) If you need auto completion for Vim, read **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README to see how to install it mannually. You basically need to add one line `Plugin 'Valloric/YouCompleteMe` in you **vimrc** file, download it using our pre-configured **Vundle**, then compile *ycm_support_libs*, and  finally go to `~/.vim/bundle/YouCompleteMe` to execute `./install.sh`. If you run into some problems, try to read [FAQ](https://github.com/Valloric/YouCompleteMe#faq) section below or open a issue in its repository.
-
-#### Installation Examples for Linux
-
-- [Installation Guide on Newly Created DigitalOcean Ubuntu 14.04 x64 LTS Droplet](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-Ubuntu-14.04-x64-LTS-Droplet)
-- [Installation Guide on Newly Created DigitalOcean CentOS 7 x64](https://github.com/tolinwei/tube-vim/wiki/Installation-Guide-on-Newly-Created-DigitalOcean-CentOS-7-x64) (to be edited)
-
 ## Usage Guide
 
 ### Vim
