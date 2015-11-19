@@ -131,7 +131,7 @@ println "[Info] ...Done"
 println "[Info] Installing Vim plugins defined in vimrc..."
 cd $PROJECT_CONFIG_DIR
 cp vimrc ${HOME_DIR}/.vimrc
-vim PlugInstall
+vim +PlugInstall +qa
 # vim +PluginInstall +qa
 println "[Info] ...Done"
 
