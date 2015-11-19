@@ -56,10 +56,10 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/inst
 ### Vim plugins and feature shortcuts
 
 #####[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
-- `<Control> + n` - Toggle NERDTree
-- `<Control> + w` then `w` - Switch between panes of Vim
-- `<Control> + w` then `<left>` - Switch to the left pane of Vim
-- `<Control> + w` then `<right>` - Switch to the right pane of Vim
+- `<Control>` + `n` - Toggle NERDTree
+- `<Control>` + `w` then `w` - Switch between panes of Vim
+- `<Control>` + `w` then `<left>` - Switch to the left pane of Vim
+- `<Control>` + `w` then `<right>` - Switch to the right pane of Vim
 
 when your cursor is in NERDTree's pane
 - `o` or `<Enter>` - Open that file or expend that directory the cursor points to
@@ -67,21 +67,21 @@ when your cursor is in NERDTree's pane
 - `U` (`<Shift> + u`) - Show upper level directory
 
 #####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
-- `z then a` - Fold or un-fold the code trunk, by the deepest level of indent guide
+- `z` then `a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
 #####[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)
-- `<Control> + f` - Scroll full page down smoothly
-- `<Control> + d` - Scroll half page down smoothly
-- `<Control> + b` - Scroll full page up smoothly
-- `<Control> + u` - Scroll half page up smoothly
+- `<Control>` + `f` - Scroll full page down smoothly
+- `<Control>` + `d` - Scroll half page down smoothly
+- `<Control>` + `b` - Scroll full page up smoothly
+- `<Control>` + `u` - Scroll half page up smoothly
 
 #####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 `<Leader>` means `,` in current setting, you can modify this in your `.vimrc`
 
-- `<Leader> + c + c` - Comment the line(s) you selected
-- `<Leader> + c + u` - Un-comment the line(s) you selected
-- `<Leader> + c + c` - Toggle the comment status of selected line(s)
-- `<Leader> + c + y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
+- `<Leader>` + `c` + `c` - Comment the line(s) you selected
+- `<Leader>` + `c` + `u` - Un-comment the line(s) you selected
+- `<Leader>` + `c` + `c` - Toggle the comment status of selected line(s)
+- `<Leader>` + `c` + `y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 
 #####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
 
@@ -93,8 +93,10 @@ For exmple:
 - `ga:` will align to the left by `:`
 - `ga4␣` will align to the left by the forth space.
 
-#####[bling/vim-airline](https://github.com/bling/vim-airline)
 #####[majutsushi/tagbar](https://github.com/majutsushi/tagbar)
+- `<Control>` + `t` - Toggle Tagbar
+
+#####[bling/vim-airline](https://github.com/bling/vim-airline)
 #####[kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
 
 
