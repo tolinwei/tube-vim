@@ -80,7 +80,7 @@ when your cursor is in NERDTree's pane
 - `<Control> + u` - Scroll half page up smoothly
 
 #####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-`<Leader>` means `,` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
+`<Leader>` means `,` in current setting, you can modify this in your `.vimrc`
 
 - `<Leader> + c + c` - Comment the line(s) you selected
 - `<Leader> + c + u` - Un-comment the line(s) you selected
