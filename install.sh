@@ -49,7 +49,7 @@ git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 println "...Done"
 
 
-println "Installing Command Line Tools for OS X (Please click 'Install' on popup window)..."
+println "Installing Command Line Tools for OS X (please click 'Install' on popup window)..."
 xcode-select --install
 println "...Done"
 
@@ -139,7 +139,7 @@ println "...Done"
 # println "...Done"
 
 
-println "Importing color scheme for iTerm2 and terminal (Please click 'OK' on the popup window..."
+println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window..."
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
