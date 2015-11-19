@@ -69,14 +69,12 @@ fi
 if [ -e .screenrc ] ; then
     println "[Info] Backing up .screenrc to .screenrc.bak-${date_time}"
     mv .screen .screenrc.bak-${date_time}
-fi
-if [ -e .tmux.conf ] ; then
+fi if [ -e .tmux.conf ] ; then
     println "[Info] Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
     mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
 if [ -e .bashrc ] ; then
-    println "[Info] Backing up .bashrc to .bashrc.bak-${date_time}"
-    mv .bashrc .bashrc.bak-${date_time}
+    println "[Info] Skipping .bashrc as it's existed"
 fi
 println "[Info] ...Done"
 
@@ -93,12 +91,6 @@ println "[Info] ...Done"
 println "[Info] Installing Exuberant Ctags to support tagbar via Homebrew..."
 CTAGS_DIR=`which ctags`
 if [ $CTAGS_DIR != '/usr/local/bin/ctags' ]; then
-    #cd $DOWNLOAD_DIR
-    #curl -L http://prdownloads.sourceforge.net/ctags/ctags-5.8.tar.gz
-    #tar zxf ctags-5.8.tar.gz
-    #cd ctags-5.8
-    #./configure -prefix=/usr/local
-    #make && sudo make install
     println "[Info] Installing new Ctags via Homebrew";
     brew install ctags
 else
