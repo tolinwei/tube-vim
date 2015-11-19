@@ -148,7 +148,7 @@ As we have mentioned in previous section, if you want **Java** auto completion s
 
 
 ## Why it is named tube-vim
-I started this project when I was working on a Yahoo! Japan's audience data pipeline, which is internally named **Tube**. Since I used most of the settings from within thie repo for that project, later I decided to rename it as **tube-vim** as a memorial.
+I started this project when I was working on a Yahoo! Japan fund project, which is internally named **Tube**. Since I used most of the settings from within thie repo for the project, later I decided to rename it as **tube-vim**.
 
 ## License
 
