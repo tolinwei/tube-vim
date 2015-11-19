@@ -86,7 +86,7 @@ when your cursor is in NERDTree's pane
 #####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
 
 Firstly select the lines you want to align in Visual Mode, then:
-- `ga<number><character>` for alignment
+- `g` then `a` then `<number>`(optional) then `<character>` for alignment
 
 For exmple:
 - `ga=` wil align to the left by `=`
