@@ -58,22 +58,23 @@ println "[Info] ...Done"
 println "[Info] Backing up existing Vim, screen, tmux settings and bashrc..."
 cd $HOME_DIR
 date_time=`date +"%y-%m-%d-%H:%M"`
-if [ -e .vimrc ] ; then
+if [ -e .vimrc ]; then
     println "[Info] Backing up .vimrc to .vimrc.bak-${date_time}"
     mv .vimrc .vimrc.bak-${date_time}
 fi
-if [ -d .vim ] ; then
+if [ -d .vim ]; then
     println "[Info] Backing up .vim directory to .vim.bak-${date_time}"
     mv .vim .vim.bak-${date_time}
 fi
-if [ -e .screenrc ] ; then
+if [ -e .screenrc ]; then
     println "[Info] Backing up .screenrc to .screenrc.bak-${date_time}"
     mv .screen .screenrc.bak-${date_time}
-fi if [ -e .tmux.conf ] ; then
+fi
+if [ -e .tmux.conf ]; then
     println "[Info] Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
     mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
-if [ -e .bashrc ] ; then
+if [ -e .bashrc ]; then
     println "[Info] Skipping .bashrc as it's existed"
 fi
 println "[Info] ...Done"
@@ -112,7 +113,7 @@ println "[Info] ...Done"
 
 
 println "[Info] Installing junegunn/vim-plug as Vim plugins manager..."
-# if [ ! -d ${HOME_DIR}/.vim/bundle/Vundle.vim ] ; then
+# if [ ! -d ${HOME_DIR}/.vim/bundle/Vundle.vim ]; then
 #     git clone https://github.com/gmarik/Vundle.vim.git ${HOME_DIR}/.vim/bundle/Vundle.vim
 # fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
