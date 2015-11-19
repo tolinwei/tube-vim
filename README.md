@@ -15,7 +15,7 @@ tube-vim
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
-**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug), and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
+**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug), and decent color scheme [gruvbox](https://github.com/morhetz/gruvbox) ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
 
 **tube-vim** also installs Z shell `zsh`'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system's default `bash`. You can switch to it easily due to its full compatibility to `bash`.
 
