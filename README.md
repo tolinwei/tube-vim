@@ -35,12 +35,8 @@ As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiple
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
 3. Change the color scheme in **Preferences...    ⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
-    + For Terminal
-    
-        <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" alt="terminal preference" width="400" />
-    + For iTerm2
-    
-        <img src="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" alt="terminal preference" width="500" />
+     + <a href="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" target="_blank">For Terminal</a>
+     + <a href="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" target="_blank">For iTerm2</a>
 
 ### For Linux
 
