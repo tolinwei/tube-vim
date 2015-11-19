@@ -79,13 +79,28 @@ when your cursor is in NERDTree's pane
 - `<Control> + b` - Scroll full page up smoothly
 - `<Control> + u` - Scroll half page up smoothly
 
-#####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) <<<
+#####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
 `<Leader>` means `,` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
 
 - `<Leader> + c + c` - Comment the line(s) you selected
 - `<Leader> + c + u` - Un-comment the line(s) you selected
 - `<Leader> + c + c` - Toggle the comment status of selected line(s)
 - `<Leader> + c + y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
+
+#####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
+
+Firstly select the lines you want to align in Visual Mode, then:
+- `ga<number><character>` for alignment
+
+For exmple:
+- `ga=` wil align to the left by `=`
+- `ga:` will align to the left by `:`
+- `ga4␣` will align to the left by the forth space.
+
+#####[bling/vim-airline](https://github.com/bling/vim-airline)
+#####[majutsushi/tagbar](https://github.com/majutsushi/tagbar)
+#####[kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
+
 
 ###tmux
 
