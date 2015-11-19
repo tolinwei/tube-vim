@@ -15,7 +15,6 @@ echo -e "
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
 
-
 println "[Start] Seting up advanced CLI environment..."
 
 
@@ -102,7 +101,9 @@ println "[Info] ...Done"
 
 println "[Info] Copying configuration file for bash, tmux, screen and color scheme for Vim..."
 cd $PROJECT_CONFIG_DIR
-cat bashrc >> ${HOME_DIR}/.bashrc
+if [ ! -f ${HOME_DIR}/.bashrc ]; then
+    cp bashrc ${HOME_DIR}/.bashrc
+fi
 cp tmux.conf ${HOME_DIR}/.tmux.conf
 cp screenrc ${HOME_DIR}/.screenrc
 
