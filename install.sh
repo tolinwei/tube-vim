@@ -35,7 +35,7 @@ if [ $? != 0 ]; then
     println "[Info] Installing new Homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    println "[Info] Updating and upgrading Homebrew..."
+    println "[Info] Updating and upgrading Homebrew"
     brew update
     brew upgrade
 fi
