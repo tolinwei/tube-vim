@@ -22,8 +22,8 @@ As a supplement, [tmux](http://tmux.github.io/) (OS X only), a terminal multiple
 [简体中文文档正在编辑中]()
 
 ## Preview
-![gruvbox-bashrc-pre](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png)
-![shell-preview](https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png)
+<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png" width="600">
+<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png" width="600">
 
 ## Installation
 
