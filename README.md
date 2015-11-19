@@ -11,11 +11,11 @@ tube-vim
 
 [简体中文文档正在编辑中]()
 
-**tube-vim** is a integrated command line environment mainly designed for OS X. You can install it simply by **running a single command**:
+**tube-vim** is a integrated command line environment mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
-**tube-vim** includes best practical Vim settings, a bunch of Vim plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug) (we used [VindleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) before), and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal.app and iTerm2). 
+**tube-vim** includes best practical Vim settings, a bunch of Vim plugins managed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug) (we used [VindleVim/Vundle.vim](https://github.com/VundleVim/Vundle.vim) before), and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal.app & iTerm2). 
 
 **tube-vim** also installs Z shell `zsh`'s wrapper oh-my-zsh ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system's default `bash`. You can switch to it easily due to its full compatibility to `bash`.
 
