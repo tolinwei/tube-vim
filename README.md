@@ -57,24 +57,9 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/inst
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 
-### Vim plugins and key mappings
+### Vim plugins and feature shortcuts
 
-#####>>> Vundle <<<
-**tube-vim** is using **[Vundle](https://github.com/gmarik/Vundle.vim)** as the plugin management tool, it allows you to keep track of and configure your plugins right inside `.vimrc` file, so that you can download all the plugins in one command if you change your development environment, of course you can also update, clean them conveniently.
-
-**Commands**
-- Enter Vim and then run `:PluginInstall` to install plugins defined in your `.vimrc`
-- Run `vim +PluginInstall +qall` from shell for installation too
-- Run `:PluginList` from within Vim or `vim +PluginList` to show the installed plugin(s), move your cursor to certain plugin, press D (Shift+d) to delete that plugin
-
-#####>>> vim-airline <<<
-**[vim-airline](https://github.com/tolinwei/vim-airline)** is a super pretty lean & mean status/tabline that's light as air, which is regarded as the replacement of deprecated [vim-powerline](https://github.com/Lokaltog/vim-powerline). It is integrated with plugins like [NERDTree](https://github.com/scrooloose/nerdtree) and [Tagbar](https://github.com/majutsushi/tagbar). We tweaked a little bit of the theme we're using and make it more clear when switching between NORMAL mode and INSERT mode.
-
-#####>>> NERDTree <<<
-**[NERDTree](https://github.com/scrooloose/nerdtree)** is a file explorer taht allows you to explore your filesystem and to open files or directories. It presents the filesystem to you in the form of a tree in which you can manipulate with the keyboard or mouse (GUI vims like [macvim](https://github.com/b4winckler/macvim)).
-
-**Shortcuts**
-
+#####[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 - `<Control> + n` - Toggle NERDTree
 - `<Control> + w` then `w` - Switch between panes of Vim
 - `<Control> + w` then `<left>` - Switch to the left pane of Vim
@@ -85,59 +70,22 @@ when your cursor is in NERDTree's pane
 - `R` (`<Shift> + r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift> + u`) - Show upper level directory
 
-For more shortcuts, please refer to a external [NERDTree Guide](http://usevim.com/2012/07/18/nerdtree/)
-
-#####>>> Indent Guides <<<
-**[vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)** is a plugin for visually displaying indent levels in Vim. Plus, you can fold your function or logic trunk (like `if` or `else` statements), by the deepest level of indent guides.
-
-**Shortcuts**
-
+#####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 - `z then a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
-#####>>> Tagbar <<<
-**[Tagbar](https://github.com/majutsushi/tagbar)** is a Vim plugin as class outline viewer, which provides a easy way to browse the tags (variable names, function/method names and etc.) of current file and get a overview of its structure). It does this by creating a sidebar (on the right side by default) the displays the ctags-generated tags of current file, ordered by their scope.
-
-**Shortcuts**
-
-- `<Control> + t` - Toggle Tagbar
-
-#####>>> Rainbow Parentheses / Auto Pairs <<<
-Complex code may come with multiple level of parenthesis and quote (includes but not only (), [], ""), the first plugin **[rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)** helps you to highlight the same level of parentheses, using the color according to based on their levels, and our default theme of Vim [gruvbox](https://github.com/morhetz/gruvbox) adds extra support for it to make the highlighted colors fit together with the theme itself. The later one **[auto-pairs](https://github.com/jiangmiao/auto-pairs)** similates the behaviors of most IDEs that close the parenthesis or quote for you artificially according to multiple scenarios. Check out their official sites for more informations.
-
-#####>>> accelerated-smooth-scroll <<<
-The default behavior of scrolling inside Vim would jump for the whole page (`<Control> + f` or `<Control> + b`) or half page (`<Control> + d` or `<Control> + u`) instantly, it somehow makes it hard to track the position of your cursor and the lines you're focusing on. The plugin **[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)** enable the scrolling with a smooth animation. Moreover, the scrolling speed will be increased if you consecutively scroll.
-
-**Shortcuts**
-
+#####[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)
 - `<Control> + f` - Scroll full page down smoothly
 - `<Control> + d` - Scroll half page down smoothly
 - `<Control> + b` - Scroll full page up smoothly
 - `<Control> + u` - Scroll half page up smoothly
 
-#####>>> NERDCommenter <<<
-**[NERDCommenter](https://github.com/scrooloose/nerdcommenter)** helps you to comment or umcomment multiples line conveniently according to the type of file you're editting.
-
-**Notes** that not all the shortcuts listed in [official Github repo](https://github.com/scrooloose/nerdcommenter) are working for some reason, the ones listed below are what we're mostly use, if you have new requirement, please open issues.
-
-**Shortcuts**
-
+#####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) <<<
 `<Leader>` means `,` in current setting, you can modify this by changing the 138 line of your `.vimrc` configuration file.
 
 - `<Leader> + c + c` - Comment the line(s) you selected
 - `<Leader> + c + u` - Un-comment the line(s) you selected
 - `<Leader> + c + c` - Toggle the comment status of selected line(s)
 - `<Leader> + c + y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
-- `<Leader> + c + A` - Add comment delimiter to the end of current line and go into INSERT mode
-
-#####>>> YouCompleteMe <<<
-I'm migrating to **[YouCompleteMe](https://github.com/Valloric/YouCompleteMe)** from **[neocomplete.vim](https://github.com/Shougo/neocomplete.vim)** as the auto completion plugin.
-
-**Note
-that** we temporarily decided to remove the installation of YCM for Linux, since it requires to pre-compile too many libraries that makes the installation process **extremely slow**. If you're interested in making YCM work on Linux, refer to **[Full Installation Guide](https://github.com/Valloric/YouCompleteMe#full-installation-guide)** in YouCompleteMe's Github README.
-
-To OS X user, YouCompleteMe by default provides auto completion support of C-family language, Python, C# and Go natively using [Jedi](https://github.com/davidhalter/jedi), [Omnisharp](https://github.com/OmniSharp/omnisharp-server), [Gocode](https://github.com/nsf/gocode). "YCM will use your omnifunc (see :h omnifunc in Vim) as a source for semantic completions if it does not have a native semantic completion engine for your file's filetype".
-
-As we have mentioned in previous section, if you want **Java** auto completion suppport, you would have to mannually follow the official guide **[Semantic completion for other languages](https://github.com/Valloric/YouCompleteMe#semantic-completion-for-other-languages)**, to install **Ecplise for Java** and **[Eclim](http://eclim.org/)** for accessing Eclipse code editing feature.
 
 ###tmux
 
