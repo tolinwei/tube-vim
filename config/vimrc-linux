@@ -1,6 +1,6 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The setting before Vundle
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" The basic settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 set background=dark
@@ -51,30 +51,21 @@ autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 80 words onwards as 'warning' and 120 words as 'danger'
-" For both 80 columns and 120 columns limitation
-"if exists('+colorcolumn')
-"    let &colorcolumn = "81,".join(range(121,999),",")
-"else
-"    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
-"endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The begining of Vundle
+" The begining of junegunn/vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible                                " be iMproved, required by Vundle
-filetype off                                    " Required, open later
-set rtp+=~/.vim/bundle/Vundle.vim               " Set the runtime path to include Vundle and initialize
-call vundle#begin()                             " Let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" set nocompatible                                " be iMproved, required by Vundle
+" filetype off                                    " Required, open later
+" set rtp+=~/.vim/bundle/Vundle.vim               " Set the runtime path to include Vundle and initialize
+" call vundle#begin()                             " Let Vundle manage Vundle, required
+" Plug 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'tolinwei/vim-airline'                   " forked repo to switch mode color of tomorrow theme
+Plug 'tolinwei/vim-airline'                   " forked repo to switch mode color of tomorrow theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                                " Set airline to appear all the time
 set timeoutlen=50                               " Remove the pause when leaving insert mode
@@ -83,13 +74,13 @@ let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <C-n> :NERDTreeToggle<CR>
 " Open NERDTree automatically when vim starts up
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 " Set NERDTree on right side, would be conflict with tagbar
-"let g:NERDTreeWinPos="right"
+" let g:NERDTreeWinPos="right"
 " Set NERDTree length
 let g:NERDTreeWinSize = 30
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -107,7 +98,7 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Startup vim-indent-guides with vim
 let g:indent_guides_enable_on_vim_startup = 1
@@ -116,7 +107,7 @@ let g:indent_guides_guide_size = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'kien/rainbow_parentheses.vim'
+Plug 'kien/rainbow_parentheses.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
@@ -128,11 +119,11 @@ au Syntax * RainbowParenthesesLoadBraces
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'yonchu/accelerated-smooth-scroll'
+Plug 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 " http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
@@ -142,17 +133,15 @@ let NERDSpaceDelims = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plugin 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call vundle#end()                               " required for Vundle
-filetype plugin indent on                       " required for Vundle
+" call vundle#end()
+call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
