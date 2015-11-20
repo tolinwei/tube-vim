@@ -52,6 +52,7 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/inst
 - Type `vimtutor` in your shell emulator like **Terminal** or **iTerm2** to open the most rudimental yet intuitive tutorial of Vim
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
+- [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
 ### Vim plugins and feature shortcuts
 
