@@ -35,7 +35,7 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
-3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
+3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **iTerm2** or **Terminal** depends on which one you're using.
      + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-switch-color-Presets-Profile-of-iTerm2-Terminal.app" target="_blank">How to switch color Presets/Profile of iTerm2/Terminal.app</a>
 
 ### For Linux
