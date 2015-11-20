@@ -35,7 +35,7 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
-3. Change the color scheme in **Preferences...    ⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
+3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **Terminal** or **iTerm2** depends on which one you're using.
      + <a href="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/terminal.png" target="_blank">For Terminal</a>
      + <a href="https://raw.githubusercontent.com/tolinwei/tube-vim/master/preview/iterm2.png" target="_blank">For iTerm2</a>
 
