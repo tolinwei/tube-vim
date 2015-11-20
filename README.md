@@ -9,21 +9,22 @@ tube-vim
          
 ```
 
-**tube-vim** is a integrated command line environment mainly designed for OS X. You can install it by **running a single command**:
+**tube-vim** is a integrated command line development environment mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
 **tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
 
-**tube-vim** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of system's default `bash`. You can switch to it easily due to its full compatibility to `bash`.
+**tube-vim** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
 
-As a supplement, **[tmux](http://tmux.github.io/)** (OS X only), a terminal multiplexer, will be installed to accerate your operation. If you feel `screen` better than `tmux`, a configuration for the former is also provided to help you manage the sessions.
+As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multiplexer, will be installed to accerate your operation (OS X only). If you feel `screen` better than `tmux`, a configuration for the former one is also provided to help you manage the sessions.
 
 [简体中文文档正在编辑中]()
 
 ## Preview
 <img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-bashrc-pre.png" width="700">
 <img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-shell-pre.png" width="700">
+
 
 ## Installation
 
@@ -106,8 +107,6 @@ For exmple:
 - [A tmux Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)
 - [A tmux Primer](https://danielmiessler.com/study/tmux/)
 - [tmux: Productive Mouse-Free Development](http://uploads.mitechie.com/books/tmux_p1_1.pdf)
-- [《tmux: Productive Mouse-Free Development》中文翻译]( https://github.com/aqua7regia/tmux-Productive-Mouse-Free-Development_zh)
-
 
 ## Why it is named tube-vim
 I started this project when I was working on a Yahoo! Japan fund project, which is internally named **Tube**. Since I used most of the settings from within thie repo for the project, later I decided to rename it as **tube-vim**.
