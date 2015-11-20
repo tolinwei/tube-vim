@@ -40,6 +40,12 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-of-iTerm2-&-Terminal.app" target="_blank">
 How to change color scheme of iTerm2 & Terminal.app</a>
 
+4. (Optional) Modified the following lines in your `~/.bashrc` for correct git record if you're using `git` and have no existing `~/.bashrc` before installation
+     ```
+     git config --global user.name "<put-your-name-here>"
+     git config --global user.email "<put-your-email-here>"
+     ```
+
 ### For Linux
 
 **tube-vim** provides a simplified version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
