@@ -1,7 +1,3 @@
-# for GNU commands
-alias ll="ls -l"
-alias la="ls -la"
-
 # to make vim colorscheme works under tmux
 export TERM=xterm-256color
 
