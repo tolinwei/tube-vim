@@ -23,7 +23,7 @@ HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-vim
 PREZTO_DIR=${HOME_DIR}/.zprezto
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
-PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
+PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 PREZTO_CONF_DIR=${HOME_DIR}/.zprezto/runcoms
 PREZTO_THEME_DIR=${HOME_DIR}/.zprezto/modules/prompt/functions
@@ -126,7 +126,7 @@ println "...Done"
 
 
 println "Copying configuration file for bash, tmux, screen and color scheme for Vim..."
-cd $PROJECT_CONFIG_DIR
+cd $PROJECT_CONF_DIR
 if [ ! -f ${HOME_DIR}/.bashrc ]; then
     cp bashrc ${HOME_DIR}/.bashrc
 fi
@@ -149,7 +149,7 @@ println "...Done"
 
 
 println "Installing Vim plugins defined in vimrc..."
-cd $PROJECT_CONFIG_DIR
+cd $PROJECT_CONF_DIR
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PlugInstall +qa
 # vim +PluginInstall +qa
