@@ -23,7 +23,6 @@ PROJECT_DIR=${HOME_DIR}/.tube-shell
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
-ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes
 println "...Done"
 
 
