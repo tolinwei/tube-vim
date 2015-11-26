@@ -25,7 +25,7 @@ PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 PREZTO_CONF_DIR=${HOME_DIR}/.zprezto/runcoms
-ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes
+PREZTO_THEME_DIR=${HOME_DIR}/.zprezto/modules/prompt/functions
 println "...Done"
 
 
@@ -164,11 +164,16 @@ println "...Done"
 
 println "Installing oh-my-zsh, and copying configuration file..."
 git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
-prezto_confs=( `ls $PREZTO_CONF_DIR | grep -v "README.md"` )
+prezto_confs=( `ls $PREZTO_CONF_DIR | grep -v "README.md" | grep -v "zpreztorc` )
 for p_conf in ${prezto_confs[@]}; do
     echo "Linking Prezto configuration file: $p_conf to ~/.$p_conf"
     ln ${PREZTO_CONF_DIR}/$p_conf ~/.$p_conf
 done
+
+cp ${PROJECT_CONF_DIR}/zpreztorc ${HOME_DIR}/.zpreztorc
+cp ${PROJECT_CONF_DIR}/prompt_giddie_setup ${PREZTO_THEME_DIR}
+println "###### Please type your password at next step to change shell to zsh..."
+println "###### If you failed, try to run 'chsh -s /bin/zsh' manually"
 chsh -s /bin/zsh
 println "...Done"
 
