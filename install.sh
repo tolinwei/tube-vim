@@ -46,7 +46,7 @@ println "...Done"
 
 println "Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
-git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
+git clone -b prezto https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 println "...Done"
 
 
@@ -55,7 +55,7 @@ xcode-select --install
 println "...Done"
 
 
-println "Backing up existing Vim, screen, tmux settings and bashrc..."
+println "Backing up existing Vim, screen, tmux settings, bashrc and zsh related..."
 cd $HOME_DIR
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ]; then
@@ -155,7 +155,7 @@ vim +PlugInstall +qa
 println "...Done"
 
 
-println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window..."
+println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
