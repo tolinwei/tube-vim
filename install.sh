@@ -174,8 +174,12 @@ done
 
 cp ${PROJECT_CONF_DIR}/zpreztorc ${HOME_DIR}/.zpreztorc
 cp ${PROJECT_CONF_DIR}/prompt_giddie_setup ${PREZTO_THEME_DIR}
+
+echo
+println "#######################################################################"
 println "###### Please type your password at next step to change shell to zsh..."
 println "###### If you failed, try to run 'chsh -s /bin/zsh' manually"
+println "#######################################################################"
 chsh -s /bin/zsh
 println "...Done"
 
