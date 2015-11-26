@@ -75,6 +75,16 @@ when your cursor is in NERDTree's pane
 - `R` (`<Shift> + r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift> + u`) - Show upper level directory
 
+when you're in any pane, you can use
+```
+:vertical resize <size_number>
+```
+to adjust size. For example, the default size of NERDTree is 20, you can use `<Control>` + `w` then `w` to switch cursor to NERDTree pane, then type the following to expand it:
+```
+:vertical resize 30
+```
+
+
 #####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 - `z` then `a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
