@@ -21,7 +21,6 @@ println "[Start] Seting up integrated shell environment..."
 println "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-vim
-PREZTO_DIR=${HOME_DIR}/.zprezto
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
