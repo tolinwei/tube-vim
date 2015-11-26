@@ -75,6 +75,10 @@ when your cursor is in NERDTree's pane
 - `R` (`<Shift> + r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift> + u`) - Show upper level directory
 
+when you're in any pane, you can use
+- `:vertical res <size_number>` to adjust the width of the pane where your cursor is inside
+- `:vertical res +<size_number>` or `:vertical res -<size_number>` to increase or decrese the width
+
 #####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 - `z` then `a` - Fold or un-fold the code trunk, by the deepest level of indent guide
 
