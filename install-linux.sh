@@ -27,10 +27,10 @@ ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes
 println "...Done"
 
 
-echo -e "## [STAGE] Cloning repo to home directories..."
+println "Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
 git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
-echo -e "## [STAGE] ...Done\n"
+println "...Done\n"
 
 
 println "Backing up existing Vim, screen, tmux settings and bashrc..."

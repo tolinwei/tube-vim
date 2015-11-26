@@ -24,6 +24,7 @@ PROJECT_DIR=${HOME_DIR}/.tube-vim
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
+PREZTO_CONF_DIR=${HOME_DIR}/.zprezto/runcoms
 ZSH_THEME_DIR=${HOME_DIR}/.oh-my-zsh/themes
 println "...Done"
 
@@ -45,7 +46,7 @@ println "...Done"
 
 println "Cloning repo to home directories..."
 rm -rf $PROJECT_DIR
-git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
+git clone -b prezto https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 println "...Done"
 
 
@@ -54,7 +55,7 @@ xcode-select --install
 println "...Done"
 
 
-println "Backing up existing Vim, screen, tmux settings and bashrc..."
+println "Backing up existing Vim, screen, tmux settings, bashrc and zsh related..."
 cd $HOME_DIR
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ]; then
@@ -73,8 +74,32 @@ if [ -e .tmux.conf ]; then
     println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
     mv .tmux.conf .tmux.conf.bak-${date_time}
 fi
-if [ -e .bashrc ]; then
+if [ -e .bashrc ]; then  # Special process for .bashrc
     println "Skipping .bashrc as it's existed"
+fi
+if [ -e .zshenv ]; then
+    println "Backing up .zshenv to .zshenv.bak-${date_time}"
+    mv .zshenv .zshenv.bak-${date_time}
+fi
+if [ -e .zprofile ]; then
+    println "Backing up .zprofile to .zprofile.bak-${date_time}"
+    mv .zprofile .zprofile.bak-${date_time}
+fi
+if [ -e .zshrc ]; then
+    println "Backing up .zshrc to .zshrc.bak-${date_time}"
+    mv .zshrc .zshrc.bak-${date_time}
+fi
+if [ -e .zpreztorc ]; then
+    println "Backing up .zpreztorc to .zpreztorc.bak-${date_time}"
+    mv .zpreztorc .zpreztorc.bak-${date_time}
+fi
+if [ -e .zlogin ]; then
+    println "Backing up .zlogin to .zlogin.bak-${date_time}"
+    mv .zlogin .zlogin.bak-${date_time}
+fi
+if [ -e .zlogout ]; then
+    println "Backing up .zlogout to .zlogout.bak-${date_time}"
+    mv .zlogout .zlogout.bak-${date_time}
 fi
 println "...Done"
 
@@ -130,16 +155,7 @@ vim +PlugInstall +qa
 println "...Done"
 
 
-# println "Installing cmake, then compile YouCompleteMe..."
-# brew install cmake
-# cd $HOME_DIR/.vim/bundle/YouCompleteMe
-# ./install.sh --clang-completer \
-#              --omnisharp-completer \
-#              --gocode-completer
-# println "...Done"
-
-
-println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window..."
+println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
 cd $PROJECT_COLOR_DIR
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
@@ -147,11 +163,13 @@ println "...Done"
 
 
 println "Installing oh-my-zsh, and copying configuration file..."
-if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
-    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-fi
-cd $PROJECT_CONFIG_DIR
-cp zshrc ${HOME_DIR}/.zshrc
+git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+prezto_confs=( `ls $PREZTO_CONF_DIR | grep -v "README.md"` )
+for p_conf in ${prezto_confs[@]}; do
+    echo "Linking Prezto configuration file: $p_conf to ~/.$p_conf"
+    ln ${PREZTO_CONF_DIR}/$p_conf ~/.$p_conf
+done
+chsh -s /bin/zsh
 println "...Done"
 
 
