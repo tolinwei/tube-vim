@@ -15,7 +15,7 @@ echo -e "
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
 
 
-println "[Start] Seting up integrated command line environment..."
+println "[Start] Seting up integrated shell environment..."
 
 
 println "Defining directory variables..."
