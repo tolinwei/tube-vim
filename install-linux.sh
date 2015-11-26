@@ -19,7 +19,7 @@ println "[Start] Seting up integrated shell environment..."
 
 println "Defining directory variables..."
 HOME_DIR=~
-PROJECT_DIR=${HOME_DIR}/.tube-vim
+PROJECT_DIR=${HOME_DIR}/.tube-shell
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
@@ -29,7 +29,7 @@ println "...Done"
 
 println "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
-git clone https://github.com/tolinwei/tube-vim.git ${PROJECT_DIR}
+git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 println "...Done\n"
 
 
