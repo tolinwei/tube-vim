@@ -48,20 +48,11 @@ How to change color scheme of iTerm2 & Terminal.app</a>
 
 ### For Linux
 
-<<<<<<< HEAD
-**tube-vim** provides a simplified version<sup>*</sup> for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
-```
-bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
-```
-Then optional follow the 4<sup>th</sup> step as that of OS X.
-     
-=======
 **tube-vim** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
 ```
 bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
 ```
 
->>>>>>> caca7c6a05f78b0a0744de7f838325a9b0e18a4f
 ## Usage Guide
 
 ### Vim
