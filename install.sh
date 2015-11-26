@@ -167,7 +167,7 @@ println "Installing oh-my-zsh, and copying configuration file..."
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-cd $PROJECT_CONFIG_DIR
+cd $PROJECT_CONF_DIR
 cp zshrc ${HOME_DIR}/.zshrc
 println "...Done"
 
