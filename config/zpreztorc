@@ -1,127 +1,59 @@
 #
-# Sets Prezto options.
+# A colourful, friendly, multiline theme with some handy features:
 #
 # Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#   Paul Gideon Dann <pdgiddie@gmail.com>
+#
+# Features:
+#   - Simple VCS branch, staged, and unstaged indication.
+#   - Prompt character is different in a VCS repository.
+#   - Last command exit status is displayed when non-zero.
+#
+# Screenshots:
+#   http://i.imgur.com/rCo3S.png
 #
 
-#
-# General
-#
+function prompt_giddie_precmd {
+  # Replace "/home/<user>" with "~"
+  _prompt_giddie_pwd="${PWD/#$HOME/~}"
 
-# Set case-sensitivity for completion, history lookup, etc.
-zstyle ':prezto:*:*' case-sensitive 'no'
+  # Choose prompt symbol based on whether or not we are in a repository.
+  if (( $+commands[git] )) && git rev-parse 2> /dev/null; then
+    _prompt_giddie_symbol='±'
+    vcs_info
+  else
+    _prompt_giddie_symbol=')'
+  fi
+}
 
-# Color output (auto set to 'no' on dumb terminals).
-zstyle ':prezto:*:*' color 'yes'
+function prompt_giddie_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
 
-# Set the Zsh modules to load (man zshmodules).
-# zstyle ':prezto:load' zmodule 'attr' 'stat'
+  # Load required functions.
+  autoload -Uz vcs_info
+  autoload -Uz add-zsh-hook
 
-# Set the Zsh functions to load (man zshcontrib).
-# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
+  # Add hook to call our function before each command
+  add-zsh-hook precmd prompt_giddie_precmd
 
-# Set the Prezto modules to load (browse modules).
-# The order matters.
-zstyle ':prezto:load' pmodule \
-  'environment' \
-    'terminal' \
-      'editor' \
-        'history' \
-          'directory' \
-            'spectrum' \
-              'utility' \
-                'completion' \
-                  'prompt'
+  zstyle ':prezto:module:editor:info:completing' format '%F{green}...%f'
+  zstyle ':prezto:module:editor:info:keymap:alternate' format '%F{yellow}--- VI-COMMAND ---%f'
+  zstyle ':vcs_info:*' enable git
+  zstyle ':vcs_info:*' check-for-changes true
+  zstyle ':vcs_info:*' formats ' on %F{magenta}%b%f%c%u'
+  zstyle ':vcs_info:*' actionformats ' on %F{magenta}%b%f%c%u %F{yellow}(%a)%f'
+  zstyle ':vcs_info:*' stagedstr '%F{green}+%f'
+  zstyle ':vcs_info:*' unstagedstr '%F{green}!%f'
 
-#
-# Editor
-#
+  # Define prompts.
+  PROMPT='%(?..%F{red}%B-> [%?]%b%f
+)%F{magenta}%n%f@%F{yellow}%m%f|%F{green}${_prompt_giddie_pwd}%f${vcs_info_msg_0_}
+%F{blue}${_prompt_giddie_symbol}%f '
+  RPROMPT=
+  SPROMPT='zsh: correct %F{magenta}%R%f to %F{green}%r%f [nyae]? '
+}
 
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' keymap 'emacs'
-
-# Auto convert .... to ../..
-# zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-#
-# Git
-#
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
-
-#
-# GNU Utility
-#
-
-# Set the command prefix on non-GNU systems.
-# zstyle ':prezto:module:gnu-utility' prefix 'g'
-
-#
-# Pacman
-#
-
-# Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
-
-#
-# Prompt
-#
-
-# Set the prompt theme to load.
-# Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'giddie'
-
-#
-# Screen
-#
-
-# Auto start a session when Zsh is launched.
-# zstyle ':prezto:module:screen' auto-start 'yes'
-
-#
-# GPG-Agent
-#
-
-# Enable SSH-Agent protocol emulation.
-# zstyle ':prezto:module:gpg-agent' ssh-support 'yes'
-
-#
-# SSH-Agent
-#
-
-# Enable ssh-agent forwarding.
-# zstyle ':prezto:module:ssh-agent' forwarding 'yes'
-
-# Set ssh-agent identities to load.
-# zstyle ':prezto:module:ssh-agent' identities 'id_rsa' 'id_rsa2' 'id_github'
-
-#
-# Syntax Highlighting
-#
-
-# Set syntax highlighters.
-# By default main, brackets, and cursor are enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
-
-#
-# Terminal
-#
-
-# Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
-
-#
-# Tmux
-#
-
-# Auto start a session when Zsh is launched.
-# zstyle ':prezto:module:tmux' auto-start 'yes'
-
+prompt_giddie_setup "$@"
+colourful
