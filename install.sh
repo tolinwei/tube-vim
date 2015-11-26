@@ -163,24 +163,12 @@ open gruvbox-dark.terminal
 println "...Done"
 
 
-println "Installing Prezto, and copying configuration file..."
-rm -rf ${PREZTO_DIR}
-git clone --recursive https://github.com/sorin-ionescu/prezto.git ${PREZTO_DIR}
-prezto_confs=( `ls $PREZTO_CONF_DIR | grep -v "README.md" | grep -v "zpreztorc` )
-for p_conf in ${prezto_confs[@]}; do
-    echo "Linking Prezto configuration file: $p_conf to ~/.$p_conf"
-    ln ${PREZTO_CONF_DIR}/$p_conf ~/.$p_conf
-done
-
-cp ${PROJECT_CONF_DIR}/zpreztorc ${HOME_DIR}/.zpreztorc
-cp ${PROJECT_CONF_DIR}/prompt_giddie_setup ${PREZTO_THEME_DIR}
-
-echo
-println "#######################################################################"
-println "###### Please type your password at next step to change shell to zsh..."
-println "###### If you failed, try to run 'chsh -s /bin/zsh' manually"
-println "#######################################################################"
-chsh -s /bin/zsh
+println "Installing oh-my-zsh, and copying configuration file..."
+if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+cd $PROJECT_CONFIG_DIR
+cp zshrc ${HOME_DIR}/.zshrc
 println "...Done"
 
 
@@ -191,5 +179,4 @@ echo -e "
     | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
     | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
      \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|\n"
-
 
