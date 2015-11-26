@@ -126,7 +126,7 @@ println "...Done"
 
 
 println "Copying configuration file for bash, tmux, screen and color scheme for Vim..."
-cd $PROJECT_CONF_DIR
+cd ${PROJECT_CONF_DIR}
 if [ ! -f ${HOME_DIR}/.bashrc ]; then
     cp bashrc ${HOME_DIR}/.bashrc
 fi
@@ -149,7 +149,7 @@ println "...Done"
 
 
 println "Installing Vim plugins defined in vimrc..."
-cd $PROJECT_CONF_DIR
+cd ${PROJECT_CONF_DIR}
 cp vimrc ${HOME_DIR}/.vimrc
 vim +PlugInstall +qa
 # vim +PluginInstall +qa
@@ -167,7 +167,7 @@ println "Installing oh-my-zsh, and copying configuration file..."
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-cd $PROJECT_CONF_DIR
+cd ${PROJECT_CONF_DIR}
 cp zshrc ${HOME_DIR}/.zshrc
 println "...Done"
 
