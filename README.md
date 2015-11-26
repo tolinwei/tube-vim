@@ -6,14 +6,14 @@ tube-vim
     | __| | | | '_ \ / _ \____\ \ / / | '_ ` _ \
     | |_| |_| | |_) |  __/_____\ V /| | | | | | |
      \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
-         
+
 ```
 
-**tube-vim** is a integrated command line development environment mainly designed for OS X. You can install it by **running a single command**:
+**tube-vim** is a integrated shell environment that mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
-**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
+**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2).
 
 **tube-vim** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
 
@@ -42,11 +42,11 @@ How to change color scheme of iTerm2 & Terminal.app</a>
 
 ### For Linux
 
-**tube-vim** provides a simplified version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
+**tube-vim** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
 ```
 bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
 ```
-     
+
 ## Usage Guide
 
 ### Vim
