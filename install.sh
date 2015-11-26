@@ -68,7 +68,7 @@ if [ -d .vim ]; then
 fi
 if [ -e .screenrc ]; then
     println "Backing up .screenrc to .screenrc.bak-${date_time}"
-    mv .screen .screenrc.bak-${date_time}
+    mv .screenrc .screenrc.bak-${date_time}
 fi
 if [ -e .tmux.conf ]; then
     println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
