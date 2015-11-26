@@ -122,13 +122,11 @@ vim +PlugInstall +qa
 println "...Done"
 
 
-if [ "$1" != "--no-theme" ]; then
-    println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
-    cd ${PROJECT_COLOR_DIR}
-    open gruvbox-dark.itermcolors
-    open gruvbox-dark.terminal
-    println "...Done"
-fi
+println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
+cd ${PROJECT_COLOR_DIR}
+open gruvbox-dark.itermcolors
+open gruvbox-dark.terminal
+println "...Done"
 
 
 println "Installing oh-my-zsh, and copying configuration file..."
