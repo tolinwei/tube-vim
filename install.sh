@@ -44,7 +44,7 @@ println "...Done"
 
 println "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
-git clone https://github.com/tolinwei/tube-vim.git ${PROJECT_DIR}
+git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
 println "...Done"
 
 
