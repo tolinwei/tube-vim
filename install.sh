@@ -25,8 +25,6 @@ PREZTO_DIR=${HOME_DIR}/.zprezto
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
-PREZTO_CONF_DIR=${HOME_DIR}/.zprezto/runcoms
-PREZTO_THEME_DIR=${HOME_DIR}/.zprezto/modules/prompt/functions
 println "...Done"
 
 
@@ -46,8 +44,8 @@ println "...Done"
 
 
 println "Cloning repo to home directories..."
-rm -rf $PROJECT_DIR
-git clone https://github.com/tolinwei/tube-vim.git $PROJECT_DIR
+rm -rf ${PROJECT_DIR}
+git clone https://github.com/tolinwei/tube-vim.git ${PROJECT_DIR}
 println "...Done"
 
 
@@ -57,7 +55,7 @@ println "...Done"
 
 
 println "Backing up existing Vim, screen, tmux settings, bashrc and zsh related..."
-cd $HOME_DIR
+cd ${HOME_DIR}
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e .vimrc ]; then
     println "Backing up .vimrc to .vimrc.bak-${date_time}"
@@ -116,7 +114,7 @@ println "...Done"
 
 println "Installing Exuberant Ctags to support tagbar via Homebrew..."
 CTAGS_DIR=`which ctags`
-if [ $CTAGS_DIR != '/usr/local/bin/ctags' ]; then
+if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
     println "Installing new Ctags via Homebrew";
     brew install ctags
 else
@@ -133,9 +131,9 @@ fi
 cp tmux.conf ${HOME_DIR}/.tmux.conf
 cp screenrc ${HOME_DIR}/.screenrc
 
-mkdir -p $VIM_COLOR_DIR
-cd $PROJECT_COLOR_DIR
-cp gruvbox.vim $VIM_COLOR_DIR
+mkdir -p ${VIM_COLOR_DIR}
+cd ${PROJECT_COLOR_DIR}
+cp gruvbox.vim ${VIM_COLOR_DIR}
 println "...Done"
 
 
@@ -149,17 +147,16 @@ println "...Done"
 
 
 println "Installing Vim plugins defined in vimrc..."
-cd ${PROJECT_CONF_DIR}
-cp vimrc ${HOME_DIR}/.vimrc
+cp ${PROJECT_CONF_DIR}/vimrc ${HOME_DIR}/.vimrc
 vim +PlugInstall +qa
 # vim +PluginInstall +qa
 println "...Done"
 
 
 println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
-cd $PROJECT_COLOR_DIR
-open gruvbox-dark.itermcolors
-open gruvbox-dark.terminal
+cd ${PROJECT_COLOR_DIR}
+# open gruvbox-dark.itermcolors
+# open gruvbox-dark.terminal
 println "...Done"
 
 
@@ -167,8 +164,7 @@ println "Installing oh-my-zsh, and copying configuration file..."
 if [ ! -d ${HOME_DIR}/.oh-my-zsh ]; then
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
-cd ${PROJECT_CONF_DIR}
-cp zshrc ${HOME_DIR}/.zshrc
+cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
 println "...Done"
 
 
