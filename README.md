@@ -1,25 +1,25 @@
-tube-vim
+tube-shell
 ============
 ```
-     _         _                     _
-    | |_ _   _| |__   ___     __   _(_)_ __ ___
-    | __| | | | '_ \ / _ \____\ \ / / | '_ ` _ \
-    | |_| |_| | |_) |  __/_____\ V /| | | | | | |
-     \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
-         
+ _         _                    _          _ _
+| |_ _   _| |__   ___       ___| |__   ___| | |
+| __| | | | '_ \ / _ \_____/ __| '_ \ / _ \ | |
+| |_| |_| | |_) |  __/_____\__ \ | | |  __/ | |
+ \__|\__,_|_.__/ \___|     |___/_| |_|\___|_|_|
+
 ```
 
-**tube-vim** is a integrated command line development environment mainly designed for OS X. You can install it by **running a single command**:
+**tube-shell** is a integrated shell environment that mainly designed for OS X. You can install it by **running a single command**:
 ```
-bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
+bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-shell/master/install.sh)
 ```
-**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2). 
+**tube-shell** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2).
 
-**tube-vim** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
+**tube-shell** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
 
 As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multiplexer, will be installed to accerate your operation (OS X only). If you feel `screen` better than `tmux`, a configuration for the former one is also provided to help you manage the sessions.
 
-<a href="https://github.com/tolinwei/tube-vim/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3" target="_blank">
+<a href="https://github.com/tolinwei/tube-shell/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3" target="_blank">
 简体中文文档正在编辑中</a>
 
 ## Preview
@@ -32,21 +32,27 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
 ### For OS X
 1. (Optional) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement, check out more features [here](https://iterm2.com/features.html)
 
-2. Run the following command to install **tube-vim**
+2. Run the following command to install **tube-shell**
      ```
-     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
+     bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-shell/master/install.sh)
      ```
 3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **iTerm2** or **Terminal** depends on which one you're using.
-     + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-of-iTerm2-&-Terminal.app" target="_blank">
+     + <a href="https://github.com/tolinwei/tube-shell/wiki/How-to-change-color-scheme-of-iTerm2-&-Terminal.app" target="_blank">
 How to change color scheme of iTerm2 & Terminal.app</a>
+
+4. (Optional) Modified the following lines in your `~/.bashrc` to correct git commits info if you're using `git` and have no existing `~/.bashrc` before installation
+     ```
+     git config --global user.name "<put-your-name-here>"
+     git config --global user.email "<put-your-email-here>"
+     ```
 
 ### For Linux
 
-**tube-vim** provides a simplified version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
+**tube-shell** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
 ```
-bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh)
+bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-shell/master/install-linux.sh)
 ```
-     
+
 ## Usage Guide
 
 ### Vim
@@ -68,6 +74,10 @@ when your cursor is in NERDTree's pane
 - `o` or `<Enter>` - Open that file or expend that directory the cursor points to
 - `R` (`<Shift> + r`) - Refresh the tree, useful if files change outside of Vim
 - `U` (`<Shift> + u`) - Show upper level directory
+
+when you're in any pane, you can use
+- `:vertical res <size_number>` to adjust the width of the pane where your cursor is inside
+- `:vertical res +<size_number>` or `:vertical res -<size_number>` to increase or decrese the width
 
 #####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
 - `z` then `a` - Fold or un-fold the code trunk, by the deepest level of indent guide
@@ -109,12 +119,12 @@ For exmple:
 - [A tmux Primer](https://danielmiessler.com/study/tmux/)
 - [tmux: Productive Mouse-Free Development](http://uploads.mitechie.com/books/tmux_p1_1.pdf)
 
-## Why it is named tube-vim
-I started this project when I was working on a Yahoo! Japan fund project, which is internally named **Tube**. Since I used most of the settings from within thie repo for the project, later I decided to rename it as **tube-vim**.
+## Why it is named tube-shell
+I started this project when I was working on a Yahoo! Japan fund project, which is internally named **Tube**. Since I used most of the settings from within thie repo for the project, later I decided to rename it as **tube-shell**.
 
 ## License
 
 Copyright © [Wei Lin](http://www.linkedin.com/in/tolinwei). Distributed under the same terms as Vim itself. See `:help license`.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-vim)](https://github.com/igrigorik/ga-beacon)
+[![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-shell)](https://github.com/igrigorik/ga-beacon)
 
