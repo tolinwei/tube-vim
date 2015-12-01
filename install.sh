@@ -49,36 +49,39 @@ cprintln "...Done"
 cprintln "Installing brew, git for OS X..."
 which -s brew
 if [ $? != 0 ]; then
-    println "Installing new Homebrew..."
+    println "Installing new Homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    println "Updating & upgrading Homebrew"
+    println "Homebrew has installed before, updating & upgrading"
     brew update
     brew upgrade
 fi
-println "Installing git via Homebrew..."
-which -s git || brew install git
+# which -s git || brew install git
+which -s git
+if [ $? != 0 ]; then
+    println "Installing git via Homebrew"
+    brew install git
 cprintln "...Done"
 
 
-println "Cloning repo to home directories..."
+cprintln "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing Command Line Tools for OS X..."
+cprintln "Installing Command Line Tools for OS X..."
 xcode-select --install
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing Vim & tmux via Homebrew..."
+cprintln "Installing Vim & tmux via Homebrew..."
 brew install vim
 brew install tmux
-println "...Done"
+cprintln "...Done"
 
 
-println "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
+cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
     println "Skipping .bashrc as it's existed"
@@ -109,10 +112,10 @@ cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
 mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing Exuberant Ctags to support tagbar via Homebrew..."
+cprintln "Installing Exuberant Ctags to support tagbar via Homebrew..."
 CTAGS_DIR=`which ctags`
 if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
     println "Installing new Ctags via Homebrew";
@@ -120,21 +123,21 @@ if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
 else
     println "Exuberant Ctags (Homebrew version) has already installed"
 fi
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing junegunn/vim-plug as Vim plugins manager..."
+cprintln "Installing junegunn/vim-plug as Vim plugins manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing Vim plugins defined in .vimrc..."
+cprintln "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing oh-my-zsh & copying configuration file..."
+cprintln "Installing oh-my-zsh & copying configuration file..."
 if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
 fi
@@ -143,17 +146,17 @@ sh -c "$(curl -fsSL https://raw.github.com/tolinwei/oh-my-zsh/master/tools/insta
     # exit"
 println "Copying zshrc to home directory"
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
-println "...Done"
+cprintln "...Done"
 
 
-println "Importing color scheme for iTerm2 & Terminal.app..."
+cprintln "Importing color scheme for iTerm2 & Terminal.app..."
 cd ${PROJECT_COLOR_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
-println "...Done"
+cprintln "...Done"
 
 
-println "[End] Finish! Please restart your terminal emulator to enjoy!!"
+cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "${YELLOW}
  _         _                    _          _ _
 | |_ _   _| |__   ___       ___| |__   ___| | |
