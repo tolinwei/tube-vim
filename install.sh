@@ -7,14 +7,26 @@ function println {
     fi
 }
 
-echo -e "
+# Define colors for prompt if terminal supports
+if which tput >/dev/null 2>&1; then
+    ncolors=$(tput colors)
+fi
+if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+    YELLOW="$(tput setaf 3)"
+    NORMAL="$(tput sgr0)"
+else
+    YELLOW=""
+    NORMAL=""
+fi
+
+echo -e "${YELLOW}
  _         _                    _          _ _
 | |_ _   _| |__   ___       ___| |__   ___| | |
 | __| | | | '_ \\ / _ \\_____/ __| '_ \\ / _ \\ | |
 | |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
- \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|\n"
+ \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
 
-println "[Start] Seting up integrated shell environment..."
+println "${YELLOW}[Start] Seting up integrated shell environment...${NORMAL}"
 
 
 println "Defining directory variables..."
