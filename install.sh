@@ -29,17 +29,17 @@ echo -e "${YELLOW}
 println "${YELLOW}[Start] Seting up integrated shell environment...${NORMAL}"
 
 
-println "Defining directory variables..."
+println "${YELLOW}Defining directory variables...${NORMAL}"
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
 OH_MY_ZSH_DIR=${HOME_DIR}/.oh-my-zsh
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing brew, git for OS X..."
+println "${YELLOW}Installing brew, git for OS X...${NORMAL}"
 which -s brew
 if [ $? != 0 ]; then
     println "Installing new Homebrew..."
@@ -49,29 +49,29 @@ else
     brew update
     brew upgrade
 fi
-println "Installing git via Homebrew..."
+println "Installing git via Homebrew...${NORMAL}"
 which -s git || brew install git
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Cloning repo to home directories..."
+println "${YELLOW}Cloning repo to home directories...${NORMAL}"
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing Command Line Tools for OS X..."
+println "${YELLOW}Installing Command Line Tools for OS X...${NORMAL}"
 xcode-select --install
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing Vim & tmux via Homebrew..."
+println "${YELLOW}Installing Vim & tmux via Homebrew...${NORMAL}"
 brew install vim
 brew install tmux
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
+println "${YELLOW}Backing up & copying configuration files for Bash, Vim, screen and tmux...${NORMAL}"
 date_time=`date +"%y-%m-%d-%H:%M"`
 if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
     println "Skipping .bashrc as it's existed"
@@ -102,10 +102,10 @@ cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
 mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing Exuberant Ctags to support tagbar via Homebrew..."
+println "${YELLOW}Installing Exuberant Ctags to support tagbar via Homebrew...${NORMAL}"
 CTAGS_DIR=`which ctags`
 if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
     println "Installing new Ctags via Homebrew";
@@ -113,21 +113,21 @@ if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
 else
     println "Exuberant Ctags (Homebrew version) has already installed"
 fi
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing junegunn/vim-plug as Vim plugins manager..."
+println "${YELLOW}Installing junegunn/vim-plug as Vim plugins manager...${NORMAL}"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-println "...Done"
+println "${YELLOW}...Done"
 
 
-println "Installing Vim plugins defined in .vimrc..."
+println "${YELLOW}Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Installing oh-my-zsh & copying configuration file..."
+println "${YELLOW}Installing oh-my-zsh & copying configuration file...${NORMAL}"
 if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
 fi
@@ -136,20 +136,20 @@ sh -c "$(curl -fsSL https://raw.github.com/tolinwei/oh-my-zsh/master/tools/insta
     # exit"
 println "Copying zshrc to home directory"
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "Importing color scheme for iTerm2 & Terminal.app..."
+println "${YELLOW}Importing color scheme for iTerm2 & Terminal.app...${NORMAL}"
 cd ${PROJECT_COLOR_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
-println "...Done"
+println "${YELLOW}...Done${NORMAL}"
 
 
-println "[End] Finish! Please restart your terminal emulator to enjoy!!"
-echo -e "
+println "${YELLOW}[End] Finish! Please restart your terminal emulator to enjoy!!${NORMAL}"
+echo -e "${YELLOW}
  _         _                    _          _ _
 | |_ _   _| |__   ___       ___| |__   ___| | |
 | __| | | | '_ \\ / _ \\_____/ __| '_ \\ / _ \\ | |
 | |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
- \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|"
+ \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}"
