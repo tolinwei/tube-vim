@@ -32,42 +32,37 @@ git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 println "...Done\n"
 
 
-println "Backing up existing Vim, screen, tmux settings and bashrc..."
-cd ${HOME_DIR}
+println "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
 date_time=`date +"%y-%m-%d-%H:%M"`
-if [ -e .bashrc ]; then
+if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
     println "Skipping .bashrc as it's existed"
+else
+    cp ${PROJECT_CONF_DIR}/bashrc ${HOME_DIR}/.bashrc
 fi
-if [ -e .vimrc ]; then
+if [ -e ${HOME_DIR}/.vimrc ]; then
     println "Backing up .vimrc to .vimrc.bak-${date_time}"
-    mv .vimrc .vimrc.bak-${date_time}
+    mv ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.bak-${date_time}
 fi
-if [ -d .vim ]; then
+if [ -d ${HOME_DIR}/.vim ]; then
     println "Backing up .vim directory to .vim.bak-${date_time}"
-    mv .vim .vim.bak-${date_time}
+    mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
 fi
-if [ -e .screenrc ]; then
+println "Copying .vimrc to home directory"
+cp ${PROJECT_CONF_DIR}/vimrc-linux ${HOME_DIR}/.vimrc
+if [ -e ${HOME_DIR}/.screenrc ]; then
     println "Backing up .screenrc to .screenrc.bak-${date_time}"
-    mv .screenrc .screenrc.bak-${date_time}
+    mv ${HOME_DIR}/.screenrc ${HOME_DIR}/.screenrc.bak-${date_time}
 fi
-if [ -e .tmux.conf ]; then
+if [ -e ${HOME_DIR}/.tmux.conf ]; then
     println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
-    mv .tmux.conf .tmux.conf.bak-${date_time}
+    mv ${HOME_DIR}/.tmux.conf ${HOME_DIR}/.tmux.conf.bak-${date_time}
 fi
-println "...Done"
-
-
-println "Copying configuration file for bash, tmux, screen and color scheme for Vim..."
-cd ${PROJECT_CONFIG_DIR}
-if [ ! -f ${HOME_DIR}/.bashrc ]; then
-    cp bashrc ${HOME_DIR}/.bashrc
-fi
-cp tmux.conf ${HOME_DIR}/.tmux.conf
-cp screenrc ${HOME_DIR}/.screenrc
-
+println "Copying .tmux.conf & .screenrc to home directory"
+cp ${PROJECT_CONF_DIR}/tmux.conf ${HOME_DIR}/.tmux.conf
+cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
+println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
 mkdir -p ${VIM_COLOR_DIR}
-cd ${PROJECT_COLOR_DIR}
-cp gruvbox.vim ${VIM_COLOR_DIR}
+cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 println "...Done"
 
 
@@ -77,9 +72,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 println "...Done"
 
 
-println "Installing Vim plugins defined in vimrc..."
-cd ${PROJECT_CONFIG_DIR}
-cp vimrc-linux ${HOME_DIR}/.vimrc
+println "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
 println "...Done\n"
 

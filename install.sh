@@ -33,7 +33,7 @@ if [ $? != 0 ]; then
     println "Installing new Homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    println "Updating and upgrading Homebrew"
+    println "Updating & upgrading Homebrew"
     brew update
     brew upgrade
 fi
@@ -53,34 +53,43 @@ xcode-select --install
 println "...Done"
 
 
-println "Backing up existing Vim, screen, tmux settings, bashrc and zsh related..."
-cd ${HOME_DIR}
-date_time=`date +"%y-%m-%d-%H:%M"`
-if [ -e .bashrc ]; then  # Special process for .bashrc
-    println "Skipping .bashrc as it's existed"
-fi
-if [ -e .vimrc ]; then
-    println "Backing up .vimrc to .vimrc.bak-${date_time}"
-    mv .vimrc .vimrc.bak-${date_time}
-fi
-if [ -d .vim ]; then
-    println "Backing up .vim directory to .vim.bak-${date_time}"
-    mv .vim .vim.bak-${date_time}
-fi
-if [ -e .screenrc ]; then
-    println "Backing up .screenrc to .screenrc.bak-${date_time}"
-    mv .screenrc .screenrc.bak-${date_time}
-fi
-if [ -e .tmux.conf ]; then
-    println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
-    mv .tmux.conf .tmux.conf.bak-${date_time}
-fi
+println "Installing Vim & tmux via Homebrew..."
+brew install vim
+brew install tmux
 println "...Done"
 
 
-println "Installing Vim and tmux via Homebrew..."
-brew install vim
-brew install tmux
+println "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
+date_time=`date +"%y-%m-%d-%H:%M"`
+if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
+    println "Skipping .bashrc as it's existed"
+else
+    cp ${PROJECT_CONF_DIR}/bashrc ${HOME_DIR}/.bashrc
+fi
+if [ -e ${HOME_DIR}/.vimrc ]; then
+    println "Backing up .vimrc to .vimrc.bak-${date_time}"
+    mv ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.bak-${date_time}
+fi
+if [ -d ${HOME_DIR}/.vim ]; then
+    println "Backing up .vim directory to .vim.bak-${date_time}"
+    mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
+fi
+println "Copying .vimrc to home directory"
+cp ${PROJECT_CONF_DIR}/vimrc ${HOME_DIR}/.vimrc
+if [ -e ${HOME_DIR}/.screenrc ]; then
+    println "Backing up .screenrc to .screenrc.bak-${date_time}"
+    mv ${HOME_DIR}/.screenrc ${HOME_DIR}/.screenrc.bak-${date_time}
+fi
+if [ -e ${HOME_DIR}/.tmux.conf ]; then
+    println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
+    mv ${HOME_DIR}/.tmux.conf ${HOME_DIR}/.tmux.conf.bak-${date_time}
+fi
+println "Copying .tmux.conf & .screenrc to home directory"
+cp ${PROJECT_CONF_DIR}/tmux.conf ${HOME_DIR}/.tmux.conf
+cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
+println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
+mkdir -p ${VIM_COLOR_DIR}
+cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 println "...Done"
 
 
@@ -95,40 +104,25 @@ fi
 println "...Done"
 
 
-println "Copying configuration file for bash, tmux, screen and color scheme for Vim..."
-cd ${PROJECT_CONF_DIR}
-if [ ! -f ${HOME_DIR}/.bashrc ]; then
-    cp bashrc ${HOME_DIR}/.bashrc
-fi
-cp tmux.conf ${HOME_DIR}/.tmux.conf
-cp screenrc ${HOME_DIR}/.screenrc
-
-mkdir -p ${VIM_COLOR_DIR}
-cd ${PROJECT_COLOR_DIR}
-cp gruvbox.vim ${VIM_COLOR_DIR}
-println "...Done"
-
-
 println "Installing junegunn/vim-plug as Vim plugins manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 println "...Done"
 
 
-println "Installing Vim plugins defined in vimrc..."
-cp ${PROJECT_CONF_DIR}/vimrc ${HOME_DIR}/.vimrc
+println "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
 println "...Done"
 
 
-println "Importing color scheme for iTerm2 and terminal (please click 'OK' on the popup window)..."
+println "Importing color scheme for iTerm2 & Terminal.app (please click 'OK' on the popup window)..."
 cd ${PROJECT_COLOR_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 println "...Done"
 
 
-println "Installing oh-my-zsh, and copying configuration file..."
+println "Installing oh-my-zsh & copying configuration file..."
 if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
 fi
