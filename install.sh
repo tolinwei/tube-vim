@@ -61,6 +61,7 @@ which -s git
 if [ $? != 0 ]; then
     println "Installing git via Homebrew"
     brew install git
+fi
 cprintln "...Done"
 
 
