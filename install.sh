@@ -19,6 +19,13 @@ function println {
     fi
 }
 
+function cprintln {
+    echo "${YELLOW}[" `date` "]" $1 "${NORMAL}"
+    if [ "$1" == "...Done" ]; then
+        echo
+    fi
+}
+
 echo -e "${YELLOW}
  _         _                    _          _ _
 | |_ _   _| |__   ___       ___| |__   ___| | |
@@ -26,20 +33,20 @@ echo -e "${YELLOW}
 | |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
  \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
 
-println "[Start] Seting up integrated shell environment..."
+cprintln "[Start] Seting up integrated shell environment..."
 
 
-println "Defining directory variables..."
+cprintln "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
 OH_MY_ZSH_DIR=${HOME_DIR}/.oh-my-zsh
 PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
-println "...Done"
+cprintln "...Done"
 
 
-println "Installing brew, git for OS X..."
+cprintln "Installing brew, git for OS X..."
 which -s brew
 if [ $? != 0 ]; then
     println "Installing new Homebrew..."
@@ -51,7 +58,7 @@ else
 fi
 println "Installing git via Homebrew..."
 which -s git || brew install git
-println "...Done"
+cprintln "...Done"
 
 
 println "Cloning repo to home directories..."
