@@ -115,13 +115,6 @@ vim +PlugInstall +qa
 println "...Done"
 
 
-println "Importing color scheme for iTerm2 & Terminal.app (please click 'OK' on the popup window)..."
-cd ${PROJECT_COLOR_DIR}
-open gruvbox-dark.itermcolors
-open gruvbox-dark.terminal
-println "...Done"
-
-
 println "Installing oh-my-zsh & copying configuration file..."
 if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
@@ -129,6 +122,13 @@ fi
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 println "Copying zshrc to home directory"
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
+println "...Done"
+
+
+println "Importing color scheme for iTerm2 & Terminal.app (please click 'OK' on the popup window)..."
+cd ${PROJECT_COLOR_DIR}
+open gruvbox-dark.itermcolors
+open gruvbox-dark.terminal
 println "...Done"
 
 
