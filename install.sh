@@ -48,7 +48,7 @@ git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 println "...Done"
 
 
-println "Installing Command Line Tools for OS X (please click 'Install' on popup window)..."
+println "Installing Command Line Tools for OS X..."
 xcode-select --install
 println "...Done"
 
@@ -120,20 +120,21 @@ if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
 fi
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh) && \
-    cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc"
+    cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc && \
+    exit"
 # println "Copying zshrc to home directory"
 # cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
 println "...Done"
 
 
-println "Importing color scheme for iTerm2 & Terminal.app (please click 'OK' on the popup window)..."
+println "Importing color scheme for iTerm2 & Terminal.app..."
 cd ${PROJECT_COLOR_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 println "...Done"
 
 
-println "[End] Finish installation, please enjoy!!"
+println "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "
  _         _                    _          _ _
 | |_ _   _| |__   ___       ___| |__   ___| | |
