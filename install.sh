@@ -39,9 +39,10 @@ cprintln "[Start] Seting up integrated shell environment..."
 cprintln "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
-OH_MY_ZSH_DIR=${HOME_DIR}/.oh-my-zsh
-PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
+PROJECT_THEME_DIR=${PROJECT_DIR}/themes
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
+OH_MY_ZSH_DIR=${HOME_DIR}/.oh-my-zsh
+OH_MY_ZSH_THEME_DIR=${OH_MY_ZSH_DIR}/themes
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
@@ -112,7 +113,7 @@ cp ${PROJECT_CONF_DIR}/tmux.conf ${HOME_DIR}/.tmux.conf
 cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
 mkdir -p ${VIM_COLOR_DIR}
-cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
+cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 cprintln "...Done"
 
 
@@ -145,13 +146,14 @@ fi
 sh -c "$(curl -fsSL https://raw.github.com/tolinwei/oh-my-zsh/master/tools/install.sh)" # && \
     # cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc && \
     # exit"
-println "Copying zshrc to home directory"
+println "Copying zshrc to home directory, and theme tjkirch.zsh-theme to ~/.oh-my-zsh/themes"
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
+cp ${PROJECT_THEME_DIR}/tjkirch.zsh-theme ${OH_MY_ZSH_THEME_DIR}
 cprintln "...Done"
 
 
 cprintln "Importing color scheme for iTerm2 & Terminal.app..."
-cd ${PROJECT_COLOR_DIR}
+cd ${PROJECT_THEME_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 cprintln "...Done"

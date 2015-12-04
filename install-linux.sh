@@ -20,7 +20,7 @@ println "[Start] Seting up integrated shell environment..."
 println "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
-PROJECT_COLOR_DIR=${PROJECT_DIR}/colors
+PROJECT_THEME_DIR=${PROJECT_DIR}/themes
 PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 println "...Done"
@@ -62,7 +62,7 @@ cp ${PROJECT_CONF_DIR}/tmux.conf ${HOME_DIR}/.tmux.conf
 cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
 mkdir -p ${VIM_COLOR_DIR}
-cp ${PROJECT_COLOR_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
+cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 println "...Done"
 
 
