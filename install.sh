@@ -33,7 +33,7 @@ echo -e "${YELLOW}
 | |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
  \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
 
-cprintln "[Start] Seting up integrated shell environment..."
+cprintln "[Start] Seting up integrated shell environment...\n"
 
 
 cprintln "Defining directory variables..."
