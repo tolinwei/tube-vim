@@ -14,9 +14,6 @@ fi
 
 function println {
     echo "[" `date` "]" $1
-    if [ "$1" == "...Done" ]; then
-        echo
-    fi
 }
 
 function cprintln {
