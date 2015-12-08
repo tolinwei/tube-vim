@@ -21,7 +21,7 @@ println "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
 PROJECT_THEME_DIR=${PROJECT_DIR}/themes
-PROJECT_CONFIG_DIR=${PROJECT_DIR}/config
+PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 println "...Done"
 
