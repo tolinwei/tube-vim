@@ -14,7 +14,6 @@ set ffs=unix,dos,mac                            " Set Unix as standard file type
 syntax on
 set number
 set backspace=indent,eol,start                  " Enable backspace to default behavior
-set whichwrap+=<,>,h,l                          " ?
 set hlsearch                                    " Highlight search result
 set incsearch                                   " Incremental search
 set cursorline
