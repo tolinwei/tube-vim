@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The basic settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color scheme
 set background=dark
 colorscheme gruvbox
@@ -50,16 +49,9 @@ autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The begining of junegunn/vim-plug
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set nocompatible                                " be iMproved, required by Vundle
-" filetype off                                    " Required, open later
-" set rtp+=~/.vim/bundle/Vundle.vim               " Set the runtime path to include Vundle and initialize
-" call vundle#begin()                             " Let Vundle manage Vundle, required
-" Plug 'gmarik/Vundle.vim'
+" The begining of junegunn/vim-plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
