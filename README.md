@@ -102,7 +102,7 @@ when you're in any pane, you can use
 
 - `<Leader>` + `c` + `c` - Comment the line(s) you selected
 - `<Leader>` + `c` + `u` - Un-comment the line(s) you selected
-- `<Leader>` + `c` + `c` - Toggle the comment status of selected line(s)
+- `<Leader>` + `c` + `i` - Toggle the comment status of selected line(s)
 - `<Leader>` + `c` + `y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 
 #####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
