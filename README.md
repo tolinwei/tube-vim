@@ -135,5 +135,3 @@ I started this project when I was working on a Yahoo! Japan fund project, which 
 
 Copyright © [Wei Lin](http://www.linkedin.com/in/tolinwei). Distributed under the same terms as Vim itself. See `:help license`.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-shell)](https://github.com/igrigorik/ga-beacon)
-
