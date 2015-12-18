@@ -15,7 +15,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-shell/master/inst
 ```
 **tube-shell** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2).
 
-**tube-shell** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
+**tube-shell** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due to its full compatibility with `bash`.
 
 As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multiplexer, will be installed to accerate your operation (OS X only). If you feel `screen` better than `tmux`, a configuration for the former one is also provided to help you manage the sessions.
 
@@ -53,15 +53,6 @@ How to change color scheme of iTerm2 & Terminal.app</a>
 bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-shell/master/install-linux.sh)
 ```
 
-## To-do List
-
-Add more plugins to accelarate operation.
-
-1. [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
-2. [docunext/closetag.vim](https://github.com/docunext/closetag.vim)
-3. [thincavim-quickrun](https://github.com/thinca/vim-quickrun)
-4. ...
-
 ## Usage Guide
 
 ### Vim
@@ -71,7 +62,7 @@ Add more plugins to accelarate operation.
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
-### Vim plugins and feature shortcuts
+### Vim plugins included and feature shortcuts
 
 #####[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 - `<Control>` + `n` - Toggle NERDTree
@@ -102,7 +93,7 @@ when you're in any pane, you can use
 
 - `<Leader>` + `c` + `c` - Comment the line(s) you selected
 - `<Leader>` + `c` + `u` - Un-comment the line(s) you selected
-- `<Leader>` + `c` + `c` - Toggle the comment status of selected line(s)
+- `<Leader>` + `c` + `i` - Toggle the comment status of selected line(s)
 - `<Leader>` + `c` + `y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
 
 #####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
@@ -120,7 +111,8 @@ For exmple:
 
 #####[bling/vim-airline](https://github.com/bling/vim-airline)
 #####[kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
-
+#####[alvan/vim-closetag](https://github.com/alvan/vim-closetag)
+#####[Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
 
 ###tmux
 
@@ -134,6 +126,4 @@ I started this project when I was working on a Yahoo! Japan fund project, which 
 ## License
 
 Copyright © [Wei Lin](http://www.linkedin.com/in/tolinwei). Distributed under the same terms as Vim itself. See `:help license`.
-
-[![Analytics](https://ga-beacon.appspot.com/UA-61856209-1/tolinwei/tube-shell)](https://github.com/igrigorik/ga-beacon)
 
