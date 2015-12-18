@@ -15,7 +15,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-shell/master/inst
 ```
 **tube-shell** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2).
 
-**tube-shell** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due as it's mostly compatible with `bash`.
+**tube-shell** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due to its full compatibility with `bash`.
 
 As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multiplexer, will be installed to accerate your operation (OS X only). If you feel `screen` better than `tmux`, a configuration for the former one is also provided to help you manage the sessions.
 
