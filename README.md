@@ -111,6 +111,8 @@ For exmple:
 
 #####[bling/vim-airline](https://github.com/bling/vim-airline)
 #####[kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
+#####[alvan/vim-closetag](https://github.com/alvan/vim-closetag)
+#####[Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
 
 ###tmux
 
