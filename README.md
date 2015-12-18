@@ -62,7 +62,7 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-shell/master/in
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
-### Vim plugins and feature shortcuts
+### Vim plugins included and feature shortcuts
 
 #####[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
 - `<Control>` + `n` - Toggle NERDTree
