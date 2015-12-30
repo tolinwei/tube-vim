@@ -47,6 +47,11 @@ VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
 
+cprintln "Installing Command Line Tools for OS X..."
+xcode-select --install
+cprintln "...Done"
+
+
 cprintln "Installing brew, git for OS X..."
 which -s brew
 if [ $? != 0 ]; then
@@ -69,11 +74,6 @@ cprintln "...Done"
 cprintln "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
-cprintln "...Done"
-
-
-cprintln "Installing Command Line Tools for OS X..."
-xcode-select --install
 cprintln "...Done"
 
 
