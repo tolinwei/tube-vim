@@ -46,7 +46,7 @@ cprintln "...Done"
 
 
 cprintln "Installing Command Line Tools for OS X..."
-whici -s xcode-select
+which -s xcode-select
 if [ $? != 0 ]; then
     xcode-select --install
 fi
