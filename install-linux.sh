@@ -1,7 +1,5 @@
 #/bin/bash
 
-# Exit script on fail
-set -e
 
 # Define colors for prompt if terminal supports
 if which tput >/dev/null 2>&1; then
