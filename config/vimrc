@@ -92,7 +92,7 @@ autocmd VimEnter * NERDTree | wincmd p
 " Set NERDTree on right side, would be conflict with tagbar
 " let g:NERDTreeWinPos="right"
 " Set NERDTree length
-let g:NERDTreeWinSize = 30
+let g:NERDTreeWinSize = 25
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
 " Close all open buffers on entering a window if the only buffer that's left is the NERDTree buffer
@@ -123,7 +123,7 @@ Plug 'majutsushi/tagbar'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <C-t> :TagbarToggle<CR>
 " Set width
-let g:tagbar_width=30
+let g:tagbar_width=25
 " Open tagbar when open Vim with supported file/files
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

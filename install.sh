@@ -149,7 +149,7 @@ sh -c "$(curl -fsSL https://raw.github.com/tolinwei/oh-my-zsh/master/tools/insta
     # exit"
 println "Copying zshrc to home directory, and theme tjkirch.zsh-theme to ~/.oh-my-zsh/themes"
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
-cp ${PROJECT_THEME_DIR}/tjkirch.zsh-theme ${OH_MY_ZSH_THEME_DIR}
+cp ${PROJECT_THEME_DIR}/tube.zsh-theme ${OH_MY_ZSH_THEME_DIR}
 cprintln "...Done"
 
 
