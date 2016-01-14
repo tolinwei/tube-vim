@@ -1,6 +1,4 @@
 #/bin/bash
-
-
 # Define colors for prompt if terminal supports
 if which tput >/dev/null 2>&1; then
     ncolors=$(tput colors)
@@ -31,7 +29,6 @@ echo -e "${YELLOW}
 | |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
  \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
 
-
 cprintln "[Start] Seting up integrated shell environment...\n"
 
 cprintln "Defining directory variables..."
@@ -42,12 +39,10 @@ PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
-
 cprintln "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 cprintln "...Done\n"
-
 
 cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
 date_time=`date +"%y-%m-%d-%H:%M"`
@@ -82,17 +77,14 @@ mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 cprintln "...Done"
 
-
 cprintln "Installing junegunn/vim-plug as Vim plugins manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cprintln "...Done"
 
-
 cprintln "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
 cprintln "...Done\n"
-
 
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "${YELLOW}

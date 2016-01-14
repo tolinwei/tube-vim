@@ -1,6 +1,4 @@
 #!/bin/bash
-
-
 # Define colors for prompt if terminal supports
 if which tput >/dev/null 2>&1; then
     ncolors=$(tput colors)
@@ -33,7 +31,6 @@ echo -e "${YELLOW}
 
 cprintln "[Start] Seting up integrated shell environment...\n"
 
-
 cprintln "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-shell
@@ -44,14 +41,12 @@ OH_MY_ZSH_THEME_DIR=${OH_MY_ZSH_DIR}/themes
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
-
 cprintln "Installing Command Line Tools for OS X..."
 which -s xcode-select
 if [ $? != 0 ]; then
     xcode-select --install
 fi
 cprintln "...Done"
-
 
 cprintln "Installing brew, git for OS X..."
 which -s brew
@@ -71,18 +66,15 @@ if [ $? != 0 ]; then
 fi
 cprintln "...Done"
 
-
 cprintln "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 cprintln "...Done"
 
-
 cprintln "Installing Vim & tmux via Homebrew..."
 brew install vim
 brew install tmux
 cprintln "...Done"
-
 
 cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
 date_time=`date +"%y-%m-%d-%H:%M"`
@@ -117,7 +109,6 @@ mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 cprintln "...Done"
 
-
 cprintln "Installing Exuberant Ctags to support tagbar via Homebrew..."
 CTAGS_DIR=`which ctags`
 if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
@@ -128,17 +119,14 @@ else
 fi
 cprintln "...Done"
 
-
 cprintln "Installing junegunn/vim-plug as Vim plugins manager..."
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 cprintln "...Done"
 
-
 cprintln "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
 cprintln "...Done"
-
 
 cprintln "Installing oh-my-zsh & copying configuration file..."
 if [ -d ${OH_MY_ZSH_DIR} ]; then
@@ -152,13 +140,11 @@ cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
 cp ${PROJECT_THEME_DIR}/tube.zsh-theme ${OH_MY_ZSH_THEME_DIR}
 cprintln "...Done"
 
-
 cprintln "Importing color scheme for iTerm2 & Terminal.app..."
 cd ${PROJECT_THEME_DIR}
 open gruvbox-dark.itermcolors
 open gruvbox-dark.terminal
 cprintln "...Done"
-
 
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "${YELLOW}
