@@ -41,7 +41,7 @@ cprintln "...Done"
 
 cprintln "Cloning repo to home directories..."
 rm -rf ${PROJECT_DIR}
-git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
+git clone git://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 cprintln "...Done\n"
 
 cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
