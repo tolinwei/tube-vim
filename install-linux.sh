@@ -24,59 +24,61 @@ function cprintln {
 }
 
 echo -e "${YELLOW}
- _         _                    _          _ _
-| |_ _   _| |__   ___       ___| |__   ___| | |
-| __| | | | '_ \\ / _ \\_____/ __| '_ \\ / _ \\ | |
-| |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
- \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
+ _         _                     _
+| |_ _   _| |__   ___     __   _(_)_ __ ___
+| __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
+| |_| |_| | |_) |  __/_____\\ V /| | | | | | |
+ \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|${NORMAL}\n"
 
-
-cprintln "[Start] Seting up integrated shell environment...\n"
+cprintln "[Start] Seting up tube-vim...\n"
 
 cprintln "Defining directory variables..."
 HOME_DIR=~
-PROJECT_DIR=${HOME_DIR}/.tube-shell
+PROJECT_DIR=${HOME_DIR}/.tube-vim
 PROJECT_THEME_DIR=${PROJECT_DIR}/themes
 PROJECT_CONF_DIR=${PROJECT_DIR}/config
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
 
-cprintln "Cloning repo to home directories..."
+cprintln "Cloning repo to ${PROJECT_DIR}..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
 cprintln "...Done\n"
 
 
-cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
+cprintln "Backing up & copying conf files for Bash, Vim and screen..."
 date_time=`date +"%y-%m-%d-%H:%M"`
+# For .bashrc
 if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
-    println "Skipping .bashrc as it's existed"
+    println "Skipping .bashrc as it's existed..."
 else
+    println "Copying new .bashrc..."
     cp ${PROJECT_CONF_DIR}/bashrc ${HOME_DIR}/.bashrc
 fi
+
+# For .vim/ and .vimrc
 if [ -e ${HOME_DIR}/.vimrc ]; then
-    println "Backing up .vimrc to .vimrc.bak-${date_time}"
+    println "Backing up .vimrc to .vimrc.bak-${date_time}..."
     mv ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.bak-${date_time}
 fi
 if [ -d ${HOME_DIR}/.vim ]; then
-    println "Backing up .vim directory to .vim.bak-${date_time}"
+    println "Backing up .vim directory to .vim.bak-${date_time}..."
     mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
 fi
-println "Copying .vimrc to home directory"
+println "Copying new .vimrc..."
 cp ${PROJECT_CONF_DIR}/vimrc-linux ${HOME_DIR}/.vimrc
+
+# For screen
 if [ -e ${HOME_DIR}/.screenrc ]; then
-    println "Backing up .screenrc to .screenrc.bak-${date_time}"
+    println "Backing up .screenrc to .screenrc.bak-${date_time}..."
     mv ${HOME_DIR}/.screenrc ${HOME_DIR}/.screenrc.bak-${date_time}
 fi
-if [ -e ${HOME_DIR}/.tmux.conf ]; then
-    println "Backing up .tmux.conf to .tmux.conf.bak-${date_time}"
-    mv ${HOME_DIR}/.tmux.conf ${HOME_DIR}/.tmux.conf.bak-${date_time}
-fi
-println "Copying .tmux.conf & .screenrc to home directory"
-cp ${PROJECT_CONF_DIR}/tmux.conf ${HOME_DIR}/.tmux.conf
+println "Copying .screenrc to ${HOME_DIR}/.screenrc..."
 cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
-println "Copying Vim color scheme to ${VIM_COLOR_DIR}"
+
+# For Vim color scheme – Gruvbox
+println "Copying Vim color scheme – Gruvbox to ${VIM_COLOR_DIR}..."
 mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 cprintln "...Done"
@@ -95,8 +97,9 @@ cprintln "...Done\n"
 
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "${YELLOW}
- _         _                    _          _ _
-| |_ _   _| |__   ___       ___| |__   ___| | |
-| __| | | | '_ \\ / _ \\_____/ __| '_ \\ / _ \\ | |
-| |_| |_| | |_) |  __/_____\\__ \\ | | |  __/ | |
- \\__|\\__,_|_.__/ \\___|     |___/_| |_|\\___|_|_|${NORMAL}\n"
+ _         _                     _
+| |_ _   _| |__   ___     __   _(_)_ __ ___
+| __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
+| |_| |_| | |_) |  __/_____\\ V /| | | | | | |
+ \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|${NORMAL}\n"
+

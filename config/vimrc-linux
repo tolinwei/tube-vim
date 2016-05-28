@@ -1,82 +1,64 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The basic settings
+                                                " General settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Color scheme
-set background=dark
-colorscheme gruvbox
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General setting
 set encoding=utf-8                              " Set the encoding for new file
 set ffs=unix,dos,mac                            " Set Unix as standard file type
-syntax on
-set number
+syntax on                                       " Open syntax highlighting
+colorscheme gruvbox                             " Color scheme: ~/.vim/colors/gruvbox.vim
+set background=dark                             " Background style 'dark'/'light'
+set number                                      " Show line number
 set backspace=indent,eol,start                  " Enable backspace to default behavior
 set hlsearch                                    " Highlight search result
 set incsearch                                   " Incremental search
-set cursorline
-set clipboard+=unnamed                          " Make yank and pasge work across Vims
+set cursorline                                  " Hightlight current line
+set clipboard+=unnamed                          " Make yank and paste work across Vims
 set mouse-=a                                    " Disable mouse Navigation
-
-" Wrap settings
-" http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
-set nowrap                                      " Don't wrap lines
-
-" Folding
-set foldmethod=indent	                        " http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
-set foldlevelstart=20                           " files will be loaded with opend folds
-
+                                                " Wrap setting:
+set nowrap                                      " - http://vim.wikia.com/wiki/Word_wrap_without_line_breaks
+                                                " Folding setting
+set foldmethod=indent	                        " - http://vim.wikia.com/wiki/All_folds_open_when_opening_a_file
+set foldlevelstart=20                           " - Open files with opend folds
 autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespaces on save
-
-" Auto reload .vimrc if it has been changed
-autocmd! bufwritepost _vimrc source %           " Windows
-autocmd! bufwritepost .vimrc source %           " *nix
+                                                " Auto reload .vimrc if it has been changed
+autocmd! bufwritepost _vimrc source %           " - Windows
+autocmd! bufwritepost .vimrc source %           " - *nix
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+                                                " Indent setting
+                                                " - http://vim.wikia.com/wiki/Indenting_source_code
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Indent setting, use 4 spaces for tab
-" http://vim.wikia.com/wiki/Indenting_source_code
 set tabstop=4                                   " Length of <TAB>
-set softtabstop=4                               " Delete 4 spaces, if it's generated using <TAB>
+set softtabstop=4                               " Delete 4 spaces, if generated using <TAB>
 set expandtab                                   " When press <TAB> key, insert 'softtabstop' amount of space
 set shiftwidth=4                                " Affects when press >>, << or ==
 set smartindent                                 " Add extra level of indent in some cases, compared to autoindent
-
-" File indent specifically for certain files
+                                                " File indent specifically for certain format
 autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
+autocmd FileType yaml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The begining of junegunn/vim-plug
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/plugged')               " The begining of junegunn/vim-plug as plugins management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-Plug 'tolinwei/vim-airline'                   " forked repo to switch mode color of tomorrow theme
+Plug 'tolinwei/vim-airline'                     " forked repo to switch mode color of tomorrow theme
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set laststatus=2                                " Set airline to appear all the time
 set timeoutlen=50                               " Remove the pause when leaving insert mode
-let g:airline_theme = 'tomorrow'
+let g:airline_theme = 'tomorrow'                " Theme
 let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTreeToggle<CR>
-" Open NERDTree automatically when vim starts up
-" autocmd VimEnter * NERDTree | wincmd p
-" Set NERDTree on right side, would be conflict with tagbar
-" let g:NERDTreeWinPos="right"
-" Set NERDTree length
-let g:NERDTreeWinSize = 30
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <C-n> :NERDTreeToggle<CR>                   " Toggle NERDTree: <Control>+n
+" autocmd VimEnter * NERDTree | wincmd p        " Open NERDTree automatically when vim starts up
+" let g:NERDTreeWinPos="right"                  " Set NERDTree on right side, would be conflict with tagbar
+let g:NERDTreeWinSize = 25                      " Set NERDTree length
+                                                " Close all open buffers on entering a window
+                                                " - if the only buffer that's left is the NERDTree buffer
 autocmd WinEnter * call s:CloseIfOnlyNerdTreeLeft()
-" Close all open buffers on entering a window if the only buffer that's left is the NERDTree buffer
 function! s:CloseIfOnlyNerdTreeLeft()
   if exists("t:NERDTreeBufName")
     if bufwinnr(t:NERDTreeBufName) != -1
@@ -88,59 +70,56 @@ function! s:CloseIfOnlyNerdTreeLeft()
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Startup vim-indent-guides with vim
-let g:indent_guides_enable_on_vim_startup = 1
-" Set width of vim-indent-guides
-let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1   " Startup vim-indent-guides with vim
+let g:indent_guides_guide_size = 1              " Set width of vim-indent-guides
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+                                                " Need to install Exuberant Ctags before usage
+Plug 'majutsushi/tagbar'                        " - http://ctags.sourceforge.net/
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <C-t> :TagbarToggle<CR>                    " Toggle Targbar: <Control>+t
+let g:tagbar_width=25                           " Set width
+                                                " Open tagbar when open Vim with supported file/files
+" autocmd VimEnter * nested :call tagbar#autoopen(1)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 Plug 'kien/rainbow_parentheses.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
-" Always on
-au VimEnter * RainbowParenthesesToggle
+au VimEnter * RainbowParenthesesToggle          " Always on
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'scrooloose/nerdcommenter'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","
-" http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
-set timeout timeoutlen=1500
-" Add extra space after comment symbol
-let NERDSpaceDelims = 1
+let mapleader = ","                             " http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
+set timeout timeoutlen=1500                     " Make the leader key work
+let NERDSpaceDelims = 1                         " Add extra space after comment symbol
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'junegunn/vim-easy-align'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)                       " Start interactive EasyAlign in visual mode (e.g. vipga)
+nmap ga <Plug>(EasyAlign)                       " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'alvan/vim-closetag'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+let g:closetag_filenames = "*.html,*.xml"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 Plug 'Raimondi/delimitMate'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" call vundle#end()
 call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
