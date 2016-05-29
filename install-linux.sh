@@ -1,5 +1,4 @@
 #/bin/bash
-
 # Define colors for prompt if terminal supports
 if which tput >/dev/null 2>&1; then
     ncolors=$(tput colors)
@@ -44,37 +43,37 @@ cprintln "...Done"
 cprintln "Cloning repo to ${PROJECT_DIR}..."
 rm -rf ${PROJECT_DIR}
 git clone https://github.com/tolinwei/tube-shell.git ${PROJECT_DIR}
-cprintln "...Done\n"
+cprintln "...Done"
 
 
 cprintln "Backing up & copying conf files for Bash, Vim and screen..."
 date_time=`date +"%y-%m-%d-%H:%M"`
 # For .bashrc
-if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
+if [ -e ${HOME_DIR}/.bashrc ]; then
     println "Skipping .bashrc as it's existed..."
 else
-    println "Copying new .bashrc..."
+    println "Copying new .bashrc to ${HOME_DIR}..."
     cp ${PROJECT_CONF_DIR}/bashrc ${HOME_DIR}/.bashrc
 fi
 
 # For .vim/ and .vimrc
 if [ -e ${HOME_DIR}/.vimrc ]; then
-    println "Backing up .vimrc to .vimrc.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.vimrc to ${HOME_DIR}/.vimrc.bak-${date_time}..."
     mv ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.bak-${date_time}
 fi
 if [ -d ${HOME_DIR}/.vim ]; then
-    println "Backing up .vim directory to .vim.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.vim/ folder to ${HOME_DIR}/.vim.bak-${date_time}..."
     mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
 fi
-println "Copying new .vimrc..."
+println "Copying new .vimrc to ${HOME_DIR}..."
 cp ${PROJECT_CONF_DIR}/vimrc-linux ${HOME_DIR}/.vimrc
 
 # For screen
 if [ -e ${HOME_DIR}/.screenrc ]; then
-    println "Backing up .screenrc to .screenrc.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.screenrc to ${HOME_DIR}/.screenrc.bak-${date_time}..."
     mv ${HOME_DIR}/.screenrc ${HOME_DIR}/.screenrc.bak-${date_time}
 fi
-println "Copying .screenrc to ${HOME_DIR}/.screenrc..."
+println "Copying new .screenrc to ${HOME_DIR}..."
 cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 
 # For Vim color scheme – Gruvbox
@@ -92,7 +91,7 @@ cprintln "...Done"
 
 cprintln "Installing Vim plugins defined in .vimrc..."
 vim +PlugInstall +qa
-cprintln "...Done\n"
+cprintln "...Done"
 
 
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"

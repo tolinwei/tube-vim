@@ -22,7 +22,6 @@ autocmd BufWritePre * :%s/\s\+$//e              " Delete all trailing whitespace
                                                 " Auto reload .vimrc if it has been changed
 autocmd! bufwritepost _vimrc source %           " - Windows
 autocmd! bufwritepost .vimrc source %           " - *nix
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
                                                 " Indent setting
                                                 " - http://vim.wikia.com/wiki/Indenting_source_code
@@ -37,7 +36,6 @@ autocmd FileType xml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType html set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType ruby set tabstop=2 | set softtabstop=2 | set shiftwidth=2
 autocmd FileType yaml set tabstop=2 | set softtabstop=2 | set shiftwidth=2
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
                                                 " Line length limitation
                                                 " 80 words onwards as 'warning' and 120 words as 'danger'
@@ -48,7 +46,6 @@ if exists('+colorcolumn')
 else
     au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>81v.\+', -1)
 endif
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 call plug#begin('~/.vim/plugged')               " The begining of junegunn/vim-plug as plugins management
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -59,7 +56,6 @@ set laststatus=2                                " Set airline to appear all the 
 set timeoutlen=50                               " Remove the pause when leaving insert mode
 let g:airline_theme = 'tomorrow'                " Theme
 let g:airline#extensions#tagbar#enabled=0       " Lazily load tagbar
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'scrooloose/nerdtree'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,13 +75,11 @@ function! s:CloseIfOnlyNerdTreeLeft()
     endif
   endif
 endfunction
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'nathanaelkane/vim-indent-guides'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1   " Startup vim-indent-guides with vim
 let g:indent_guides_guide_size = 1              " Set width of vim-indent-guides
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
                                                 " Need to install Exuberant Ctags before usage
 Plug 'majutsushi/tagbar'                        " - http://ctags.sourceforge.net/
@@ -94,7 +88,6 @@ nmap <C-t> :TagbarToggle<CR>                    " Toggle Targbar: <Control>+t
 let g:tagbar_width=25                           " Set width
                                                 " Open tagbar when open Vim with supported file/files
 " autocmd VimEnter * nested :call tagbar#autoopen(1)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'kien/rainbow_parentheses.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -104,7 +97,6 @@ au VimEnter * RainbowParenthesesToggle          " Always on
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'yonchu/accelerated-smooth-scroll'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -114,19 +106,15 @@ Plug 'scrooloose/nerdcommenter'
 let mapleader = ","                             " http://stackoverflow.com/questions/14226390/how-to-use-nerd-commenter-for-vim-how-to-use-leader-key
 set timeout timeoutlen=1500                     " Make the leader key work
 let NERDSpaceDelims = 1                         " Add extra space after comment symbol
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 Plug 'junegunn/vim-easy-align'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 xmap ga <Plug>(EasyAlign)                       " Start interactive EasyAlign in visual mode (e.g. vipga)
 nmap ga <Plug>(EasyAlign)                       " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'alvan/vim-closetag'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:closetag_filenames = "*.html,*.xml"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plug 'Raimondi/delimitMate'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

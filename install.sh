@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Define colors for prompt if terminal supports
 if which tput >/dev/null 2>&1; then
     ncolors=$(tput colors)
@@ -32,7 +31,6 @@ echo -e "${YELLOW}
 
 cprintln "[Start] Seting up tube-vim...\n"
 
-
 cprintln "Defining directory variables..."
 HOME_DIR=~
 PROJECT_DIR=${HOME_DIR}/.tube-vim
@@ -43,6 +41,12 @@ OH_MY_ZSH_THEME_DIR=${OH_MY_ZSH_DIR}/themes
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
 cprintln "...Done"
 
+cprintln "Installing Command Line Tools for OS X..."
+which -s xcode-select
+if [ $? != 0 ]; then
+    xcode-select --install
+fi
+cprintln "...Done"
 
 cprintln "Installing brew, git for OS X..."
 which -s brew
@@ -54,7 +58,6 @@ else
     brew update
     brew upgrade
 fi
-# which -s git || brew install git
 which -s git
 if [ $? != 0 ]; then
     println "Installing git via Homebrew..."
@@ -79,44 +82,44 @@ brew install vim
 cprintln "...Done"
 
 
-cprintln "Backing up & copying configuration files for Bash, Vim, screen and tmux..."
+cprintln "Backing up & copying conf files for Bash, Vim, screen..."
 date_time=`date +"%y-%m-%d-%H:%M"`
 # For .bashrc
-if [ -e ${HOME_DIR}/.bashrc ]; then  # Special process for .bashrc
-    println "Skipping .bashrc as it's existed"
+if [ -e ${HOME_DIR}/.bashrc ]; then
+    println "Skipping .bashrc as it's existed..."
 else
+    println "Copying new .bashrc to ${HOME_DIR}..."
     cp ${PROJECT_CONF_DIR}/bashrc ${HOME_DIR}/.bashrc
 fi
 
 # For .vim/ and .vimrc
 if [ -e ${HOME_DIR}/.vimrc ]; then
-    println "Backing up .vimrc to .vimrc.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.vimrc to ${HOME_DIR}/.vimrc.bak-${date_time}..."
     mv ${HOME_DIR}/.vimrc ${HOME_DIR}/.vimrc.bak-${date_time}
 fi
 if [ -d ${HOME_DIR}/.vim ]; then
-    println "Backing up .vim directory to .vim.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.vim/ folder to ${HOME_DIR}/.vim.bak-${date_time}..."
     mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
 fi
-println "Copying new .vimrc..."
+println "Copying new .vimrc to ${HOME_DIR}..."
 cp ${PROJECT_CONF_DIR}/vimrc ${HOME_DIR}/.vimrc
 
 # For screen
 if [ -e ${HOME_DIR}/.screenrc ]; then
-    println "Backing up .screenrc to .screenrc.bak-${date_time}..."
+    println "Backing up ${HOME_DIR}/.screenrc to ${HOME_DIR}/.screenrc.bak-${date_time}..."
     mv ${HOME_DIR}/.screenrc ${HOME_DIR}/.screenrc.bak-${date_time}
 fi
-
-println "Copying new .screenrc..."
+println "Copying new .screenrc to ${HOME_DIR}..."
 cp ${PROJECT_CONF_DIR}/screenrc ${HOME_DIR}/.screenrc
 
 # For Vim color scheme – Gruvbox
-println "Copying Vim color scheme – Gruvbox to ${VIM_COLOR_DIR}"
+println "Copying Vim color scheme – Gruvbox to ${VIM_COLOR_DIR}..."
 mkdir -p ${VIM_COLOR_DIR}
 cp ${PROJECT_THEME_DIR}/gruvbox.vim ${VIM_COLOR_DIR}
 cprintln "...Done"
 
 
-cprintln "Installing Exuberant Ctags via Homebrew to support tagbar..."
+cprintln "Installing Exuberant Ctags to support tagbar via Homebrew..."
 CTAGS_DIR=`which ctags`
 if [ ${CTAGS_DIR} != '/usr/local/bin/ctags' ]; then
     println "Installing new Ctags via Homebrew...";
@@ -145,7 +148,7 @@ fi
 sh -c "$(curl -fsSL https://raw.github.com/tolinwei/oh-my-zsh/master/tools/install.sh)" # && \
 println "Copying new .zshrc, and theme tjkirch.zsh-theme to ${OH_MY_ZSH_THEME_DIR}..."
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
-cp ${PROJECT_THEME_DIR}/tjkirch.zsh-theme ${OH_MY_ZSH_THEME_DIR}
+cp ${PROJECT_THEME_DIR}/tube.zsh-theme ${OH_MY_ZSH_THEME_DIR}
 cprintln "...Done"
 
 
@@ -159,8 +162,8 @@ cprintln "...Done"
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
 echo -e "${YELLOW}
  _         _                     _
- | |_ _   _| |__   ___     __   _(_)_ __ ___
- | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
- | |_| |_| | |_) |  __/_____\\ V /| | | | | | |
-  \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|${NORMAL}\n"
+| |_ _   _| |__   ___     __   _(_)_ __ ___
+| __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
+| |_| |_| | |_) |  __/_____\\ V /| | | | | | |
+ \\__|\\__,_|_.__/ \\___|      \\_/ |_|_| |_| |_|${NORMAL}\n"
 

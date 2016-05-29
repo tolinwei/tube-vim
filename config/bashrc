@@ -1,5 +1,7 @@
 # to make vim colorscheme works under tmux
 export TERM=xterm-256color
+# enable ls coloring
+export CLICOLOR=1
 
 # set the editor for Git and also other programs
 export VISUAL=vim

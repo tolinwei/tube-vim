@@ -1,11 +1,11 @@
 tube-shell
 ============
 ```
- _         _                    _          _ _
-| |_ _   _| |__   ___       ___| |__   ___| | |
-| __| | | | '_ \ / _ \_____/ __| '_ \ / _ \ | |
-| |_| |_| | |_) |  __/_____\__ \ | | |  __/ | |
- \__|\__,_|_.__/ \___|     |___/_| |_|\___|_|_|
+ _         _                     _
+| |_ _   _| |__   ___     __   _(_)_ __ ___
+| __| | | | '_ \ / _ \____\ \ / / | '_ ` _ \
+| |_| |_| | |_) |  __/_____\ V /| | | | | | |
+ \__|\__,_|_.__/ \___|      \_/ |_|_| |_| |_|
 
 ```
 
@@ -50,7 +50,7 @@ How to change color scheme of iTerm2 & Terminal.app</a>
 
 **tube-shell** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
 ```
-bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-shell/master/install-linux.sh)
+bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-shell/master/install-linux.sh --no-check-certificate)
 ```
 
 ## Usage Guide
