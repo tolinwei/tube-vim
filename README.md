@@ -23,8 +23,8 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
 简体中文文档正在编辑中</a>
 
 ## Preview
-<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/java-preview.png" width="900">
-<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/perl-preview.png" width="900">
+<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-vimrc.png" width="600">
+<img src="https://raw.githubusercontent.com/tolinwei/dev-config/master/preview/gruvbox-java.png" width="600">
 
 
 ## Installation
