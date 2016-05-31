@@ -37,8 +37,8 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
 3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **iTerm2** or **Terminal** depends on which one you're using.
-     + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-of-iTerm2-&-Terminal.app" target="_blank">
-How to change color scheme of iTerm2 & Terminal.app</a>
+     + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-for-iTerm2-&-Terminal.app" target="_blank">
+How to change color scheme for iTerm2 & Terminal.app</a>
 
 4. (Optional) Modified the following lines in your `~/.bashrc` to correct git commits info if you're using `git` and have no existing `~/.bashrc` before installation
      ```
