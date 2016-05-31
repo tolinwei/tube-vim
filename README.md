@@ -9,7 +9,7 @@ tube-vim
 
 ```
 
-**tube-vim** is a integrated shell environment that mainly designed for OS X. You can install it by **running a single command**:
+**tube-vim** is a integrated command line environment that mainly designed for OS X. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
@@ -40,7 +40,7 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-for-iTerm2-&-Terminal.app" target="_blank">
 How to change color scheme for iTerm2 & Terminal.app</a>
 
-4. (Optional) Modified the following lines in your `~/.bashrc` to correct git commits info if you're using `git` and have no existing `~/.bashrc` before installation
+4. Modified the following lines in your `~/.bashrc` to correct git commits info if you're using `git` and have no existing `~/.bashrc` before installation
      ```
      git config --global user.name "<put-your-name-here>"
      git config --global user.email "<put-your-email-here>"
@@ -48,7 +48,7 @@ How to change color scheme for iTerm2 & Terminal.app</a>
 
 ### For Linux
 
-**tube-vim** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have rencent `git` and `wget` installed, then run the following command to set up quickly:
+**tube-vim** provides a simplified<sup>*</sup> version for server side Linux, as it's always anoying to develop on a bare remote machine. Makie sure you have `git`, `wget` and Vim >= 7.4 installed (7.2 might have issue with [NERDTree](https://github.com/scrooloose/nerdtree)), then run the following command to set it up:
 ```
 bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh --no-check-certificate)
 ```
@@ -62,57 +62,7 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/inst
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
-### Vim plugins included and feature shortcuts
-
-#####[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)
-- `<Control>` + `n` - Toggle NERDTree
-- `<Control>` + `w` then `w` - Switch between panes of Vim
-- `<Control>` + `w` then `<left>` - Switch to the left pane of Vim
-- `<Control>` + `w` then `<right>` - Switch to the right pane of Vim
-
-when your cursor is in NERDTree's pane
-- `o` or `<Enter>` - Open that file or expend that directory the cursor points to
-- `R` (`<Shift> + r`) - Refresh the tree, useful if files change outside of Vim
-- `U` (`<Shift> + u`) - Show upper level directory
-
-when you're in any pane, you can use
-- `:vertical res <size_number>` to adjust the width of the pane where your cursor is inside
-- `:vertical res +<size_number>` or `:vertical res -<size_number>` to increase or decrese the width
-
-#####[nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides)
-- `z` then `a` - Fold or un-fold the code trunk, by the deepest level of indent guide
-
-#####[accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll)
-- `<Control>` + `f` - Scroll full page down smoothly
-- `<Control>` + `d` - Scroll half page down smoothly
-- `<Control>` + `b` - Scroll full page up smoothly
-- `<Control>` + `u` - Scroll half page up smoothly
-
-#####[scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter)
-`<Leader>` means `,` in current setting, you can modify this in your `.vimrc`
-
-- `<Leader>` + `c` + `c` - Comment the line(s) you selected
-- `<Leader>` + `c` + `u` - Un-comment the line(s) you selected
-- `<Leader>` + `c` + `i` - Toggle the comment status of selected line(s)
-- `<Leader>` + `c` + `y` - Same as <Leader>+c+c expect that the commented line(s) are yanked first
-
-#####[junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align)
-
-Firstly select the lines you want to align in Visual Mode, then:
-- `g` then `a` then `<number>`(optional) then `<character>` for alignment
-
-For exmple:
-- `ga=` wil align to the left by `=`
-- `ga:` will align to the left by `:`
-- `ga4␣` will align to the left by the forth space.
-
-#####[majutsushi/tagbar](https://github.com/majutsushi/tagbar)
-- `<Control>` + `t` - Toggle Tagbar
-
-#####[bling/vim-airline](https://github.com/bling/vim-airline)
-#####[kien/rainbow_parentheses.vim](https://github.com/kien/rainbow_parentheses.vim)
-#####[alvan/vim-closetag](https://github.com/alvan/vim-closetag)
-#####[Raimondi/delimitMate](https://github.com/Raimondi/delimitMate)
+### [Vim Plugins and Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-and-Usage-Guide)
 
 ###tmux
 
