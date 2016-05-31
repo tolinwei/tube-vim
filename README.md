@@ -27,7 +27,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 
 ## Installation
 
-### For OS X
+#### For OS X
 1. (Optional) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement, check out more features [here](https://iterm2.com/features.html)
 
 2. Run the following command to install **tube-vim** for OS X
@@ -44,7 +44,7 @@ How to change color scheme for iTerm2 and Terminal.app</a>
      git config --global user.email "<put-your-email-here>"
      ```
 
-### For Linux
+#### For Linux
 
 **tube-vim** provides a simplified<sup>*</sup> version for server side Linux, since it's always anoying to develop on a bare remote machine. Makie sure you have `git`, `wget` and Vim >= 7.4 installed (7.2 might have issue with [NERDTree](https://github.com/scrooloose/nerdtree)), then run the following command to set it up:
 ```
@@ -53,13 +53,16 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/inst
 
 ## Usage Guide
 
-### Vim
+#### Basic Vim Operations
 
 - Type `vimtutor` in your shell emulator like **Terminal** or **iTerm2** to open the most rudimental yet intuitive tutorial of Vim
 - [Learn Vim Progressively](http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/)
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
-- **Wiki – [Vim Plugins in tube-vim and Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-in-tube-vim-and-Usage-Guide)**
+
+#### Vim Plugins included in tube-vim and Usage Guide
+
+- **Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)**
 
 ## License
 
