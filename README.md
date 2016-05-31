@@ -13,11 +13,9 @@ tube-vim
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
-**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for Terminal & iTerm2).
+**tube-vim** includes best practical Vim settings, bunch of Vim plugins managed by **[junegunn/vim-plug](https://github.com/junegunn/vim-plug)**, and decent color scheme **[gruvbox](https://github.com/morhetz/gruvbox)** ([gruvbox-terminal](https://github.com/flipxfx/gruvbox-terminal) & [gruvbox-generalized](https://github.com/morhetz/gruvbox-generalized) for iTerm2 and Terminal.app).
 
 **tube-vim** also installs Z shell `zsh`'s wrapper **oh-my-zsh** ([Github](https://github.com/robbyrussell/oh-my-zsh) | [Official size](http://ohmyz.sh/)) as the replacement of most system's default `bash`. You can switch to it easily due to its full compatibility with `bash`.
-
-As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multiplexer, will be installed to accerate your operation (OS X only). If you feel `screen` better than `tmux`, a configuration for the former one is also provided to help you manage the sessions.
 
 <a href="https://github.com/tolinwei/tube-vim/wiki/%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3" target="_blank">
 简体中文文档正在编辑中</a>
@@ -36,7 +34,7 @@ As a supplement, **[tmux](http://tmux.github.io/)**, which is a terminal multipl
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
-3. Change the color scheme in **Preferences...&nbsp;&nbsp;&nbsp;&nbsp;⌘,** of **iTerm2** or **Terminal** depends on which one you're using.
+3. Change the color scheme in **Preferences...** (⌘,) of **iTerm2** or **Terminal** depends on which one you're using.
      + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-for-iTerm2-&-Terminal.app" target="_blank">
 How to change color scheme for iTerm2 & Terminal.app</a>
 
