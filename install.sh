@@ -146,8 +146,9 @@ if [ -d ${OH_MY_ZSH_DIR} ]; then
     rm -rf ${OH_MY_ZSH_DIR}
 fi
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-println "Copying new .zshrc, and theme tjkirch.zsh-theme to ${OH_MY_ZSH_THEME_DIR}..."
+println "Copying new .zshrc to ${HOME_DIR}..."
 cp ${PROJECT_CONF_DIR}/zshrc ${HOME_DIR}/.zshrc
+println "Copying Zsh theme – tube.zsh-theme to ${OH_MY_ZSH_THEME_DIR}..."
 cp ${PROJECT_THEME_DIR}/tube.zsh-theme ${OH_MY_ZSH_THEME_DIR}
 cprintln "...Done"
 
