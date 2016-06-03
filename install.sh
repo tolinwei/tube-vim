@@ -54,9 +54,9 @@ if [ $? != 0 ]; then
     println "Installing new Homebrew..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-    println "Homebrew has installed, updating & upgrading..."
+    println "Homebrew has installed, updating & upgrading git..."
     brew update
-    brew upgrade
+    brew upgrade git
 fi
 which -s git
 if [ $? != 0 ]; then
