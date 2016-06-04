@@ -22,7 +22,7 @@ function println {
 }
 
 function cprintln {
-    echo -e "${BLUE}[" `date` "]" $1 "${NORMAL}"
+    echo -e "${YELLOW}[" `date` "]" $1 "${NORMAL}"
     if [ "$1" == "...Done" ]; then
         echo
     fi
