@@ -72,7 +72,7 @@ if [ -d ${HOME_DIR}/.vim ]; then
     mv ${HOME_DIR}/.vim ${HOME_DIR}/.vim.bak-${date_time}
 fi
 println "Copying new .vimrc to ${HOME_DIR}..."
-cp ${PROJECT_CONF_DIR}/vimrc-linux ${HOME_DIR}/.vimrc
+cp ${PROJECT_CONF_DIR}/linux-vimrc ${HOME_DIR}/.vimrc
 
 # For screen
 if [ -e ${HOME_DIR}/.screenrc ]; then
