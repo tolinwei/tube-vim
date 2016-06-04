@@ -45,6 +45,7 @@ PROJECT_CONF_DIR=${PROJECT_DIR}/config
 OH_MY_ZSH_DIR=${HOME_DIR}/.oh-my-zsh
 OH_MY_ZSH_THEME_DIR=${OH_MY_ZSH_DIR}/themes
 VIM_COLOR_DIR=${HOME_DIR}/.vim/colors
+VIM_
 cprintln "...Done"
 
 cprintln "Installing Command Line Tools for OS X..."
@@ -89,7 +90,7 @@ cprintln "...Done"
 
 
 cprintln "Backing up & copying conf files for Bash, Vim, screen..."
-date_time=`date +"%y-%m-%d-%H:%M"`
+date_time=`date +"%y_%m_%d_%H:%M"`
 # For .bashrc
 if [ -e ${HOME_DIR}/.bashrc ]; then
     println "Skipping .bashrc as it's existed..."

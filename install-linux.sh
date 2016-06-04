@@ -53,7 +53,7 @@ cprintln "...Done"
 
 
 cprintln "Backing up & copying conf files for Bash, Vim and screen..."
-date_time=`date +"%y-%m-%d-%H:%M"`
+date_time=`date +"%y_%m_%d_%H:%M"`
 # For .bashrc
 if [ -e ${HOME_DIR}/.bashrc ]; then
     println "Skipping .bashrc as it's existed..."
