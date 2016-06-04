@@ -4,10 +4,16 @@ if which tput >/dev/null 2>&1; then
     ncolors=$(tput colors)
 fi
 if [ -t 1 ] && [ -n "$ncolors" ] && [ "$ncolors" -ge 8 ]; then
+    RED="$(tput setaf 1)"
+    GREEN="$(tput setaf 2)"
     YELLOW="$(tput setaf 3)"
+    BLUE="$(tput setaf 4)"
     NORMAL="$(tput sgr0)"
 else
+    RED=""
+    GREEN=""
     YELLOW=""
+    BLUE=""
     NORMAL=""
 fi
 
@@ -16,13 +22,13 @@ function println {
 }
 
 function cprintln {
-    echo -e "${YELLOW}[" `date` "]" $1 "${NORMAL}"
+    echo -e "${BLUE}[" `date` "]" $1 "${NORMAL}"
     if [ "$1" == "...Done" ]; then
         echo
     fi
 }
 
-echo -e "${YELLOW}
+echo -e "${BLUE}
  _         _                     _
 | |_ _   _| |__   ___     __   _(_)_ __ ___
 | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
@@ -161,7 +167,7 @@ cprintln "...Done"
 
 
 cprintln "[End] Finish! Please restart your terminal emulator to enjoy!!"
-echo -e "${YELLOW}
+echo -e "${BLUE}
  _         _                     _
 | |_ _   _| |__   ___     __   _(_)_ __ ___
 | __| | | | '_ \\ / _ \\____\\ \\ / / | '_ \` _ \\
