@@ -48,7 +48,7 @@ How to change color scheme for iTerm2 and Terminal.app</a>
 
 **tube-vim** provides a simplified<sup>*</sup> version for server side Linux, since it's always anoying to develop on a bare remote machine. Makie sure you have `git`, `wget` and __Vim__ >= 7.4 installed (7.2 might have issue with [NERDTree](https://github.com/scrooloose/nerdtree)), then run the following command to set it up:
 ```
-bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/install-linux.sh --no-check-certificate)
+bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/linux-install.sh --no-check-certificate)
 ```
 
 ## Usage Guide
