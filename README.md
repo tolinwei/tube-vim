@@ -38,7 +38,7 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
      + <a href="https://github.com/tolinwei/tube-vim/wiki/How-to-change-color-scheme-for-iTerm2-and-Terminal.app" target="_blank">
 How to change color scheme for iTerm2 and Terminal.app</a>
 
-4. Modified the following lines in your `~/.bashrc` to correct git commits info if you will be using `git` and have no existing `~/.bashrc` before installation
+4. Modified the following lines in your `~/.bashrc` to correct git commits info (if you will be using `git` and have no existing `~/.bashrc` before installation)
      ```
      git config --global user.name "<put-your-name-here>"
      git config --global user.email "<put-your-email-here>"
