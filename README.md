@@ -62,9 +62,9 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/linu
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
-#### Vim Plugins included in tube-vim and Usage Guide
+#### Vim Plugins in tube-vim and Usage Guide
 
-- **Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)**
+- Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)
 
 ## License
 
