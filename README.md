@@ -79,7 +79,7 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/linu
 Notes that, **tube-vim** was created initially to recover a general purpose command line dev environment NOT for certain programing language. If you are working on certain programming language, you might consider to add proper plugins to your `~/.vimrc` in the format of `Plug '{github_username}/{github_repo_name}`. For example:
 
 - Add `Plug 'derekwyatt/vim-scala'` for Scala
-- Add `Plug 'maksimr/vim-jsbeautify' for JavaScript
+- Add `Plug 'maksimr/vim-jsbeautify` for JavaScript
 - Then execute `PlugInstall` in Vim or execute `vim +PlugInstall +qa` in your shell to install new plugins
 
 #### Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)
