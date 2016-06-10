@@ -65,16 +65,16 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/linu
 #### Vim Plugins List
 
 - [junegunn](https://github.com/junegunn/vim-plug) - A minimalist Vim plugin manager
-- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline) - 
-- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) -
-- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) - 
-- [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) - 
-- [majutsushi/tagbar](https://github.com/majutsushi/tagbar) - 
-- [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) - 
-- [alvan/vim-closetag](https://github.com/alvan/vim-closetag) - 
-- [yonchu/accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll) - 
-- [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate) - 
-- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) - 
+- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline) - Lean & mean status/tabline for vim that's light as air
+- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) - A tree file explorer plugin for vim (not active by default, C-n to toggle)
+- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) - Vim plugin for intensely orgasmic commenting
+- [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) - A Vim plugin for visually displaying indent levels in code
+- [majutsushi/tagbar](https://github.com/majutsushi/tagbar) - A class outline viewer for Vim (not active by default, C-t to toggle)
+- [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) - A simple, easy-to-use Vim alignment plugin
+- [alvan/vim-closetag](https://github.com/alvan/vim-closetag) - Functions and mappings to close open HTML/XML tags 
+- [yonchu/accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll) - Vim plugin for accelerated smooth scroll
+- [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate) - Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
+- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) - A Vim plugin which shows a git diff in the gutter (sign column) and stages/undoes hunks
 
 #### Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)
 
