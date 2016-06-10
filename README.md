@@ -62,9 +62,21 @@ bash <(wget -O - https://raw.githubusercontent.com/tolinwei/tube-vim/master/linu
 - [Learn Vimscript the hard way](http://learnvimscriptthehardway.stevelosh.com/)
 - [Practical Vim - Edit Text at the Speed of Though](http://media.pragprog.com/titles/dnvim/toc.pdf)
 
-#### Vim Plugins in tube-vim and Usage Guide
+#### Vim Plugins List
 
-- Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)
+- [junegunn](https://github.com/junegunn/vim-plug) - A minimalist Vim plugin manager
+- [vim-airline/vim-airline](https://github.com/vim-airline/vim-airline) - 
+- [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) -
+- [scrooloose/nerdcommenter](https://github.com/scrooloose/nerdcommenter) - 
+- [nathanaelkane/vim-indent-guides](https://github.com/nathanaelkane/vim-indent-guides) - 
+- [majutsushi/tagbar](https://github.com/majutsushi/tagbar) - 
+- [junegunn/vim-easy-align](https://github.com/junegunn/vim-easy-align) - 
+- [alvan/vim-closetag](https://github.com/alvan/vim-closetag) - 
+- [yonchu/accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll) - 
+- [Raimondi/delimitMate](https://github.com/Raimondi/delimitMate) - 
+- [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) - 
+
+#### Wiki – [Vim Plugins Usage Guide](https://github.com/tolinwei/tube-vim/wiki/Vim-Plugins-Usage-Guide)
 
 ## License
 
