@@ -9,7 +9,7 @@ tube-vim
 
 ```
 
-**tube-vim** is a integrated command line environment that mainly designed for OS X. You can install it by **running a single command**:
+**tube-vim** is a integrated command line environment that mainly designed for macOS. You can install it by **running a single command**:
 ```
 bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
 ```
@@ -27,10 +27,10 @@ bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/instal
 
 ## Installation
 
-#### For OS X
+#### For macOS
 1. (Optional) Install **[iTerm2](https://iterm2.com/index.html)** ([direct link](https://iterm2.com/downloads/stable/iTerm2_v2_0.zip)) as Terminal replacement, check out more features [here](https://iterm2.com/features.html)
 
-2. Run the following command to install **tube-vim** for OS X
+2. Run the following command to install **tube-vim** for macOS
      ```
      bash <(curl -L https://raw.githubusercontent.com/tolinwei/tube-vim/master/install.sh)
      ```
